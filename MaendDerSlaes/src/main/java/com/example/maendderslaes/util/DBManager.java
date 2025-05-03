@@ -27,7 +27,7 @@ public class DBManager {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("Couldn't check if user existed because: " + e.getMessage());
+            System.out.println("User might already exist: " + e.getMessage());
         }
 
         return false;
@@ -58,7 +58,6 @@ public class DBManager {
         if (!folder.exists()) {
             folder.mkdirs();
         }
-
 
         connect(url);
 

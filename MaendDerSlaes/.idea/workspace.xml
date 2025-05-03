@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Done with DBMananger">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/GifManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/GifManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/SoundManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="OliverMergeBranch" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -40,12 +45,12 @@
     &quot;assignee&quot;: &quot;olivermjmj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/olivermjmj/Maend-der-slaes.git",
-    "accountId": "f0f12b59-9053-4bc4-bd30-b2525363b5ea"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/olivermjmj/Maend-der-slaes.git&quot;,
+    &quot;accountId&quot;: &quot;f0f12b59-9053-4bc4-bd30-b2525363b5ea&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -73,7 +78,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Oliver__StartMenuButtons__Implementation",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

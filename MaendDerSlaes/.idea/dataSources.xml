@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="userData" uuid="ad1c6b62-1946-4e5b-81c1-602bd2260e35">
+    <data-source source="LOCAL" name="userData" uuid="6c1e08bd-5783-4599-bca9-453c94ebf327">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:E:\GitHub\Maend-der-slaes\MaendDerSlaes\data\database\userData.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Olive\Desktop\GitHub\Maend-der-slaes\MaendDerSlaes\data\database\userData.db</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>
