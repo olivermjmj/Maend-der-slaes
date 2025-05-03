@@ -55,6 +55,14 @@
       <artifactId>slf4j-simple</artifactId>
       <version>1.7.36</version>
     </dependency>
+
+    <!-- For soundManager -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-media</artifactId>
+      <version>22.0.1</version>
+    </dependency>
+
   </dependencies>
 
 
