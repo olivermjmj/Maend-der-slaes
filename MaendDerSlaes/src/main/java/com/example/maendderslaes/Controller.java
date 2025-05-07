@@ -39,11 +39,17 @@ public class Controller {
 
         database.ensureDatabaseExists();
 
+        if(database.doesUserExist(username, password)) {
+
+        } else {
+            System.out.println("No such user exists.");
+        }
+
     }
 
     @FXML
     protected void guestLogin() {
-        // Implementer gæstelogin logik her
-        System.out.println("Gæste login aktiveret");
+        // Implement guestLogin logic here
+        System.out.println("Logging in as guest");
     }
 }

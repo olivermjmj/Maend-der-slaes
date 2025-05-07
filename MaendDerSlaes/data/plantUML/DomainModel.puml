@@ -6,11 +6,14 @@ User --> (Game)
 (Game) --> (StarterMenu)
 (StarterMenu) --> (Login)
 (StarterMenu) --> (Login as Guest)
-(StarterMenu) <--> (Registre)
+(StarterMenu) --> (Registre)
 (Game) -> (MainMenu)
 (Login) --> (MainMenu)
 (Login as Guest) --> (MainMenu)
 (MainMenu) --> (Arena)
 (MainMenu) --> (Shop)
+
+(Arena) --> (FightBoss)
+(Arena) --> (FightScrub)
 
 @enduml

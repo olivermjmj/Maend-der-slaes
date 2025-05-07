@@ -1,6 +1,5 @@
 package com.example.maendderslaes;
 
-import com.example.maendderslaes.util.DBManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
