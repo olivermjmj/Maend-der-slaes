@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Trying to implement soundManager">
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Changed Character, and imported a sound for when pressing on a button.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746637642259</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed Character, and imported a sound for when pressing on a button.">
+      <option name="closed" value="true" />
+      <created>1746641517719</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746641517719</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +220,8 @@
     <MESSAGE value="DomainModel and ClassDiagram. I have also made it so a user trying to registre needs at username and password that is 3 - 12 characters long." />
     <MESSAGE value="Updated the domainModel" />
     <MESSAGE value="Trying to implement soundManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to implement soundManager" />
+    <MESSAGE value="Changed Character, and imported a sound for when pressing on a button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Character, and imported a sound for when pressing on a button." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
