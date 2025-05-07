@@ -1,5 +1,6 @@
 package com.example.maendderslaes;
 
+import com.example.maendderslaes.util.SoundManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +21,8 @@ public class Main extends Application {
         stage.setFullScreenExitHint("");
 
         stage.setScene(scene);
+        SoundManager soundManager = new SoundManager();
+        soundManager.playSound("data/music/startMenu_Music.mp3");
         stage.show();
     }
 

@@ -25,4 +25,9 @@ public class SoundManager {
             System.out.println("Error couldn't play the given sound file: " + e.getMessage());
         }
     }
+
+    public void playSoundOnR() {
+
+
+    }
 }

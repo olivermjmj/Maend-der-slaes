@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Fixede skittet">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c1e08bd-5783-4599-bca9-453c94ebf327.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c1e08bd-5783-4599-bca9-453c94ebf327/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Updated the domainModel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/plantUML/DomainModel.puml" beforeDir="false" afterPath="$PROJECT_DIR$/data/plantUML/DomainModel.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +157,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747072659122</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DomainModel and ClassDiagram. I have also made it so a user trying to registre needs at username and password that is 3 - 12 characters long.">
+      <option name="closed" value="true" />
+      <created>1746635521480</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746635521480</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated the domainModel">
+      <option name="closed" value="true" />
+      <created>1746635755064</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746635755064</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +185,9 @@
     <MESSAGE value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
     <MESSAGE value="For Maven" />
     <MESSAGE value="Fixede skittet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixede skittet" />
+    <MESSAGE value="DomainModel and ClassDiagram. I have also made it so a user trying to registre needs at username and password that is 3 - 12 characters long." />
+    <MESSAGE value="Updated the domainModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the domainModel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
