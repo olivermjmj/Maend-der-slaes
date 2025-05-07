@@ -1,6 +1,7 @@
 package com.example.maendderslaes;
 
 import com.example.maendderslaes.util.DBManager;
+import com.example.maendderslaes.util.SoundManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
@@ -16,8 +17,11 @@ public class Controller {
 
     private final DBManager database = new DBManager();
 
+    private SoundManager sound = new SoundManager();
+
     @FXML
     protected void register() {
+        sound.playSound("data/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -34,6 +38,7 @@ public class Controller {
 
     @FXML
     protected void login() {
+        sound.playSound("data/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -49,6 +54,7 @@ public class Controller {
 
     @FXML
     protected void guestLogin() {
+        sound.playSound("data/musicFX/buttonPress.wav");
         // Implement guestLogin logic here
         System.out.println("Logging in as guest");
     }

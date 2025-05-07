@@ -8,6 +8,7 @@ public class Player extends Character{
         super(health, strength, defence, random, attack);
     }
 
+    @Override
     public void tryToAttack(Character target, String choice) {
 
         int damage = 0;

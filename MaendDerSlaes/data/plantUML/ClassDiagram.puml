@@ -39,6 +39,7 @@ abstract Class Character {
 # int defence
 # Random random
 + Character()
++ abstract void tryToAttack()
 # abstract int lightAttack()
 # abstract int mediumAttack()
 # abstract int heavyAttack()
