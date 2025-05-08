@@ -10,7 +10,7 @@ public class DBManager {
 
     public boolean doesUserExist(String name, String password) {
 
-        String sql = "SELECT name, password FROM Users";
+        String sql = "SELECT (name, password) FROM Users";
 
         try {
             Statement statement = conn.createStatement();
@@ -51,7 +51,7 @@ public class DBManager {
 
     //creates the database if not found
     public void ensureDatabaseExists() {
-        // Sørg for at mappen findes
+        // Insures that the folder exists
         File dbFile = new File(dbPath);
         File folder = dbFile.getParentFile();
 
