@@ -1,14 +1,30 @@
 package com.example.maendderslaes;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class Controller {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField username;
+    private PasswordField password;
+
+    @FXML
+    protected void login() {
+
     }
+
+    @FXML
+    protected void registre() {
+
+
+    }
+
+    @FXML
+    protected void guestLogin() {
+
+
+    }
+
 }
