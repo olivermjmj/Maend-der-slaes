@@ -3,6 +3,7 @@ module com.example.maendderslaes {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens com.example.maendderslaes to javafx.fxml;
     exports com.example.maendderslaes;
