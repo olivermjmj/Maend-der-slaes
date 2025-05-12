@@ -1,27 +1,67 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Main extends Application {
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
++ public void start(Stage stage) throws IOException {
+Scene scene = new Scene()
+stage.setTitle()
+stage.setScene()
+stage.show()
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
++ public static void main(String[] args) {
+launch()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+Class Game {
+
 }
 
+Class Controller {
+@FXML
+- TextField usernameField
+@FXML
+- PasswordField passwordField
+
+- final DBManager database
+# protected void registre() {
+database.ensureDatabaseExists()
+}
+
+Class Shop {
+
+}
+
+Class Character {
+
+}
+
+package "Util" {
+Class DBManager {
+- Connection conn
+- String dbPath
+- String url
+
++ boolean doesUserExist(String name, String password) {}
++ void addUserToDB(String name, String password) {}
++ void ensureDatabaseExists() {}
+- void connect(String url) {}
+}
+
+Class GifManager {
+- ImageView imageView
++ GifManager(ImageView imageView) {}
++ public void playGif(String gifPath) {}
+}
+
+Class SoundManager {
+- Media sound
+- MediaPlayer mediaPlayer
++ void playSound(String filePath)
+}
+}
+
+Main *- "Util"
+Main *-- "Game"
+Game *-- "Controller"
 @enduml

@@ -8,7 +8,7 @@ import java.io.File;
 public class SoundManager {
 
     private Media sound;
-    private MediaPlayer mediaPlayer;;
+    private MediaPlayer mediaPlayer;
 
     public void playSound(String filePath) {
         try {
