@@ -1,9 +1,9 @@
 package com.example.maendderslaes;
 
-import com.example.maendderslaes.util.DBManager;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.Label;
 
 public class Controller {
 
@@ -16,10 +16,13 @@ public class Controller {
     private final DBManager database = new DBManager();
 
     @FXML
-    protected void registre() {
-        String username = this.usernameField.getText();
-        String password = this.passwordField.getText();
+    protected void register() {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
 
+        // Implementer registrerings logik her
+
+        System.out.println("Registreringsforsøg med: " + brugernavn);
         //Ensures that the database exists, and if not creates it.
         database.ensureDatabaseExists();
 
@@ -29,5 +32,12 @@ public class Controller {
         } else {
             System.out.println("A user with the name: " + username + ". Already exists, try another name");
         }
+    }
+    }
+
+    @FXML
+    protected void guestLogin() {
+        // Implementer gæstelogin logik her
+        System.out.println("Gæste login aktiveret");
     }
 }
