@@ -21,9 +21,6 @@ public class Controller {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        // Implementer registrerings logik her
-
-        System.out.println("Registreringsforsøg med: " + username);
         //Ensures that the database exists, and if not creates it.
         database.ensureDatabaseExists();
 
