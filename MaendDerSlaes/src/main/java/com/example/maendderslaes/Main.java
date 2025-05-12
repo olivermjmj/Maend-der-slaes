@@ -11,10 +11,20 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Hovedmenu");
 
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        DBManager manager = new DBManager();
+
+        //manager.ensureDatabaseExists();
+        //manager.addUser("dawd21das","dw12");
+
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
         stage.setScene(scene);
         stage.show();
     }

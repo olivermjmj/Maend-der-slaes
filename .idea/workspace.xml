@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/Maend Der Slaes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maend Der Slaes/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,24 +13,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="DinosMergeBranch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "olivermjmj"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;olivermjmj&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/olivermjmj/Maend-der-slaes.git",
-    "accountId": "6ef7cef0-63d7-4e9d-993a-48400fb49126"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/olivermjmj/Maend-der-slaes.git&quot;,
+    &quot;accountId&quot;: &quot;09590726-4c0e-4eb2-b275-4c29be444e5a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2wnxAc02Omnswcfcd0EqcOjILa6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,8 +45,14 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Dino__GUI__Implementation",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -53,8 +60,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -67,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746690997639</updated>
       <workItem from="1746690999046" duration="174000" />
+      <workItem from="1747040795990" duration="76000" />
+      <workItem from="1747040903553" duration="1184000" />
     </task>
     <servers />
   </component>
