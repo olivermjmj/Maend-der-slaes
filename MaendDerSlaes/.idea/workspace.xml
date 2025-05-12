@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character">
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="For Maven">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +91,12 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\Maend-der-slaes\MaendDerSlaes\src\main\resources" />
+      <recent name="E:\GitHub\Maend-der-slaes\MaendDerSlaes\src\main\resources\com\example\maendderslaes" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -133,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747069786054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="For Maven">
+      <option name="closed" value="true" />
+      <created>1747071544772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747071544772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +160,8 @@
     <MESSAGE value="Renaming and creating files." />
     <MESSAGE value="Done with DBMananger" />
     <MESSAGE value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
+    <MESSAGE value="For Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="For Maven" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
