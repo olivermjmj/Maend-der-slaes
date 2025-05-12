@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+User -> (Equip gear) : Can only be done in the Main menu
+User --> (Game)
+(Game) --> (StarterMenu)
+(StarterMenu) --> (Login)
+(StarterMenu) --> (Login as Guest)
+(StarterMenu) <--> (Registre)
+(Game) -> (MainMenu)
+(Login) --> (MainMenu)
+(Login as Guest) --> (MainMenu)
+(MainMenu) --> (Arena)
+(MainMenu) --> (Shop)
+
+@enduml
