@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Done with DBMananger">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4b6835-c6f3-4b1b-913f-c4f377713292.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d4b6835-c6f3-4b1b-913f-c4f377713292/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad1c6b62-1946-4e5b-81c1-602bd2260e35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad1c6b62-1946-4e5b-81c1-602bd2260e35/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/data/plantUML/ClassDiagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/SoundManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
+        <entry key="$PROJECT_DIR$/.." value="Oliver_MergeBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -47,12 +36,12 @@
     &quot;assignee&quot;: &quot;olivermjmj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/olivermjmj/Maend-der-slaes.git",
-    "accountId": "6ef7cef0-63d7-4e9d-993a-48400fb49126"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/olivermjmj/Maend-der-slaes.git&quot;,
+    &quot;accountId&quot;: &quot;6ef7cef0-63d7-4e9d-993a-48400fb49126&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -136,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746710061517</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character">
+      <option name="closed" value="true" />
+      <created>1747069786054</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747069786054</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +142,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Renaming and creating files." />
     <MESSAGE value="Done with DBMananger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with DBMananger" />
+    <MESSAGE value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
