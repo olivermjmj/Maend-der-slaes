@@ -35,6 +35,14 @@ public class Controller {
         }
     }
 
+    @FXML
+    protected void login() {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        database.ensureDatabaseExists();
+
+    }
 
     @FXML
     protected void guestLogin() {
