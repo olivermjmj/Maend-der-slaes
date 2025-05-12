@@ -15,11 +15,6 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hovedmenu");
 
-        DBManager manager = new DBManager();
-
-        //manager.ensureDatabaseExists();
-        //manager.addUser("dawd21das","dw12");
-
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);

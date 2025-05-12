@@ -8,10 +8,19 @@ public class Player extends Character{
         super(health, strength, defence, random, attack);
     }
 
-    @Override
-    public void tryToAttack(Character target) {
+    public void tryToAttack(Character target, String choice) {
 
+        int damage = 0;
 
+        switch (choice) {
+            //Lambda for switch cases are only possible for java 14+
+            case "light" -> damage = lightAttack();
+            case "medium" -> damage = mediumAttack();
+            case "heavy" -> damage = heavyAttack();
+        }
+
+        int dealtDMG = target.takeDMG(damage);
+        System.out.println("Attack hit for " + dealtDMG + " damage");
     }
 
     @Override
@@ -35,13 +44,13 @@ public class Player extends Character{
 
         attack = strength - random.nextInt(3,6);
 
-        return 0;
+        return attack;
     }
 
 
     @Override
     protected int takeDMG(int damage) {
-        int finalDMG = Math.max(0,damage - defence);
+        int finalDMG = damage - defence;
         health -= finalDMG;
 
         return finalDMG;
