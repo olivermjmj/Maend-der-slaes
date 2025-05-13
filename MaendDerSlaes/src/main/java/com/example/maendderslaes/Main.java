@@ -1,9 +1,10 @@
 package com.example.maendderslaes;
 
-import com.example.maendderslaes.util.SoundManager;
+import com.example.maendderslaes.util.DBManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,14 +16,25 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hovedmenu");
 
+        DBManager manager = new DBManager();
+
+        //manager.ensureDatabaseExists();
+        //manager.addUser("dawd21das","dw12");
+
+        //fullscreen code for mac
+        /*Screen screen = Screen.getPrimary();
+        var bounds = screen.getVisualBounds();
+        stage.setX(bounds.getMinX());
+        stage.setY(bounds.getMinY());
+        stage.setWidth(bounds.getWidth());
+        stage.setHeight(bounds.getHeight()); */
+
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
 
         stage.setScene(scene);
-        SoundManager soundManager = new SoundManager();
-        soundManager.playSound("data/music/startMenu_Music.mp3");
         stage.show();
     }
 
