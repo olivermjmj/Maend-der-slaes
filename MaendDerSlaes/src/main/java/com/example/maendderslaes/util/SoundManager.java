@@ -7,27 +7,48 @@ import java.io.File;
 
 public class SoundManager {
 
-    private Media sound;
-    private MediaPlayer mediaPlayer;
+    private MediaPlayer effectPlayer;
+    private MediaPlayer musicPlayer;
 
     public void playSound(String filePath) {
+
         try {
 
-            //Stops the current sound and plays it again.
-            if(mediaPlayer != null && mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-                mediaPlayer.stop();
+            if (effectPlayer != null && effectPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+                effectPlayer.stop();
             }
 
-            this.sound = new Media(new File(filePath).toURI().toString());
-            this.mediaPlayer = new MediaPlayer(sound);
-            this.mediaPlayer.play();
+            Media sound = new Media(new File(filePath).toURI().toString());
+            effectPlayer = new MediaPlayer(sound);
+            effectPlayer.play();
+
         } catch (Exception e) {
-            System.out.println("Error couldn't play the given sound file: " + e.getMessage());
+            System.out.println("Error couldn't play the sound effect: " + e.getMessage());
         }
     }
 
-    public void playSoundOnR() {
+    public void playSoundOnRepeat(String filePath) {
 
+        try {
 
+            if (musicPlayer != null && musicPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+                musicPlayer.stop();
+            }
+
+            Media music = new Media(new File(filePath).toURI().toString());
+            musicPlayer = new MediaPlayer(music);
+            musicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            musicPlayer.play();
+
+        } catch (Exception e) {
+            System.out.println("Error couldn't play the background music: " + e.getMessage());
+        }
+    }
+
+    public void stopBackgroundMusic() {
+
+        if (musicPlayer != null) {
+            musicPlayer.stop();
+        }
     }
 }
