@@ -17,7 +17,6 @@ public abstract class Character {
         this.random = random;
         this.attack = attack;
     }
-    public abstract void tryToAttack(Character target);
 
     protected abstract int lightAttack();
 
