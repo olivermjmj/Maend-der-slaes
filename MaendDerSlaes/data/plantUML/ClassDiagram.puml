@@ -24,8 +24,9 @@ Class Controller {
 - PasswordField passwordField
 
 - final DBManager database
-# protected void registre() {
-database.ensureDatabaseExists()
+# void registre() {}
+# void login() {}
+# void guestLogin() {}
 }
 
 Class Shop {
@@ -38,7 +39,7 @@ abstract Class Character {
 # int defence
 # Random random
 + Character()
-+ abstract tryToAttack()
++ abstract void tryToAttack()
 # abstract int lightAttack()
 # abstract int mediumAttack()
 # abstract int heavyAttack()
@@ -46,10 +47,18 @@ abstract Class Character {
 
 Class Player implements Character{
 + Player()
++ void tryToAttack(Character target, String choice) {}
+# int lightAttack() {}
+# int mediumAttack() {}
+# int heavyAttack() {}
 }
 
 Class Enemy implements Character {
 + Enemy()
++ void tryToAttack(Character target) {}
+# int lightAttack() {}
+# int mediumAttack() {}
+# int heavyAttack() {}
 }
 
 package "Util" {
@@ -67,13 +76,13 @@ Class DBManager {
 Class GifManager {
 - ImageView imageView
 + GifManager(ImageView imageView) {}
-+ public void playGif(String gifPath) {}
++ void playGif(String gifPath) {}
 }
 
 Class SoundManager {
 - Media sound
 - MediaPlayer mediaPlayer
-+ void playSound(String filePath)
++ void playSound(String filePath) {}
 }
 }
 

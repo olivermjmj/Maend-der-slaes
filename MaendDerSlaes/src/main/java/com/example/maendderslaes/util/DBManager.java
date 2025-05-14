@@ -34,18 +34,23 @@ public class DBManager {
     }
 
     public void addUserToDB(String name, String password) {
-        String sql = "INSERT INTO Users (name, password) VALUES (?, ?)";
 
-        try {
+        if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
+            String sql = "INSERT INTO Users (name, password) VALUES (?, ?)";
 
-            PreparedStatement stmt = conn.prepareStatement(sql);
+            try {
 
-            stmt.setString(1, name);
-            stmt.setString(2, password);
-            stmt.executeUpdate();
+                PreparedStatement stmt = conn.prepareStatement(sql);
 
-        } catch (SQLException e) {
-            System.out.println("Failed to create user because: " + e.getMessage());
+                stmt.setString(1, name);
+                stmt.setString(2, password);
+                stmt.executeUpdate();
+
+            } catch (SQLException e) {
+                System.out.println("Failed to create user because: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Username and password length must be: 3 - 12 characters");
         }
     }
 

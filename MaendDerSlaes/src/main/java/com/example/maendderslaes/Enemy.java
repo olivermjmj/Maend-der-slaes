@@ -8,7 +8,8 @@ public class Enemy extends Character{
         super(health, strength, defence, random, attack);
     }
 
-    public void tryToAttack(Character target) {
+    @Override
+    public void tryToAttack(Character target, String choice) {
         int roll = random.nextInt(1,4);
         int damage = 0;
 

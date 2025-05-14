@@ -18,6 +18,8 @@ public abstract class Character {
         this.attack = attack;
     }
 
+    public abstract void tryToAttack(Character target, String choice);
+
     protected abstract int lightAttack();
 
     protected abstract int mediumAttack();
