@@ -9,13 +9,10 @@ public abstract class Character {
     protected int attack;
     protected int money;
 
-    protected Random random;
-
-    public Character(int health, int strength, int defence, Random random, int attack, int money) {
+    public Character(int health, int strength, int defence, int attack, int money) {
         this.health = health;
         this.strength = strength;
         this.defence = defence;
-        this.random = random;
         this.attack = attack;
         this.money = money;
     }

@@ -4,13 +4,15 @@ import java.util.Random;
 
 public class Enemy extends Character{
 
-    public Enemy(int health, int strength, int defence, Random random, int attack, int money) {
-        super(health, strength, defence, random, attack, money);
+    Random random;
+
+    public Enemy(int health, int strength, int defence, int attack, int money) {
+        super(health, strength, defence, attack, money);
     }
 
     @Override
     public void tryToAttack(Character target, String choice) {
-        int roll = random.nextInt(1,4);
+        int roll = this.random.nextInt(1,4);
         int damage = 0;
 
         switch (roll) {
@@ -27,7 +29,7 @@ public class Enemy extends Character{
     @Override
     protected int lightAttack() {
 
-        attack = strength - random.nextInt(5,21);
+        attack = strength - this.random.nextInt(5,21);
 
         return attack;
     }
@@ -35,7 +37,7 @@ public class Enemy extends Character{
     @Override
     protected int mediumAttack() {
 
-        attack = strength - random.nextInt(4, 11);
+        attack = strength - this.random.nextInt(4, 11);
 
         return attack;
     }
@@ -43,7 +45,7 @@ public class Enemy extends Character{
     @Override
     protected int heavyAttack() {
 
-        attack = strength - random.nextInt(3,6);
+        attack = strength - this.random.nextInt(3,6);
 
         return attack;
     }
