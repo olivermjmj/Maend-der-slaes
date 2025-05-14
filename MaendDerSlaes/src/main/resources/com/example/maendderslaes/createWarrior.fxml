@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.HBox?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.maendderslaes.Controller">
@@ -15,10 +14,10 @@
                  -fx-background-size: cover;
                  -fx-background-position: center center;">
         
-        <!-- Tilbage-knap i top-venstre hjørne -->
+        <!-- Tilbage-knap i Bottom right -->
         <VBox alignment="BOTTOM_RIGHT">
             <padding>
-                <Insets top="900" left="150" right="20"/>
+                <Insets top="900" left="150" right="150"/>
             </padding>
             <Button onAction="#goBack" text="Return to MainMenu"
                     style="-fx-background-color: #FFD700;
@@ -32,9 +31,9 @@
         </VBox>
         
         <!-- GO TO CITY CENTER knap i bunden -->
-        <VBox alignment="BOTTOM_CENTER">
+        <VBox alignment="BOTTOM_RIGHT">
             <padding>
-                <Insets bottom="300" left="800" right="50" top="50"/>
+                <Insets bottom="30" left="150" right="525"/>
             </padding>
             <Button onAction="#goToCityCenter" text="GO TO CITY CENTER"
                     style="-fx-background-color: #FFD700;
@@ -45,7 +44,7 @@
                            -fx-min-height: 40;
                            -fx-min-width: 200;
                            -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);
-                           -fx-border-color: #DAA520;
+                           -fx-border-color: #000000;
                            -fx-border-width: 2;
                            -fx-background-radius: 5;
                            -fx-border-radius: 5;"/>

@@ -10,6 +10,9 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 
+import javafx.event.ActionEvent;
+import javafx.scene.Node;
+
 
 import java.io.IOException;
 
@@ -59,62 +62,63 @@ public class Controller {
     }
 
     @FXML
-    protected void guestLogin() throws IOException {
-
+    protected void guestLogin(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("createWarrior.fxml"));
 
+        // get the new scene through the event
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // create and load the new scene
         Scene scene = new Scene(fxmlLoader.load());
 
-        Stage stage = new Stage();
+        // Set the stage for the existing window
         stage.setScene(scene);
-        stage.show();
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
 
         sound.playSound("data/musicFX/buttonPress.wav");
-        // Implement guestLogin logic here
-        System.out.println("Logging in as guest");
-
     }
-    @FXML
-    protected void goBack() throws IOException {
 
+    @FXML
+    protected void goBack(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
 
-        Stage stage = new Stage();
+        // get the new scene through the event
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // create and load the new scene
         Scene scene = new Scene(fxmlLoader.load());
 
+        // Set the stage for the existing window
         stage.setScene(scene);
-        stage.show();
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
 
         sound.playSound("data/musicFX/buttonPress.wav");
-
     }
 
     @FXML
-    protected void goToCityCenter() throws IOException {
-
+    protected void goToCityCenter(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cityCenter.fxml"));
 
-        Stage stage = new Stage();
+        // get the new scene through the event
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // create and load the new scene
         Scene scene = new Scene(fxmlLoader.load());
 
+        // Set the stage for the existing window
         stage.setScene(scene);
-        stage.show();
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
 
-
         sound.playSound("data/musicFX/buttonPress.wav");
-
     }
 
 }

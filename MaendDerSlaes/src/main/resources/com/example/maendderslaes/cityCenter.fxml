@@ -14,12 +14,12 @@
                  -fx-background-size: cover;
                  -fx-background-position: center center;">
 
-        <!-- Tilbage-knap i top-venstre hjørne -->
+        <!-- Tilbage-knap i Bottom Right -->
         <VBox alignment="BOTTOM_RIGHT">
             <padding>
                 <Insets top="900" left="20" right="20"/>
             </padding>
-            <Button onAction="#goBack" text="Return to Character Creation"
+            <Button onAction="#goBack" text="Go Back To Main Menu"
                     style="-fx-background-color: #FFD700;
                            -fx-text-fill: #000000;
                            -fx-font-family: 'Comic Sans MS';
