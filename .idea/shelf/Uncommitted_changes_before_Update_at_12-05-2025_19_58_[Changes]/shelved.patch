@@ -1,0 +1,199 @@
+Index: MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.text.*?>\r\n\r\n<VBox alignment=\"CENTER\" spacing=\"20.0\" xmlns:fx=\"http://javafx.com/fxml\"\r\n      fx:controller=\"com.example.maendderslaes.Controller\"\r\n      style=\"-fx-background-image: url('MaenDerSlaasForside.png');\r\n             -fx-background-repeat: no-repeat;\r\n             -fx-background-size: cover;\r\n             -fx-background-position: center center;\">\r\n    <padding>\r\n        <Insets bottom=\"20.0\" left=\"20.0\" right=\"150.0\" top=\"20.0\"/>\r\n    </padding>\r\n\r\n    <VBox alignment=\"CENTER\" spacing=\"20.0\">\r\n        <padding>\r\n            <Insets bottom=\"20.0\" left=\"20.0\" right=\"20.0\" top=\"350.0\" />\r\n        </padding>\r\n\r\n        <VBox alignment=\"CENTER\" spacing=\"10.0\">\r\n            <TextField fx:id=\"usernameField\"\r\n                       promptText=\"Brugernavn\"\r\n                       maxWidth=\"200\"\r\n                       style=\"-fx-min-height: 20;\r\n                             -fx-max-height: 30;\r\n                             -fx-font-family: 'Comic Sans MS';\r\n                             -fx-font-size: 14;\r\n                             -fx-background-color: #2A2A2A;\r\n                             -fx-text-fill: #FFD700;\r\n                             -fx-prompt-text-fill: #FFD700;\r\n                             -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);\"/>\r\n            <PasswordField fx:id=\"passwordField\"\r\n                           promptText=\"Adgangskode\"\r\n                           maxWidth=\"200\"\r\n                           style=\"-fx-min-height: 20;\r\n                                 -fx-max-height: 30;\r\n                                 -fx-font-family: 'Comic Sans MS';\r\n                                 -fx-font-size: 14;\r\n                                 -fx-background-color: #2A2A2A;\r\n                                 -fx-text-fill: #FFD700;\r\n                                 -fx-prompt-text-fill: #FFD700;\r\n                                 -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);\"/>\r\n        </VBox>\r\n    </VBox>\r\n\r\n    <VBox alignment=\"CENTER\" spacing=\"20.0\">\r\n        <Button onAction=\"#login\" text=\"LOGIN\"\r\n                maxWidth=\"200\"\r\n                style=\"-fx-background-color: #FFD700;\r\n                       -fx-text-fill: #000000;\r\n                       -fx-font-family: 'Comic Sans MS';\r\n                       -fx-font-size: 18;\r\n                       -fx-font-weight: bold;\r\n                       -fx-min-height: 40;\r\n                       -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);\r\n                       -fx-border-color: #DAA520;\r\n                       -fx-border-width: 2;\r\n                       -fx-background-radius: 5;\r\n                       -fx-border-radius: 5;\"/>\r\n        <Button onAction=\"#register\" text=\"REGISTER\"\r\n                maxWidth=\"200\"\r\n                style=\"-fx-background-color: #FFD700;\r\n                       -fx-text-fill: #000000;\r\n                       -fx-font-family: 'Comic Sans MS';\r\n                       -fx-font-size: 14;\r\n                       -fx-font-weight: bold;\r\n                       -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);\"/>\r\n        <Button onAction=\"#guestLogin\" text=\"PLAY AS GUEST\"\r\n                maxWidth=\"200\"\r\n                style=\"-fx-background-color: #FFD700;\r\n                       -fx-text-fill: #000000;\r\n                       -fx-font-family: 'Comic Sans MS';\r\n                       -fx-font-size: 14;\r\n                       -fx-font-weight: bold;\r\n                       -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);\"/>\r\n    </VBox>\r\n\r\n</VBox>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml b/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml
+--- a/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml	(revision 16d31f92e381bcf45e68101b96a0e57af36195d8)
++++ b/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml	(date 1747072618011)
+@@ -7,7 +7,8 @@
+ 
+ <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+       fx:controller="com.example.maendderslaes.Controller"
+-      style="-fx-background-image: url('MaenDerSlaasForside.png');
++      style="-fx-background-image: url('file:/data/images/MaenDerSlaasForside.png');
++');
+              -fx-background-repeat: no-repeat;
+              -fx-background-size: cover;
+              -fx-background-position: center center;">
+Index: MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.maendderslaes;\r\n\r\nimport com.example.maendderslaes.util.DBManager;\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class Main extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(\"view.fxml\"));\r\n\r\n        Scene scene = new Scene(fxmlLoader.load(), 320, 240);\r\n        stage.setTitle(\"Hello!\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java b/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java
+--- a/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java	(revision 16d31f92e381bcf45e68101b96a0e57af36195d8)
++++ b/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java	(date 1747072173979)
+@@ -11,7 +11,7 @@
+ public class Main extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
++        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
+ 
+         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+         stage.setTitle("Hello!");
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1747071756838)
++++ b/.idea/compiler.xml	(date 1747071756838)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="MaendDerSlaes" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/Maend-der-slaes.iml\" filepath=\"$PROJECT_DIR$/.idea/Maend-der-slaes.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/MaendDerSlaes/MaendDerSlaes.iml\" filepath=\"$PROJECT_DIR$/MaendDerSlaes/MaendDerSlaes.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision 16d31f92e381bcf45e68101b96a0e57af36195d8)
++++ b/.idea/modules.xml	(date 1747072178987)
+@@ -3,7 +3,6 @@
+   <component name="ProjectModuleManager">
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/.idea/Maend-der-slaes.iml" filepath="$PROJECT_DIR$/.idea/Maend-der-slaes.iml" />
+-      <module fileurl="file://$PROJECT_DIR$/MaendDerSlaes/MaendDerSlaes.iml" filepath="$PROJECT_DIR$/MaendDerSlaes/MaendDerSlaes.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1747071756849)
++++ b/.idea/jarRepositories.xml	(date 1747071756849)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1747071756844)
++++ b/.idea/encodings.xml	(date 1747071756844)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/MaendDerSlaes/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/MaendDerSlaes/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a35e58fb-8a04-496f-8552-e51fce0ca32b\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"DinosMergeBranch\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;olivermjmj&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/olivermjmj/Maend-der-slaes.git&quot;,\r\n    &quot;accountId&quot;: &quot;09590726-4c0e-4eb2-b275-4c29be444e5a&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2wnxAc02Omnswcfcd0EqcOjILa6\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"Dino__GUI__Implementation\",\r\n    \"junie.onboarding.icon.badge.shown\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a35e58fb-8a04-496f-8552-e51fce0ca32b\" name=\"Changes\" comment=\"\" />\r\n      <created>1746690997639</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1746690997639</updated>\r\n      <workItem from=\"1746690999046\" duration=\"174000\" />\r\n      <workItem from=\"1747040795990\" duration=\"76000\" />\r\n      <workItem from=\"1747040903553\" duration=\"1184000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 16d31f92e381bcf45e68101b96a0e57af36195d8)
++++ b/.idea/workspace.xml	(date 1747072544798)
+@@ -5,7 +5,14 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -43,9 +50,11 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "Maven.MaendDerSlaes [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
++    "Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "Dino__GUI__Implementation",
++    "git-widget-placeholder": "main",
+     "junie.onboarding.icon.badge.shown": "true",
+     "kotlin-language-version-configured": "true",
+     "last_opened_file_path": "C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes",
+@@ -57,6 +66,12 @@
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\Dinos\OneDrive\Dokumenter\GitHub\Maend-der-slaes\MaendDerSlaes\data" />
++      <recent name="C:\Users\Dinos\OneDrive\Dokumenter\GitHub\Maend-der-slaes\MaendDerSlaes\src\main\resources" />
++    </key>
++  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/MaendDerSlaes/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_24\" default=\"true\" project-jdk-name=\"openjdk-24\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 16d31f92e381bcf45e68101b96a0e57af36195d8)
++++ b/.idea/misc.xml	(date 1747072178994)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>

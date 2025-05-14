@@ -3,8 +3,15 @@ package com.example.maendderslaes;
 import com.example.maendderslaes.util.DBManager;
 import com.example.maendderslaes.util.SoundManager;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.stage.Stage;
+
+
+
+import java.io.IOException;
 
 public class Controller {
 
@@ -52,9 +59,62 @@ public class Controller {
     }
 
     @FXML
-    protected void guestLogin() {
+    protected void guestLogin() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("createWarrior.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
         sound.playSound("data/musicFX/buttonPress.wav");
         // Implement guestLogin logic here
         System.out.println("Logging in as guest");
+
     }
+    @FXML
+    protected void goBack() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load());
+
+        stage.setScene(scene);
+        stage.show();
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
+        sound.playSound("data/musicFX/buttonPress.wav");
+
+    }
+
+    @FXML
+    protected void goToCityCenter() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cityCenter.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load());
+
+        stage.setScene(scene);
+        stage.show();
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
+
+        sound.playSound("data/musicFX/buttonPress.wav");
+
+    }
+
 }
