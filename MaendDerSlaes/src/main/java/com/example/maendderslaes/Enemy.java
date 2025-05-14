@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Enemy extends Character{
 
-    public Enemy(int health, int strength, int defence, Random random, int attack) {
-        super(health, strength, defence, random, attack);
+    public Enemy(int health, int strength, int defence, Random random, int attack, int money) {
+        super(health, strength, defence, random, attack, money);
     }
 
     @Override
@@ -54,5 +54,15 @@ public class Enemy extends Character{
         int finalDamage = Math.max(0, damage - defence);
         health -= finalDamage;
         return finalDamage;
+    }
+
+    public int getHP() {
+
+        return health;
+    }
+
+    public int getMoney() {
+
+        return money;
     }
 }

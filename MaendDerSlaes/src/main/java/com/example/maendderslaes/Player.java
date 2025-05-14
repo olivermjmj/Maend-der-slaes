@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Player extends Character{
 
-    public Player(int health, int strength, int defence, Random random, int attack) {
-        super(health, strength, defence, random, attack);
+    public Player(int health, int strength, int defence, Random random, int attack, int money) {
+        super(health, strength, defence, random, attack, money);
     }
 
     @Override
@@ -55,5 +55,15 @@ public class Player extends Character{
         health -= finalDMG;
 
         return finalDMG;
+    }
+
+    public int getHP() {
+
+        return health;
+    }
+
+    public int getMoney() {
+
+        return money;
     }
 }

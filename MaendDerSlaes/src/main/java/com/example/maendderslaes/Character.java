@@ -7,15 +7,17 @@ public abstract class Character {
     protected int strength;
     protected int defence;
     protected int attack;
+    protected int money;
 
     protected Random random;
 
-    public Character(int health, int strength, int defence, Random random, int attack) {
+    public Character(int health, int strength, int defence, Random random, int attack, int money) {
         this.health = health;
         this.strength = strength;
         this.defence = defence;
         this.random = random;
         this.attack = attack;
+        this.money = money;
     }
 
     public abstract void tryToAttack(Character target, String choice);
@@ -27,4 +29,8 @@ public abstract class Character {
     protected abstract int heavyAttack();
 
     protected abstract int takeDMG(int damage);
+
+    public abstract int getHP();
+
+    public abstract int getMoney();
 }

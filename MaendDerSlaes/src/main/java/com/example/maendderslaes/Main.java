@@ -1,5 +1,6 @@
 package com.example.maendderslaes;
 
+import com.example.maendderslaes.util.SoundManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -24,6 +25,8 @@ public class Main extends Application {
         stage.setWidth(bounds.getWidth());
         stage.setHeight(bounds.getHeight()); */
 
+        SoundManager music = new SoundManager();
+        music.playSoundOnRepeat("data/music/startMenu_Music.wav");
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
