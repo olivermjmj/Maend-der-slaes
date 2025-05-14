@@ -6,8 +6,8 @@ public class Player extends Character{
 
     Random random;
 
-    public Player(int health, int strength, int defence, Random random, int attack, int money) {
-        super(health, strength, defence, attack, money);
+    public Player(int health, int strength, int defence, Random random, int attack, int money, int level) {
+        super(health, strength, defence, attack, money, level);
     }
 
     @Override
@@ -59,13 +59,26 @@ public class Player extends Character{
         return finalDMG;
     }
 
+    @Override
     public int getHP() {
 
         return health;
     }
 
+    @Override
     public int getMoney() {
 
         return money;
     }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void spendMoney(int amount) {
+        if(money >= amount) {
+            money -= amount;
+        }
+    }
+
 }

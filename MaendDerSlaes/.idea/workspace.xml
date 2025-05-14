@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Prepared for a battle class">
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Preparing for shop.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Battle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +122,7 @@
       <workItem from="1746696828517" duration="11703000" />
       <workItem from="1746299195231" duration="634000" />
       <workItem from="1747040872098" duration="4120000" />
-      <workItem from="1747213213987" duration="3310000" />
+      <workItem from="1747213213987" duration="7861000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming and creating files.">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747216740311</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Preparing for shop.">
+      <option name="closed" value="true" />
+      <created>1747217486854</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1747217486854</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +290,8 @@
     <MESSAGE value="Updated soundmanager to handle background music and soundFX" />
     <MESSAGE value="small update" />
     <MESSAGE value="Prepared for a battle class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepared for a battle class" />
+    <MESSAGE value="Preparing for shop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparing for shop." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

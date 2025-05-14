@@ -6,8 +6,8 @@ public class Enemy extends Character{
 
     Random random;
 
-    public Enemy(int health, int strength, int defence, int attack, int money) {
-        super(health, strength, defence, attack, money);
+    public Enemy(int health, int strength, int defence, int attack, int money, int level) {
+        super(health, strength, defence, attack, money, level);
     }
 
     @Override
@@ -58,11 +58,13 @@ public class Enemy extends Character{
         return finalDamage;
     }
 
+    @Override
     public int getHP() {
 
         return health;
     }
 
+    @Override
     public int getMoney() {
 
         return money;

@@ -8,13 +8,15 @@ public abstract class Character {
     protected int defence;
     protected int attack;
     protected int money;
+    protected int level;
 
-    public Character(int health, int strength, int defence, int attack, int money) {
+    public Character(int health, int strength, int defence, int attack, int money, int level) {
         this.health = health;
         this.strength = strength;
         this.defence = defence;
         this.attack = attack;
         this.money = money;
+        this.level = level;
     }
 
     public abstract void tryToAttack(Character target, String choice);
