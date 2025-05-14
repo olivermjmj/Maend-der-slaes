@@ -14,6 +14,7 @@ public class Shop {
         setShopItems();
     }
 
+    /* //Has been moved to Player class, so that the user is the one that buys the item, instead of the shop.
     public boolean buyItem(Player player, Item item, DBManager database) {
 
         //Build it so that a user can't purchase the weapon he/she has equipped
@@ -25,6 +26,8 @@ public class Shop {
         }
         return false;
     }
+
+     */
 
     private void setShopItems() {
 

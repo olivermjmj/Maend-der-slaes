@@ -84,7 +84,8 @@ public class DBManager {
                          password VARCHAR(12) NOT NULL,
                          level INTEGER NOT NULL,
                          health INTEGER,
-                         weapon VARCHAR(24) NOT NULL
+                         weapon VARCHAR(24) NOT NULL,
+                         money INTEGER
                      );
                      """;
             stmt.execute(sql);
@@ -104,14 +105,14 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon) {
+    public void saveUserData(int level, int health, String weapon, int money, String activeUser) {
 
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
         }
 
-        String sql = "UPDATE Users SET level = ?, health, weapon = ? WHERE name = ?";
+        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ? WHERE name = ?";
 
         try {
 
@@ -120,7 +121,8 @@ public class DBManager {
             stmt.setInt(1, level);
             stmt.setInt(2, health);
             stmt.setString(3,weapon);
-            stmt.setString(4, activeUser);
+            stmt.setInt(4, 50);
+            stmt.setString(5, activeUser);
             stmt.executeUpdate();
 
         } catch (SQLException e) {

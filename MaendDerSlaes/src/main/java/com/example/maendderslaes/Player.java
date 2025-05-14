@@ -1,5 +1,7 @@
 package com.example.maendderslaes;
 
+import com.example.maendderslaes.util.DBManager;
+
 import java.util.Random;
 
 public class Player extends Character{
@@ -67,8 +69,15 @@ public class Player extends Character{
 
     @Override
     public int getMoney() {
+        return this.money;
+    }
 
-        return money;
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public void negateMoney(int money) {
+        this.money -= money;
     }
 
     public int getLevel() {
@@ -79,6 +88,18 @@ public class Player extends Character{
         if(money >= amount) {
             money -= amount;
         }
+    }
+
+    public boolean buyItem(Player player, Item item, DBManager database) {
+
+        //Build it so that a user can't purchase the weapon he/she has equipped
+
+        if(player.getMoney() >= item.getPrice()) {
+            player.spendMoney(item.getPrice());
+            database.saveUserWeapon(item.getName());
+            return true;
+        }
+        return false;
     }
 
 }
