@@ -5,7 +5,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.StackPane?>
 
-<?import javafx.scene.layout.AnchorPane?>
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.maendderslaes.Controller"
            maxWidth="Infinity"
@@ -15,7 +14,7 @@
     <VBox alignment="CENTER" spacing="20.0"
           maxWidth="Infinity"
           maxHeight="Infinity"
-          style="-fx-background-image: url('file:data/images/VælgDinArena.png');
+          style="-fx-background-image: url('file:data/images/Colosseum.png');
                  -fx-background-repeat: stretch;
                  -fx-background-size: 100% 100%;
                  -fx-background-position: center center;">
@@ -33,29 +32,6 @@
                            -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
                            -fx-min-width: 100;
                            -fx-min-height: 30;"/>
-
         </VBox>
     </VBox>
-    <AnchorPane maxWidth="Infinity" maxHeight="Infinity">
-        <Button onAction="#goToTræningsArena"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.leftAnchor="90.0"
-                AnchorPane.topAnchor="250.0"/>
-        <Button onAction="#goToBorgen"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.leftAnchor="660.0"
-                AnchorPane.rightAnchor="660.0"
-                AnchorPane.topAnchor="250.0"/>
-        <Button onAction="#goToColosseum"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.rightAnchor="90.0"
-                AnchorPane.topAnchor="250.0"/>
-
-    </AnchorPane>
 </StackPane>
