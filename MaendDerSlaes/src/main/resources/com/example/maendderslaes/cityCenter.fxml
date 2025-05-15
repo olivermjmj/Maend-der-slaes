@@ -22,15 +22,24 @@
 
         <AnchorPane maxWidth="Infinity" maxHeight="Infinity">
             <Button onAction="#goToSmed"
-                    style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                    minWidth="360"
-                    minHeight="135"
-                    maxWidth="360"
-                    maxHeight="135"
+                    style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;"
                     prefWidth="360"
                     prefHeight="135"
                     AnchorPane.leftAnchor="90.0"
-                    AnchorPane.topAnchor="570.0"/>
+                    AnchorPane.topAnchor="675.0"/>
+            <Button onAction="#goToStatsOgEgenskaber"
+                    style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;"
+                    prefWidth="360"
+                    prefHeight="135"
+                    AnchorPane.rightAnchor="200.0"
+                    AnchorPane.topAnchor="750.0"/>
+            <Button onAction="#goToArenaMenu"
+                    style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;"
+                    prefWidth="800"
+                    prefHeight="211"
+                    AnchorPane.leftAnchor="600.0"
+                    AnchorPane.rightAnchor="600.0"
+                    AnchorPane.topAnchor="450.0"/>
         </AnchorPane>
 
         <VBox alignment="BOTTOM_RIGHT" maxWidth="Infinity">

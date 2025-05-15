@@ -135,6 +135,34 @@ public class Controller {
         sound.playSound("data/musicFX/buttonPress.wav");
     }
 
+    @FXML
+    protected void goToStatsOgEgenskaber(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("StatsOgEgenskaber.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
 
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
+        sound.playSound("data/musicFX/buttonPress.wav");
+    }
+
+    @FXML
+    protected void goToArenaMenu(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ArenaMenu.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
+        sound.playSound("data/musicFX/buttonPress.wav");
+    }
 
 }
