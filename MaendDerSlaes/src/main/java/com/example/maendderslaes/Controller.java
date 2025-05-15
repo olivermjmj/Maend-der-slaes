@@ -120,5 +120,21 @@ public class Controller {
 
         sound.playSound("data/musicFX/buttonPress.wav");
     }
+    @FXML
+    protected void goToSmed(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SMED.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.setFullScreenExitHint("");
+
+        sound.playSound("data/musicFX/buttonPress.wav");
+    }
+
+
 
 }

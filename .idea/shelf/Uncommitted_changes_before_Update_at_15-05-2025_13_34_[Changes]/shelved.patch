@@ -1,0 +1,536 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1747308851259)
++++ b/.idea/compiler.xml	(date 1747308851259)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel>
++      <module name="MaendDerSlaes" target="22" />
++    </bytecodeTargetLevel>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_xerial_sqlite_jdbc_3_45_2_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_45_2_0.xml b/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_45_2_0.xml
+new file mode 100644
+--- /dev/null	(date 1747308765255)
++++ b/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_45_2_0.xml	(date 1747308765255)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.xerial:sqlite-jdbc:3.45.2.0" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.xerial" artifactId="sqlite-jdbc" version="3.45.2.0" baseVersion="3.45.2.0" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.45.2.0/sqlite-jdbc-3.45.2.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.45.2.0/sqlite-jdbc-3.45.2.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.45.2.0/sqlite-jdbc-3.45.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1747212742145)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1747212742145)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="LanguageDetectionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
++  </profile>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml
+new file mode 100644
+--- /dev/null	(date 1747308765229)
++++ b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml	(date 1747308765229)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.10.2" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-engine" version="5.10.2" baseVersion="5.10.2" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml
+new file mode 100644
+--- /dev/null	(date 1747308765227)
++++ b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml	(date 1747308765227)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.10.2" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-api" version="5.10.2" baseVersion="5.10.2" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml b/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml
+new file mode 100644
+--- /dev/null	(date 1747308765226)
++++ b/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml	(date 1747308765226)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.apiguardian:apiguardian-api:1.1.2" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.apiguardian" artifactId="apiguardian-api" version="1.1.2" baseVersion="1.1.2" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_base_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_base_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_base_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765235)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_base_22_0_1.xml	(date 1747308765235)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-base:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-base" version="22.0.1" baseVersion="22.0.1" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml b/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml
+new file mode 100644
+--- /dev/null	(date 1747308765234)
++++ b/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml	(date 1747308765234)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.kordamp.bootstrapfx" artifactId="bootstrapfx-core" version="0.4.0" baseVersion="0.4.0" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/kordamp/bootstrapfx/bootstrapfx-core/0.4.0/bootstrapfx-core-0.4.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/kordamp/bootstrapfx/bootstrapfx-core/0.4.0/bootstrapfx-core-0.4.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/kordamp/bootstrapfx/bootstrapfx-core/0.4.0/bootstrapfx-core-0.4.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml
+new file mode 100644
+--- /dev/null	(date 1747308765232)
++++ b/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml	(date 1747308765232)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.platform:junit-platform-engine:1.10.2" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.junit.platform" artifactId="junit-platform-engine" version="1.10.2" baseVersion="1.10.2" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml
+new file mode 100644
+--- /dev/null	(date 1747308765231)
++++ b/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml	(date 1747308765231)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.platform:junit-platform-commons:1.10.2" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.junit.platform" artifactId="junit-platform-commons" version="1.10.2" baseVersion="1.10.2" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_fxml_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_fxml_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_fxml_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765240)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_fxml_22_0_1.xml	(date 1747308765240)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-fxml:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-fxml" version="22.0.1" baseVersion="22.0.1" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_controls_win_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_controls_win_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_controls_win_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765239)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_controls_win_22_0_1.xml	(date 1747308765239)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-controls:win:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-controls" version="22.0.1" baseVersion="22.0.1" classifier="win" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-win.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_controls_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_controls_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_controls_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765238)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_controls_22_0_1.xml	(date 1747308765238)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-controls:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-controls" version="22.0.1" baseVersion="22.0.1" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_base_win_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_base_win_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_base_win_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765236)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_base_win_22_0_1.xml	(date 1747308765236)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-base:win:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-base" version="22.0.1" baseVersion="22.0.1" classifier="win" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-win.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_media_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_media_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_media_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765247)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_media_22_0_1.xml	(date 1747308765247)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-media:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-media" version="22.0.1" baseVersion="22.0.1" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_graphics_win_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765245)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_22_0_1.xml	(date 1747308765245)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-graphics:win:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-graphics" version="22.0.1" baseVersion="22.0.1" classifier="win" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-win.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_graphics_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_graphics_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_graphics_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765243)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_graphics_22_0_1.xml	(date 1747308765243)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-graphics:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-graphics" version="22.0.1" baseVersion="22.0.1" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_fxml_win_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765241)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_22_0_1.xml	(date 1747308765241)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-fxml:win:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-fxml" version="22.0.1" baseVersion="22.0.1" classifier="win" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-win.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_36.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_36.xml b/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_36.xml
+new file mode 100644
+--- /dev/null	(date 1747308765254)
++++ b/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_36.xml	(date 1747308765254)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.slf4j:slf4j-simple:1.7.36" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.slf4j" artifactId="slf4j-simple" version="1.7.36" baseVersion="1.7.36" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml b/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml
+new file mode 100644
+--- /dev/null	(date 1747308765252)
++++ b/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml	(date 1747308765252)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.slf4j:slf4j-api:1.7.36" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.slf4j" artifactId="slf4j-api" version="1.7.36" baseVersion="1.7.36" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml b/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml
+new file mode 100644
+--- /dev/null	(date 1747308765250)
++++ b/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml	(date 1747308765250)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.opentest4j:opentest4j:1.3.0" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.opentest4j" artifactId="opentest4j" version="1.3.0" baseVersion="1.3.0" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_media_win_22_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_media_win_22_0_1.xml b/.idea/libraries/Maven__org_openjfx_javafx_media_win_22_0_1.xml
+new file mode 100644
+--- /dev/null	(date 1747308765249)
++++ b/.idea/libraries/Maven__org_openjfx_javafx_media_win_22_0_1.xml	(date 1747308765249)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Maven: org.openjfx:javafx-media:win:22.0.1" type="java-imported" external-system-id="Maven">
++    <properties groupId="org.openjfx" artifactId="javafx-media" version="22.0.1" baseVersion="22.0.1" classifier="win" />
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1-win.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-media/22.0.1/javafx-media-22.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
