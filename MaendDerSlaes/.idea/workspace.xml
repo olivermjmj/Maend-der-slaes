@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/Borgen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/CITYCENTER.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/Colosseum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/Game_Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/MaenDerSlaasForside.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/SMED.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/SkabDinKrigerScene.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/TræningsArena.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/VælgDinArena.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/statsogegenskaber.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/music/mainMenu_Music.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/music/startMenu_Music.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/musicFX/AttackNoise.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/musicFX/Punch.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/musicFX/buttonPress.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/SMED.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/SMED.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/cityCenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/cityCenter.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,14 +69,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Jonas__soundManager__Fix",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",

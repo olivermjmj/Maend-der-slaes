@@ -332,7 +332,7 @@ public class Controller {
     }
 
     //Lets us view the skill points before pressing any buttons.
-    // Public instead of private
+    // This is a quick way to avoid CSS, even tho we should have used that.
     @FXML
     public void initialize() {
         if (root != null) {
