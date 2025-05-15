@@ -1,5 +1,8 @@
 package com.example.maendderslaes.util;
 
+import com.example.maendderslaes.Character;
+import com.example.maendderslaes.Player;
+
 import java.io.File;
 import java.sql.*;
 
@@ -7,6 +10,9 @@ public class DBManager {
     private Connection conn;
     private String dbPath = "data/database/userData.db";
     private String url = "jdbc:sqlite:" + dbPath;
+    private String activeUser;
+
+    Character player;
 
     public boolean doesUserExist(String name, String password) {
 
@@ -23,6 +29,7 @@ public class DBManager {
 
                 if(DBName.equals(name) && DBPassword.equals(password)) {
 
+                    this.activeUser = name;
                     return true;
                 }
             }
@@ -36,14 +43,16 @@ public class DBManager {
     public void addUserToDB(String name, String password) {
 
         if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
-            String sql = "INSERT INTO Users (name, password) VALUES (?, ?)";
-
+            String sql = "INSERT INTO Users (name, password, level, weapon) VALUES (?, ?, ?, ?)";
+            int startLevel = 1;
             try {
 
                 PreparedStatement stmt = conn.prepareStatement(sql);
 
                 stmt.setString(1, name);
                 stmt.setString(2, password);
+                stmt.setInt(3, startLevel);
+                stmt.setString(4,null);
                 stmt.executeUpdate();
 
             } catch (SQLException e) {
@@ -72,7 +81,11 @@ public class DBManager {
                      CREATE TABLE IF NOT EXISTS Users(
                          id INTEGER PRIMARY KEY AUTOINCREMENT,
                          name VARCHAR(12) NOT NULL UNIQUE,
-                         password VARCHAR(12) NOT NULL
+                         password VARCHAR(12) NOT NULL,
+                         level INTEGER NOT NULL,
+                         health INTEGER,
+                         weapon VARCHAR(24) NOT NULL,
+                         money INTEGER
                      );
                      """;
             stmt.execute(sql);
@@ -91,4 +104,56 @@ public class DBManager {
             System.out.println(e.getMessage());
         }
     }
+
+    public void saveUserData(int level, int health, String weapon, int money, String activeUser) {
+
+        if(activeUser == null) {
+            System.out.println("No user is logged in.");
+            return;
+        }
+
+        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ? WHERE name = ?";
+
+        try {
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, level);
+            stmt.setInt(2, health);
+            stmt.setString(3,weapon);
+            stmt.setInt(4, 50);
+            stmt.setString(5, activeUser);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Failed to update user because: " + e.getMessage());
+        }
+    }
+
+    public void saveUserWeapon(String weapon) {
+        if(activeUser == null) {
+            System.out.println("No user is logged in.");
+            return;
+        }
+
+        String sql = "UPDATE Users SET weapon = ? WHERE name = ?";
+
+        try {
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, weapon);
+            stmt.setString(2, activeUser);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Failed to update user weapon because: " + e.getMessage());
+        }
+    }
+
+    public String getActiveUser() {
+
+        return activeUser;
+    }
+
 }

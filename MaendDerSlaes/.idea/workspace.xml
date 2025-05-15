@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Updated soundmanager to handle background music and soundFX">
-      <change beforePath="$PROJECT_DIR$/data/music/startMenu_Music.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/musicFX/buttonPress.wav" beforeDir="false" afterPath="$PROJECT_DIR$/data/musicFX/buttonPress.wav" afterDir="false" />
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Still developing the shop">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Casino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Oliver_MergeBranch" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -70,14 +73,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Oliver__Battle__Implementation&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
@@ -116,6 +119,8 @@
       <workItem from="1746696828517" duration="11703000" />
       <workItem from="1746299195231" duration="634000" />
       <workItem from="1747040872098" duration="4120000" />
+      <workItem from="1747213213987" duration="7861000" />
+      <workItem from="1747244192212" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming and creating files.">
       <option name="closed" value="true" />
@@ -237,7 +242,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747170761701</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="small update">
+      <option name="closed" value="true" />
+      <created>1747213404747</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1747213404747</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Prepared for a battle class">
+      <option name="closed" value="true" />
+      <created>1747216740311</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1747216740311</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Preparing for shop.">
+      <option name="closed" value="true" />
+      <created>1747217486854</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1747217486854</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +286,10 @@
     <MESSAGE value="Removed some useless info in Main." />
     <MESSAGE value="Logo for the game" />
     <MESSAGE value="Updated soundmanager to handle background music and soundFX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated soundmanager to handle background music and soundFX" />
+    <MESSAGE value="small update" />
+    <MESSAGE value="Prepared for a battle class" />
+    <MESSAGE value="Preparing for shop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparing for shop." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -11,9 +11,7 @@ public class SoundManager {
     private MediaPlayer musicPlayer;
 
     public void playSound(String filePath) {
-
         try {
-
             if (effectPlayer != null && effectPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
                 effectPlayer.stop();
             }
@@ -21,16 +19,13 @@ public class SoundManager {
             Media sound = new Media(new File(filePath).toURI().toString());
             effectPlayer = new MediaPlayer(sound);
             effectPlayer.play();
-
         } catch (Exception e) {
             System.out.println("Error couldn't play the sound effect: " + e.getMessage());
         }
     }
 
     public void playSoundOnRepeat(String filePath) {
-
         try {
-
             if (musicPlayer != null && musicPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
                 musicPlayer.stop();
             }
@@ -39,14 +34,12 @@ public class SoundManager {
             musicPlayer = new MediaPlayer(music);
             musicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             musicPlayer.play();
-
         } catch (Exception e) {
             System.out.println("Error couldn't play the background music: " + e.getMessage());
         }
     }
 
     public void stopBackgroundMusic() {
-
         if (musicPlayer != null) {
             musicPlayer.stop();
         }
