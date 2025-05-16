@@ -1,62 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.StackPane?>
-
 <?import javafx.scene.layout.AnchorPane?>
-<StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.maendderslaes.Controller"
-           maxWidth="Infinity"
-           maxHeight="Infinity"
-           style="-fx-background-color: black;">
 
-    <VBox alignment="CENTER" spacing="20.0"
-          maxWidth="Infinity"
-          maxHeight="Infinity"
-          style="-fx-background-image: url('file:data/images/VælgDinArena.png');
-                 -fx-background-repeat: stretch;
-                 -fx-background-size: 100% 100%;
-                 -fx-background-position: center center;">
-    </VBox>
-    <VBox alignment="BOTTOM_RIGHT">
-        <padding>
-            <Insets top="900" left="20" right="20"/>
-        </padding>
-        <Button onAction="#goToCityCenter" text="Tilbage til byen"
-                style="-fx-background-color: #FFD700;
-                           -fx-text-fill: #000000;
-                           -fx-font-family: 'Comic Sans MS';
-                           -fx-font-size: 14;
-                           -fx-font-weight: bold;
-                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-                           -fx-min-width: 100;
-                           -fx-min-height: 30;"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.maendderslaes.Controller"
+            style="-fx-background-image: url('file:data/images/VælgDinArena.png');
+                   -fx-background-repeat: stretch;
+                   -fx-background-size: 100% 100%;
+                   -fx-background-position: center center;
+                   -fx-background-color: black;">
 
-    </VBox>
+    <Button onAction="#goToTræningsArena"
+            style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;
+                   -fx-cursor: hand;"
+            prefWidth="550"
+            prefHeight="675"
+            AnchorPane.leftAnchor="90.0"
+            AnchorPane.topAnchor="250.0"/>
 
-    <AnchorPane maxWidth="Infinity" maxHeight="Infinity">
-        <Button onAction="#goToTræningsArena"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.leftAnchor="90.0"
-                AnchorPane.topAnchor="250.0"/>
-        <Button onAction="#goToBorgen"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.leftAnchor="660.0"
-                AnchorPane.rightAnchor="660.0"
-                AnchorPane.topAnchor="250.0"/>
-        <Button onAction="#goToColosseum"
-                style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0"
-                prefWidth="550"
-                prefHeight="675"
-                AnchorPane.rightAnchor="90.0"
-                AnchorPane.topAnchor="250.0"/>
+    <Button onAction="#goToBorgen"
+            style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;
+                   -fx-cursor: hand;"
+            prefWidth="550"
+            prefHeight="675"
+            AnchorPane.leftAnchor="660.0"
+            AnchorPane.rightAnchor="660.0"
+            AnchorPane.topAnchor="250.0"/>
 
-    </AnchorPane>
+    <Button onAction="#goToColosseum"
+            style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;
+                   -fx-cursor: hand;"
+            prefWidth="550"
+            prefHeight="675"
+            AnchorPane.rightAnchor="90.0"
+            AnchorPane.topAnchor="250.0"/>
 
-</StackPane>
+    <Button onAction="#goToCityCenter"
+            text="Tilbage til byen"
+            style="-fx-background-color: #FFD700;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 14;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                   -fx-min-width: 100;
+                   -fx-min-height: 30;"
+            AnchorPane.rightAnchor="20.0"
+            AnchorPane.bottomAnchor="20.0"/>
+
+</AnchorPane>

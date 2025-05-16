@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.maendderslaes.Controller">
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.maendderslaes.Controller"
+            style="-fx-background-image: url('file:data/images/statsogegenskaber.png');
+                   -fx-background-repeat: stretch;
+                   -fx-background-size: 100% 100%;
+                   -fx-background-position: center center;
+                   -fx-background-color: black;">
 
-    <VBox alignment="CENTER" spacing="20.0"
-          style="-fx-background-image: url('file:data/images/statsogegenskaber.png');
-                 -fx-background-repeat: no-repeat;
-                 -fx-background-size: cover;
-                 -fx-background-position: center center;">
+    <Button onAction="#goToCityCenter"
+            text="Tilbage til byen"
+            style="-fx-background-color: #FFD700;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 14;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                   -fx-min-width: 100;
+                   -fx-min-height: 30;"
+            AnchorPane.rightAnchor="20.0"
+            AnchorPane.bottomAnchor="20.0"/>
 
-        <VBox alignment="BOTTOM_RIGHT">
-            <padding>
-                <Insets top="900" left="20" right="20"/>
-            </padding>
-            <Button onAction="#goToCityCenter" text="Tilbage til byen"
-                    style="-fx-background-color: #FFD700;
-                           -fx-text-fill: #000000;
-                           -fx-font-family: 'Comic Sans MS';
-                           -fx-font-size: 14;
-                           -fx-font-weight: bold;
-                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-                           -fx-min-width: 100;
-                           -fx-min-height: 30;"/>
-        </VBox>
-    </VBox>
-</StackPane>
+</AnchorPane>

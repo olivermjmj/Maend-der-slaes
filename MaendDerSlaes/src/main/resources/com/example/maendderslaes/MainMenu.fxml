@@ -1,85 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.maendderslaes.Controller"
-           maxWidth="Infinity"
-           maxHeight="Infinity"
-           style="-fx-background-color: black;">
+<AnchorPane xmlns:fx="[http://javafx.com/fxml](http://javafx.com/fxml)" fx:controller="com.example.maendderslaes.Controller" style="-fx-background-image: url('file:data/images/MaenDerSlaasForside.png'); -fx-background-repeat: stretch; -fx-background-size: 100% 100%; -fx-background-position: center center; -fx-background-color: black;">
+    <VBox spacing="10.0" alignment="CENTER"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="120.0">
 
-    <VBox alignment="CENTER" spacing="20.0"
-          maxWidth="Infinity"
-          maxHeight="Infinity"
-          style="-fx-background-image: url('file:data/images/MaenDerSlaasForside.png');
-                 -fx-background-repeat: stretch;
-                 -fx-background-size: 100% 100%;
-                 -fx-background-position: center center;">
+        <TextField fx:id="usernameField"
+                   promptText="Brugernavn"
+                   maxWidth="200"
+                   style="-fx-min-height: 20;
+                      -fx-max-height: 30;
+                      -fx-font-family: 'Comic Sans MS';
+                      -fx-font-size: 14;
+                      -fx-background-color: #2A2A2A;
+                      -fx-text-fill: #FFD700;
+                      -fx-prompt-text-fill: #FFD700;
+                      -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);"/>
 
-        <!-- Login felter -->
-        <VBox alignment="CENTER" spacing="10.0">
-            <padding>
-                <Insets top="100.0"/>
-            </padding>
-
-            <TextField fx:id="usernameField"
-                       promptText="Brugernavn"
+        <PasswordField fx:id="passwordField"
+                       promptText="Adgangskode"
                        maxWidth="200"
                        style="-fx-min-height: 20;
-                            -fx-max-height: 30;
-                            -fx-font-family: 'Comic Sans MS';
-                            -fx-font-size: 14;
-                            -fx-background-color: #2A2A2A;
-                            -fx-text-fill: #FFD700;
-                            -fx-prompt-text-fill: #FFD700;
-                            -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);"/>
-            <PasswordField fx:id="passwordField"
-                           promptText="Adgangskode"
-                           maxWidth="200"
-                           style="-fx-min-height: 20;
-                               -fx-max-height: 30;
-                               -fx-font-family: 'Comic Sans MS';
-                               -fx-font-size: 14;
-                               -fx-background-color: #2A2A2A;
-                               -fx-text-fill: #FFD700;
-                               -fx-prompt-text-fill: #FFD700;
-                               -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);"/>
-        </VBox>
-
-        <!-- Knapper -->
-        <VBox alignment="CENTER" spacing="20.0">
-            <Button onAction="#login" text="LOGIN"
-                    maxWidth="200"
-                    style="-fx-background-color: #FFD700;
-                           -fx-text-fill: #000000;
-                           -fx-font-family: 'Comic Sans MS';
-                           -fx-font-size: 18;
-                           -fx-font-weight: bold;
-                           -fx-min-height: 40;
-                           -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);
-                           -fx-border-color: #DAA520;
-                           -fx-border-width: 2;
-                           -fx-background-radius: 5;
-                           -fx-border-radius: 5;"/>
-            <Button onAction="#register" text="REGISTER"
-                    maxWidth="200"
-                    style="-fx-background-color: #FFD700;
-                           -fx-text-fill: #000000;
-                           -fx-font-family: 'Comic Sans MS';
-                           -fx-font-size: 14;
-                           -fx-font-weight: bold;
-                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);"/>
-            <Button onAction="#guestLogin" text="PLAY AS GUEST"
-                    maxWidth="200"
-                    style="-fx-background-color: #FFD700;
-                           -fx-text-fill: #000000;
-                           -fx-font-family: 'Comic Sans MS';
-                           -fx-font-size: 14;
-                           -fx-font-weight: bold;
-                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);"/>
-        </VBox>
+                          -fx-max-height: 30;
+                          -fx-font-family: 'Comic Sans MS';
+                          -fx-font-size: 14;
+                          -fx-background-color: #2A2A2A;
+                          -fx-text-fill: #FFD700;
+                          -fx-prompt-text-fill: #FFD700;
+                          -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.6), 10, 0, 0, 0);"/>
     </VBox>
-</StackPane>
+
+    <VBox spacing="20.0" alignment="CENTER"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="220.0">
+
+        <Button onAction="#login"
+                text="LOGIN"
+                maxWidth="200"
+                style="-fx-background-color: #FFD700;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 18;
+                   -fx-font-weight: bold;
+                   -fx-min-height: 40;
+                   -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);
+                   -fx-border-color: #DAA520;
+                   -fx-border-width: 2;
+                   -fx-background-radius: 5;
+                   -fx-border-radius: 5;"/>
+
+        <Button onAction="#register"
+                text="REGISTER"
+                maxWidth="200"
+                style="-fx-background-color: #FFD700;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 14;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);"/>
+
+        <Button onAction="#guestLogin"
+                text="PLAY AS GUEST"
+                maxWidth="200"
+                style="-fx-background-color: #FFD700;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 14;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);"/>
+    </VBox>
+</AnchorPane>

@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="Ny smed scene og nye knapper i city center">
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
+    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="rykket vbox over Anchorpane så den ikke overwriter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/data/images/Arena1.png" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/data/images/TræningsArena.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/data/images/Arena2.png" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/data/images/Borgen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/data/images/Arena3.png" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/data/images/Colosseum.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DinoSceneChange&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor": "Run",
+    "Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "DinoSceneChange",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -94,6 +101,7 @@
       <workItem from="1746690999046" duration="174000" />
       <workItem from="1747040795990" duration="76000" />
       <workItem from="1747040903553" duration="1184000" />
+      <workItem from="1747380376650" duration="5572000" />
     </task>
     <task id="LOCAL-00001" summary="Ny smed scene og nye knapper i city center">
       <option name="closed" value="true" />
@@ -103,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747314912422</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implementering af alle 3 arenaer, både controller og knapfunktionerne">
+      <option name="closed" value="true" />
+      <created>1747328173634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747328173634</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rykket vbox over Anchorpane så den ikke overwriter">
+      <option name="closed" value="true" />
+      <created>1747328970771</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747328970771</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ny smed scene og nye knapper i city center" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ny smed scene og nye knapper i city center" />
+    <MESSAGE value="implementering af alle 3 arenaer, både controller og knapfunktionerne" />
+    <MESSAGE value="rykket vbox over Anchorpane så den ikke overwriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="rykket vbox over Anchorpane så den ikke overwriter" />
   </component>
 </project>
