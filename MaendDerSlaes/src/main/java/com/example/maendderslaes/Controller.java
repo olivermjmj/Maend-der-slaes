@@ -26,6 +26,46 @@ public class Controller {
     private final DBManager database = new DBManager();
     private SoundManager sound = new SoundManager();
 
+    private Player player = new Player(100, 20, 5, 0, 50, 1);
+    private Enemy enemy = new Enemy(80, 15, 3, 0, 20, 1);
+
+    @FXML
+    protected void lightAttack() {
+        handleAttack("light");
+    }
+
+    @FXML
+    protected void mediumAttack() {
+        handleAttack("medium");
+    }
+
+    @FXML void heavyAttack() {
+        handleAttack("heavy");
+    }
+
+    private void handleAttack(String attackType) {
+        String playersName = database.getActiveUser();
+
+        if(database.getActiveUser() == null) {
+            playersName = "Guest";
+        }
+
+        player.tryToAttack(enemy, attackType);
+
+        if(enemy.getHP() <= 0 ) {
+            int oldMoneyAmount = player.getMoney();
+            player.setMoney(player.getMoney() + enemy.getMoney());
+            System.out.println(playersName + ", won the battle. Your balance has gone from " + oldMoneyAmount + " to " + player.getMoney());
+            return;
+        }
+
+        enemy.tryToAttack(player, null);
+
+        if(player.getHP() <= 0) {
+            System.out.println(playersName + ", has lost");
+        }
+    }
+
     private void switchView(ActionEvent event, String fxmlPath) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent newRoot = fxmlLoader.load();

@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Enemy extends Character{
 
-    Random random;
-
     public Enemy(int health, int strength, int defence, int attack, int money, int level) {
         super(health, strength, defence, attack, money, level);
     }

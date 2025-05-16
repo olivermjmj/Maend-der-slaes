@@ -6,9 +6,7 @@ import java.util.Random;
 
 public class Player extends Character{
 
-    Random random;
-
-    public Player(int health, int strength, int defence, Random random, int attack, int money, int level) {
+    public Player(int health, int strength, int defence, int attack, int money, int level) {
         super(health, strength, defence, attack, money, level);
     }
 
@@ -88,18 +86,6 @@ public class Player extends Character{
         if(money >= amount) {
             money -= amount;
         }
-    }
-
-    public boolean buyItem(Player player, Item item, DBManager database) {
-
-        //Build it so that a user can't purchase the weapon he/she has equipped
-
-        if(player.getMoney() >= item.getPrice()) {
-            player.spendMoney(item.getPrice());
-            database.saveUserWeapon(item.getName());
-            return true;
-        }
-        return false;
     }
 
 }

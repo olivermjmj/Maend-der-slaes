@@ -11,6 +11,10 @@
                    -fx-background-position: center center;
                    -fx-background-color: black;">
 
+    <Button text="Light Attack" onAction="#lightAttack" layoutX="100" layoutY="600"/>
+    <Button text="Medium Attack" onAction="#mediumAttack" layoutX="250" layoutY="600"/>
+    <Button text="Heavy Attack" onAction="#heavyAttack" layoutX="400" layoutY="600"/>
+
     <Button onAction="#goToCityCenter"
             text="CONTINUE TO CITY CENTER"
             style="-fx-background-color: #FFD700;

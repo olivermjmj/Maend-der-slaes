@@ -9,6 +9,7 @@ public abstract class Character {
     protected int attack;
     protected int money;
     protected int level;
+    protected Random random;
 
     public Character(int health, int strength, int defence, int attack, int money, int level) {
         this.health = health;
@@ -17,6 +18,7 @@ public abstract class Character {
         this.attack = attack;
         this.money = money;
         this.level = level;
+        this.random = new Random();
     }
 
     public abstract void tryToAttack(Character target, String choice);
