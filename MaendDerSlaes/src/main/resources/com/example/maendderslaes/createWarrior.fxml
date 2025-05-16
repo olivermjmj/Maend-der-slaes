@@ -5,26 +5,28 @@
 
 <AnchorPane xmlns:fx="[http://javafx.com/fxml](http://javafx.com/fxml)" fx:controller="com.example.maendderslaes.Controller" style="-fx-background-image: url('file:data/images/SkabDinKrigerScene.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover; -fx-background-position: center center; -fx-background-color: black;">
     <Button onAction="#goBack"
-            text="Return to MainMenu"
+            text="GO BACK"
             style="-fx-background-color: #FFD700;
+               -fx-cursor: hand;
                -fx-text-fill: #000000;
                -fx-font-family: 'Comic Sans MS';
-               -fx-font-size: 14;
+               -fx-font-size: 15;
                -fx-font-weight: bold;
                -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-               -fx-min-width: 100;
+               -fx-min-width: 70;
                -fx-min-height: 30;"
-            AnchorPane.rightAnchor="150.0"
-            AnchorPane.bottomAnchor="20.0"/>
+            AnchorPane.rightAnchor="50.0"
+            AnchorPane.bottomAnchor="100.0"/>
 
     <Button onAction="#goToCityCenter"
             text="GO TO CITY CENTER"
             style="-fx-background-color: #FFD700;
+               -fx-cursor: hand;
                -fx-text-fill: #000000;
                -fx-font-family: 'Comic Sans MS';
                -fx-font-size: 18;
                -fx-font-weight: bold;
-               -fx-min-height: 40;
+               -fx-min-height: 30;
                -fx-min-width: 200;
                -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);
                -fx-border-color: #000000;
@@ -32,5 +34,5 @@
                -fx-background-radius: 5;
                -fx-border-radius: 5;"
             AnchorPane.rightAnchor="525.0"
-            AnchorPane.bottomAnchor="30.0"/>
+            AnchorPane.bottomAnchor="100.0"/>
 </AnchorPane>

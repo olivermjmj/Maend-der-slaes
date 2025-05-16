@@ -12,7 +12,7 @@
                    -fx-background-color: black;">
 
     <Button onAction="#goToSmed"
-            style="-fx-background-color: rgba(179,5,237,0.3);
+            style="-fx-background-color: rgba(179,5,237,0.3);  -fx-opacity: 0;
                    -fx-cursor: hand;"
             prefWidth="360"
             prefHeight="135"
@@ -20,7 +20,7 @@
             AnchorPane.topAnchor="300.0"/>
 
     <Button onAction="#goToStatsOgEgenskaber"
-            style="-fx-background-color: rgba(179,5,237,0.3);
+            style="-fx-background-color: rgba(179,5,237,0.3);  -fx-opacity: 0;
                    -fx-cursor: hand;"
             prefWidth="360"
             prefHeight="135"
@@ -28,7 +28,7 @@
             AnchorPane.topAnchor="400.0"/>
 
     <Button onAction="#goToArenaMenu"
-            style="-fx-background-color: rgba(179,5,237,0.3);
+            style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;
                    -fx-cursor: hand;"
             prefWidth="800"
             prefHeight="211"
@@ -36,18 +36,18 @@
             AnchorPane.rightAnchor="600.0"
             AnchorPane.topAnchor="120.0"/>
 
-    <Button onAction="#goBack"
-            text="Go Back To Main Menu"
+    <Button onAction="#goBackToCharacterCreation"
+            text="GO BACK"
             style="-fx-background-color: #FFD700;
-                   -fx-cursor: hand;
-                   -fx-text-fill: #000000;
-                   -fx-font-family: 'Comic Sans MS';
-                   -fx-font-size: 14;
-                   -fx-font-weight: bold;
-                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-                   -fx-pref-width: 100;
-                   -fx-pref-height: 30;"
-            AnchorPane.rightAnchor="60.0"
-            AnchorPane.topAnchor="500.0"/>
+               -fx-cursor: hand;
+               -fx-text-fill: #000000;
+               -fx-font-family: 'Comic Sans MS';
+               -fx-font-size: 15;
+               -fx-font-weight: bold;
+               -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+               -fx-min-width: 70;
+               -fx-min-height: 30;"
+            AnchorPane.rightAnchor="50.0"
+            AnchorPane.bottomAnchor="80.0"/>
 
 </AnchorPane>

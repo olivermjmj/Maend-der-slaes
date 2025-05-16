@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="rykket vbox over Anchorpane så den ikke overwriter">
+    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
@@ -101,7 +97,7 @@
       <workItem from="1746690999046" duration="174000" />
       <workItem from="1747040795990" duration="76000" />
       <workItem from="1747040903553" duration="1184000" />
-      <workItem from="1747380376650" duration="5572000" />
+      <workItem from="1747380376650" duration="6842000" />
     </task>
     <task id="LOCAL-00001" summary="Ny smed scene og nye knapper i city center">
       <option name="closed" value="true" />
@@ -127,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747328970771</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory.">
+      <option name="closed" value="true" />
+      <created>1747390421034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747390421034</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +141,7 @@
     <MESSAGE value="Ny smed scene og nye knapper i city center" />
     <MESSAGE value="implementering af alle 3 arenaer, både controller og knapfunktionerne" />
     <MESSAGE value="rykket vbox over Anchorpane så den ikke overwriter" />
-    <option name="LAST_COMMIT_MESSAGE" value="rykket vbox over Anchorpane så den ikke overwriter" />
+    <MESSAGE value="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory." />
   </component>
 </project>
