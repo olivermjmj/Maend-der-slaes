@@ -1,6 +1,7 @@
 package com.example.maendderslaes;
 
-import com.example.maendderslaes.util.DBManager;
+
+import com.example.maendderslaes.util.SoundManager;
 
 import java.util.Random;
 
@@ -12,6 +13,7 @@ public class Player extends Character{
 
     @Override
     public void tryToAttack(Character target, String choice) {
+
 
         int damage = 0;
 

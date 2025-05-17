@@ -7,41 +7,44 @@ import java.io.File;
 
 public class SoundManager {
 
-    private MediaPlayer effectPlayer;
     private MediaPlayer musicPlayer;
 
     public void playSound(String filePath) {
         try {
-            if (effectPlayer != null && effectPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-                effectPlayer.stop();
-            }
-
             Media sound = new Media(new File(filePath).toURI().toString());
-            effectPlayer = new MediaPlayer(sound);
+            MediaPlayer effectPlayer = new MediaPlayer(sound);
+
             effectPlayer.play();
+
+            //Cleans up after the audio is done.
+            effectPlayer.setOnEndOfMedia(() -> {
+                effectPlayer.dispose();
+            });
+
         } catch (Exception e) {
-            System.out.println("Error couldn't play the sound effect: " + e.getMessage());
+            System.out.println("Error: Couldn't play the sound effect: " + e.getMessage());
         }
     }
 
     public void playSoundOnRepeat(String filePath) {
         try {
-            if (musicPlayer != null && musicPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-                musicPlayer.stop();
+            if (this.musicPlayer != null) {
+                this.musicPlayer.stop();
             }
 
             Media music = new Media(new File(filePath).toURI().toString());
-            musicPlayer = new MediaPlayer(music);
-            musicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-            musicPlayer.play();
+            this.musicPlayer = new MediaPlayer(music);
+            this.musicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            this.musicPlayer.play();
+
         } catch (Exception e) {
-            System.out.println("Error couldn't play the background music: " + e.getMessage());
+            System.out.println("Error: Couldn't play the background music: " + e.getMessage());
         }
     }
 
     public void stopBackgroundMusic() {
-        if (musicPlayer != null) {
-            musicPlayer.stop();
+        if (this.musicPlayer != null) {
+            this.musicPlayer.stop();
         }
     }
 }
