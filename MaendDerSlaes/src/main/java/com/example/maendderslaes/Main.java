@@ -1,5 +1,6 @@
 package com.example.maendderslaes;
 
+import com.example.maendderslaes.util.DBManager;
 import com.example.maendderslaes.util.SoundManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
+
+    DBManager database = new DBManager();
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
@@ -31,7 +35,6 @@ public class Main extends Application {
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
-
         stage.setScene(scene);
         stage.show();
     }

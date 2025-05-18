@@ -10,13 +10,13 @@ public class DBManager {
     private Connection conn;
     private String dbPath = "data/database/userData.db";
     private String url = "jdbc:sqlite:" + dbPath;
-    private String activeUser;
+    private static String activeUser;
 
     Character player;
 
     public boolean doesUserExist(String name, String password) {
 
-        String sql = "SELECT (name, password) FROM Users";
+        String sql = "SELECT name, password FROM Users";
 
         try {
             Statement statement = conn.createStatement();
@@ -52,7 +52,7 @@ public class DBManager {
                 stmt.setString(1, name);
                 stmt.setString(2, password);
                 stmt.setInt(3, startLevel);
-                stmt.setString(4,null);
+                stmt.setString(4,"NONE");
                 stmt.executeUpdate();
 
             } catch (SQLException e) {
@@ -130,6 +130,41 @@ public class DBManager {
         }
     }
 
+
+    public void saveUserGold(int moneyAmount) {
+
+        if(activeUser == null) {
+            System.out.println("No user is logged in.");
+            return;
+        }
+
+        String sql = "UPDATE Users SET money = ? WHERE name = ?";
+
+        try {
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, moneyAmount);
+        } catch (SQLException e) {
+            System.out.println("Failed to save users gold" + e.getMessage());
+        }
+    }
+
+    public int getUserGold() {
+
+        String sql = "SELECT money FROM Users";
+
+        try {
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            return rs.getInt("money");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void saveUserWeapon(String weapon) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
@@ -151,9 +186,14 @@ public class DBManager {
         }
     }
 
-    public String getActiveUser() {
+    public static String getActiveUser() {
 
         return activeUser;
+    }
+
+    public static void setActiveUser(String user) {
+
+        activeUser = user;
     }
 
 }

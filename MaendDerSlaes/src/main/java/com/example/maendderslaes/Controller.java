@@ -44,9 +44,9 @@ public class Controller {
     }
 
     private void handleAttack(String attackType) {
-        String playersName = database.getActiveUser();
+        String playersName = DBManager.getActiveUser();
 
-        if(database.getActiveUser() == null) {
+        if(playersName == null) {
             playersName = "Guest";
         }
 
@@ -119,7 +119,7 @@ public class Controller {
     }
 
     @FXML
-    protected void login() {
+    protected void login(ActionEvent event) throws IOException {
         sound.playSound("data/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
@@ -127,7 +127,7 @@ public class Controller {
         database.ensureDatabaseExists();
 
         if(database.doesUserExist(username, password)) {
-
+            switchView(event, "createWarrior.fxml");
         } else {
             System.out.println("No such user exists.");
         }

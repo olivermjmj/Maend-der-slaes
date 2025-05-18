@@ -27,4 +27,11 @@ public class GameService {
         return false;
     }
 
+    public int addBalance(int enemyWorthInMoney) {
+
+        player.setMoney(player.getMoney() + enemyWorthInMoney);
+
+        return 0;
+    }
+
 }
