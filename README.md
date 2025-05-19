@@ -1,54 +1,48 @@
 # Mænd der slås
 
-*Mænd der slås* er et digitalt kampspil, hvor brugeren skaber og udvikler sin egen kriger for at deltage i kampe mod andre krigere. Spillet er inspireret af klassiske arena-kampspil som *Swords and Sandals*, hvor karakterudvikling og strategi er i fokus.
+- "Mænd der slås" er et digitalt kampspil, hvor brugeren skaber og udvikler sin egen kriger for at deltage i kampe mod andre krigere. Spillet tager inspiration fra klassiske arena-kampspil, som Swords and Sandals, hvor karakterudvikling og strategi er i fokus.
 
 ## Formål
 
-Formålet med spillet er at give spilleren mulighed for at skabe en personlig kriger, tilpasse den med forskellige egenskaber og bruge krigeren i en kamparena. Spilleren kan konkurrere mod computergenererede modstandere i turbaserede kampe.
+- Formålet med spillet er at give spilleren mulighed for at skabe en personlig kriger, tilpasse den med forskellige egenskaber og bruge krigeren i en kamparena. Spilleren kan konkurrere mod computergenererede modstandere.
 
-## Brugertyper
+## BrugerTyper
 
-Spillet understøtter følgende brugertyper:
-
-- **Registrerede brugere**  
-  Brugere, der opretter en konto og får gemt deres data permanent.
-
-- **Gæstebrugere**  
-  Brugere, der spiller uden at oprette konto. Deres data gemmes ikke permanent.
+- Spillet understøtter følgende brugertyper:
+  - Registrerede brugere: Brugere der opretter en personlig konto.
+  - Gæstebrugere: Brugere der spiller uden at oprette en konto. Disse brugeres data gemmes ikke permanent.
 
 ## Funktionalitet
 
-### Brugerhåndtering
+### BrugerHåndtering
 
-- Oprette en konto med brugernavn og adgangskode.
-- Logge ind med eksisterende konto.
-- Spille som gæst uden at gemme data.
+- Brugeren skal kunne oprette en konto ved at angive nødvendige oplysninger som brugernavn og adgangskode.
+- Brugeren skal kunne logge ind med en eksisterende konto.
+- Brugeren skal kunne logge ind som gæst, uden at tilknytte data til en konto.
 
-### Karakterskabelse og -håndtering
+### Karakterskabelse og håndtering
 
-- Oprette en kriger og fordele **skill points** på attributter som:
-  - Health
-  - Strength
-  - Defence
-  - Speed
-- Gemme krigeren til senere brug (kun for registrerede brugere).
+- Brugeren skal kunne fordele skill points på attributter som f.eks:
+  - Health, Strength, Defence, Speed mm.
+- Når krigeren er oprettet og egenskaber er fordelt, skal denne gemmes, så brugeren kan fortsætte senere (gælder ikke gæstebrugere).
 
 ### Kampfunktion
 
-- Starte en kamp mod en computergenereret modstander.
-- Kæmpe i et turbaseret kampsystem, hvor parterne skiftes til at angribe.
-- Afspille animation og lyd, når et angreb udføres.
+- Brugeren skal kunne starte en kamp mod en modstander.
+- Modstanderen er en computergenereret kriger:
+- Kampen skal have et enkelt turbaseret kampsystem, hvor brugeren og modstanderen skiftes til at angribe.
+- Når et angreb bliver initialiseret, så bliver der afspillet en angrebs animation, samt lyd effekt.
 
 ### Datahåndtering
 
-- Gemme og hente brugere og krigere via database.
-- Opdatere krigerens egenskaber efter kamp baseret på optjente point.
+- Oprettede brugere og deres krigere skal kunne gemmes og genindlæses ved hjælp af en databaseret løsning.
+- Brugeren skal kunne opdatere sin krigers egenskaber efter hver kamp, baseret på optjente point eller erfaring.
 
-## Fremtidige udvidelser
+## Fremtidige Udvidelser, som skuffe projekt i sommerferie.
 
-- Realtids multiplayer mod andre spillere.
-- Flere angrebstyper, fx magi og specialangreb.
-- Forbedret AI for større udfordring.
-- Bedre spilbalancering.
+- Mulighed for multiplayer mod rigtige brugere i realtid.
+- Flere typer angreb og evner, fx magi og specielle angreb.
+- Bedre AI for at gøre spillet svære.
+- Bedre balancing, så brugeren ikke er for stærk eller svag.
 - Leaderboards og statistik.
-- Brug af grafiske API’er som OpenGL til bedre ydeevne.
+- Brug af API, som OpenGL, for at anvende brugerens grafikkort.
