@@ -3,25 +3,27 @@ package com.example.maendderslaes;
 import com.example.maendderslaes.util.DBManager;
 import com.example.maendderslaes.util.SoundManager;
 import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.PauseTransition;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
+
 import java.io.IOException;
-import java.net.URL;
 
 public class Controller {
+
+    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
+    DBManager dbManager = DBManager.getInstance();
+    GameService gameService = new GameService(player, DBManager.getInstance());
+
+    private final SoundManager sound = new SoundManager();
 
     @FXML
     private TextField usernameField;
@@ -29,44 +31,50 @@ public class Controller {
     @FXML
     private PasswordField passwordField;
 
-    @FXML private ImageView characterImageView;
-
-    private Image staticImage;
-    private Image fightImage;
+    @FXML
+    private Text skillPointsLeft;
 
     @FXML
-    public void initialize() {
-        if (characterImageView == null) return;
+    private Text strengthLevel;
 
-        // antager at din working directory er projektroden, og at der findes en mappe "data/images/"
-        staticImage = new Image("file:data/images/CharacterIdle.png");
-        characterImageView.setImage(staticImage);
+    private final Character enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
+
+    @FXML
+    protected void lightAttack() {
+        handleAttack("light");
     }
 
     @FXML
-    private void onHitButtonClick() {
-        // Forudsat at disse billeder er indlæst et eller andet sted (fx i initialize)
-        Image stance1 = new Image("file:data/images/CharacterLightAttack1.png");
-        Image stance2 = new Image("file:data/images/CharacterLightAttack1.png");
-        Image stance3 = new Image("file:data/images/CharacterLightAttack2.png");
-        Image stance4 = new Image("file:data/images/CharLightAttack3.png");
-
-
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO, e -> characterImageView.setImage(stance1)),
-                new KeyFrame(Duration.seconds(0.1), e -> characterImageView.setImage(stance2)),
-                new KeyFrame(Duration.seconds(0.3), e -> characterImageView.setImage(stance3)),
-                new KeyFrame(Duration.seconds(0.5), e -> characterImageView.setImage(stance4)),
-                new KeyFrame(Duration.seconds(0.8), e -> characterImageView.setImage(staticImage))
-        );
-        timeline.play();
+    protected void mediumAttack() {
+        handleAttack("medium");
     }
 
+    @FXML void heavyAttack() {
+        handleAttack("heavy");
+    }
 
+    private void handleAttack(String attackType) {
+        String playersName = dbManager.getUserName();
 
+        if(playersName == null) {
+            playersName = "Guest";
+        }
 
-    private final DBManager database = new DBManager();
-    private SoundManager sound = new SoundManager();
+        player.tryToAttack(enemy, attackType);
+
+        if(enemy.getHP() <= 0 ) {
+            int oldMoneyAmount = player.getMoney();
+            player.setMoney(player.getMoney() + enemy.getMoney());
+            System.out.println(playersName + ", won the battle. Your balance has gone from " + oldMoneyAmount + " to " + player.getMoney());
+            return;
+        }
+
+        enemy.tryToAttack(player, null);
+
+        if(player.getHP() <= 0) {
+            System.out.println(playersName + ", has lost");
+        }
+    }
 
     private void switchView(ActionEvent event, String fxmlPath) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
@@ -110,10 +118,12 @@ public class Controller {
         String password = passwordField.getText();
 
         //Ensures that the database exists, and if not creates it.
-        database.ensureDatabaseExists();
+        dbManager.ensureDatabaseExists();
 
-        if (!database.doesUserExist(username, password)) {
-            database.addUserToDB(username, password);
+        if (!dbManager.doesUserExist(username, password)) {
+            dbManager.addUserToDB(username, password);
+            gameService.setDefaultStats();
+            gameService.savePlayerData();
             System.out.println("Welcome: " + username);
         } else {
             System.out.println("A user with the name: " + username + ". Already exists, try another name");
@@ -121,19 +131,22 @@ public class Controller {
     }
 
     @FXML
-    protected void login() {
+    protected void login(ActionEvent event) throws IOException {
+        sound.playSound("data/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        database.ensureDatabaseExists();
+        dbManager.ensureDatabaseExists();
 
-        if(database.doesUserExist(username, password)) {
+        if(dbManager.doesUserExist(username, password)) {
+            gameService.loadPlayerData();
 
+            switchView(event, "createWarrior.fxml");
         } else {
             System.out.println("No such user exists.");
         }
-
     }
+
     @FXML protected void guestLogin(ActionEvent event) throws IOException { switchView (event, "createWarrior.fxml"); }
     @FXML protected void goBack (ActionEvent event) throws IOException { switchView (event, "MainMenu.fxml"); }
     @FXML protected void goToCityCenter (ActionEvent event) throws IOException { switchView (event, "cityCenter.fxml"); }
@@ -145,4 +158,27 @@ public class Controller {
     @FXML protected void goToColosseum (ActionEvent event) throws IOException { switchView (event, "Colosseum.fxml"); }
     @FXML protected void goBackToCharacterCreation(ActionEvent event) throws IOException { switchView (event, "createWarrior.fxml"); }
 
+
+    public void setGameService(GameService gameService) {
+        this.gameService = gameService;
+    }
+
+    public GameService getGameService() {
+        return gameService;
+    }
+
+    @FXML
+    public void addStrength() {
+
+    }
+
+    @FXML
+    public void negateStrength() {
+
+    }
+
+    @FXML
+    public void addHealth() {
+
+    }
 }

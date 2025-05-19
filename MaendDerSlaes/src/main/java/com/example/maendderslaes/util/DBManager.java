@@ -7,16 +7,29 @@ import java.io.File;
 import java.sql.*;
 
 public class DBManager {
+    private static DBManager instance;
     private Connection conn;
     private String dbPath = "data/database/userData.db";
     private String url = "jdbc:sqlite:" + dbPath;
-    private String activeUser;
+    private static String activeUser;
 
-    Character player;
+    public DBManager() {
+        connect(url);
+        ensureDatabaseExists();
+    }
+
+    // By ChatGPT: Will let us use the same database across multiple classes
+    public static DBManager getInstance() {
+        if(instance == null) {
+            instance = new DBManager();
+        }
+        return instance;
+    }
+
 
     public boolean doesUserExist(String name, String password) {
 
-        String sql = "SELECT (name, password) FROM Users";
+        String sql = "SELECT name, password FROM Users";
 
         try {
             Statement statement = conn.createStatement();
@@ -52,7 +65,7 @@ public class DBManager {
                 stmt.setString(1, name);
                 stmt.setString(2, password);
                 stmt.setInt(3, startLevel);
-                stmt.setString(4,null);
+                stmt.setString(4,"NONE");
                 stmt.executeUpdate();
 
             } catch (SQLException e) {
@@ -83,9 +96,9 @@ public class DBManager {
                          name VARCHAR(12) NOT NULL UNIQUE,
                          password VARCHAR(12) NOT NULL,
                          level INTEGER NOT NULL,
-                         health INTEGER,
-                         weapon VARCHAR(24) NOT NULL,
-                         money INTEGER
+                         health INTEGER DEFAULT 100,
+                         money INTEGER DEFAULT 50,
+                         weapon VARCHAR(24) DEFAULT 'NONE'
                      );
                      """;
             stmt.execute(sql);
@@ -105,8 +118,7 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon, int money, String activeUser) {
-
+    public void saveUserData(int level, int health, String weapon, int money) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
@@ -114,20 +126,102 @@ public class DBManager {
 
         String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ? WHERE name = ?";
 
-        try {
-
-            PreparedStatement stmt = conn.prepareStatement(sql);
+        try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
             stmt.setInt(1, level);
             stmt.setInt(2, health);
             stmt.setString(3,weapon);
-            stmt.setInt(4, 50);
+            stmt.setInt(4, money);
             stmt.setString(5, activeUser);
             stmt.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println("Failed to update user because: " + e.getMessage());
         }
+    }
+
+
+    public void saveUserGold(int moneyAmount) {
+
+        if(activeUser == null) {
+            System.out.println("No user is logged in.");
+            return;
+        }
+
+        String sql = "UPDATE Users SET money = ? WHERE name = ?";
+
+        try {
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, moneyAmount);
+        } catch (SQLException e) {
+            System.out.println("Failed to save users gold" + e.getMessage());
+        }
+    }
+
+    public int getUserLevel() {
+
+        String sql = "SELECT level FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("level");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column money, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public int getUserHP() {
+
+        String sql = "SELECT health FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("health");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column health, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public int getUserGold() {
+
+        String sql = "SELECT money FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("money");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column money, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public String getUserWeapon() {
+
+        String sql = "SELECT weapon FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getString("weapon");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column weapon, because: " + e.getMessage());
+        }
+
+        return null;
     }
 
     public void saveUserWeapon(String weapon) {
@@ -151,9 +245,13 @@ public class DBManager {
         }
     }
 
-    public String getActiveUser() {
+    public String getUserName() {
 
         return activeUser;
     }
 
+    public static void setActiveUser(String user) {
+
+        activeUser = user;
+    }
 }

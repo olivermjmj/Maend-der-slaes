@@ -9,14 +9,20 @@ public abstract class Character {
     protected int attack;
     protected int money;
     protected int level;
+    protected Random random;
+    protected String username;
+    protected String weapon;
 
-    public Character(int health, int strength, int defence, int attack, int money, int level) {
+    public Character(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
         this.health = health;
         this.strength = strength;
         this.defence = defence;
         this.attack = attack;
         this.money = money;
         this.level = level;
+        this.random = new Random();
+        this.username = username;
+        this.weapon = weapon;
     }
 
     public abstract void tryToAttack(Character target, String choice);

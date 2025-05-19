@@ -1,19 +1,14 @@
 package com.example.maendderslaes;
 
-import com.example.maendderslaes.util.DBManager;
-
-import java.util.Random;
-
 public class Player extends Character{
 
-    Random random;
-
-    public Player(int health, int strength, int defence, Random random, int attack, int money, int level) {
-        super(health, strength, defence, attack, money, level);
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
+        super(username, health, strength, defence, attack, money, level, weapon);
     }
 
     @Override
     public void tryToAttack(Character target, String choice) {
+
 
         int damage = 0;
 
@@ -72,12 +67,16 @@ public class Player extends Character{
         return this.money;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    public String getUsername() {
+        return this.username;
     }
 
     public void negateMoney(int money) {
         this.money -= money;
+    }
+
+    public String getWeapon() {
+        return this.weapon;
     }
 
     public int getLevel() {
@@ -90,16 +89,49 @@ public class Player extends Character{
         }
     }
 
-    public boolean buyItem(Player player, Item item, DBManager database) {
-
-        //Build it so that a user can't purchase the weapon he/she has equipped
-
-        if(player.getMoney() >= item.getPrice()) {
-            player.spendMoney(item.getPrice());
-            database.saveUserWeapon(item.getName());
-            return true;
-        }
-        return false;
+    public void addStrength(int strength) {
+        this.strength += strength;
     }
 
+    public void negateStrength(int strength) {
+        this.strength -= strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setHP(int health) {
+        this.health = health;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setName(String username) {
+        this.username = username;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public void applyWeaponBonus() {
+
+        switch (this.weapon) {
+
+            case "NONE" -> {this.strength += 1;}
+
+            case "SwordOfIce" -> {this.strength += 2;}
+
+            case "SwordOfBlood" -> {this.strength += 4;}
+
+            case "diamondSword" -> {this.strength += 8;}
+        }
+    }
 }
