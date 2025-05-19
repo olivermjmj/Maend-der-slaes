@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    DBManager database = new DBManager();
+    GameService gameService;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -29,6 +29,10 @@ public class Main extends Application {
         stage.setWidth(bounds.getWidth());
         stage.setHeight(bounds.getHeight()); */
 
+        // By ChatGPT: Get's a hold of the controller
+        Controller controller = fxmlLoader.getController();
+        this.gameService = controller.getGameService();
+
         SoundManager music = new SoundManager();
         music.playSoundOnRepeat("data/music/startMenu_Music.wav");
         stage.setMaximized(true);
@@ -37,6 +41,11 @@ public class Main extends Application {
         stage.setFullScreenExitHint("");
         stage.setScene(scene);
         stage.show();
+
+        stage.setOnCloseRequest(event -> {
+
+            gameService.savePlayerData();
+        });
     }
 
     public static void main(String[] args) {

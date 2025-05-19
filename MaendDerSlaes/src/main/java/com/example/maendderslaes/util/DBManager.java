@@ -12,7 +12,10 @@ public class DBManager {
     private String url = "jdbc:sqlite:" + dbPath;
     private static String activeUser;
 
-    Character player;
+    public DBManager() {
+        connect(url);
+        ensureDatabaseExists();
+    }
 
     public boolean doesUserExist(String name, String password) {
 
@@ -83,9 +86,9 @@ public class DBManager {
                          name VARCHAR(12) NOT NULL UNIQUE,
                          password VARCHAR(12) NOT NULL,
                          level INTEGER NOT NULL,
-                         health INTEGER,
-                         weapon VARCHAR(24) DEFAULT 'NONE',
-                         money INTEGER DEFAULT 50
+                         health INTEGER DEFAULT 100,
+                         money INTEGER DEFAULT 50,
+                         weapon VARCHAR(24) DEFAULT 'NONE'
                      );
                      """;
             stmt.execute(sql);
@@ -105,8 +108,7 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon, int money, String activeUser) {
-
+    public void saveUserData(int level, int health, String weapon, int money) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
@@ -114,9 +116,7 @@ public class DBManager {
 
         String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ? WHERE name = ?";
 
-        try {
-
-            PreparedStatement stmt = conn.prepareStatement(sql);
+        try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
             stmt.setInt(1, level);
             stmt.setInt(2, health);
@@ -150,19 +150,68 @@ public class DBManager {
         }
     }
 
-    public int getUserGold() {
+    public int getUserLevel() {
 
-        String sql = "SELECT money FROM Users";
+        String sql = "SELECT level FROM Users WHERE name = ?";
 
         try {
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery(sql);
-
-            return rs.getInt("money");
-
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("level");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Couldn't get column money, because: " + e.getMessage());
         }
+
+        return 0;
+    }
+
+    public int getUserHP() {
+
+        String sql = "SELECT health FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("health");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column health, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public int getUserGold() {
+
+        String sql = "SELECT money FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("money");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column money, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public String getUserWeapon() {
+
+        String sql = "SELECT weapon FROM Users WHERE name = ?";
+
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getString("weapon");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column weapon, because: " + e.getMessage());
+        }
+
+        return null;
     }
 
     public void saveUserWeapon(String weapon) {
@@ -186,7 +235,7 @@ public class DBManager {
         }
     }
 
-    public static String getActiveUser() {
+    public static String getUserName() {
 
         return activeUser;
     }
@@ -195,5 +244,4 @@ public class DBManager {
 
         activeUser = user;
     }
-
 }

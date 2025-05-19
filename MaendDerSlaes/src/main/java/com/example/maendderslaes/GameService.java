@@ -4,8 +4,8 @@ import com.example.maendderslaes.util.DBManager;
 
 public class GameService {
 
-    private Player player;
-    private DBManager dbManager;
+    private final Player player;
+    private final DBManager dbManager;
 
     public GameService(Player player, DBManager dbManager) {
 
@@ -32,6 +32,22 @@ public class GameService {
         player.setMoney(player.getMoney() + enemyWorthInMoney);
 
         return 0;
+    }
+
+    public void loadPlayerData() {
+        player.setName(dbManager.getUserName());        //lods the users name
+        player.setLevel(dbManager.getUserLevel());      //loads the users level
+        player.setHP(dbManager.getUserHP());            //loads the users hp
+        player.setMoney(dbManager.getUserGold());       //loads the users money
+        player.setWeapon(dbManager.getUserWeapon());    //loads the users weapon
+    }
+
+    public void savePlayerData() {
+        dbManager.saveUserData(
+                player.getLevel(),
+                player.getHP(),
+                player.getWeapon(),
+                player.getMoney());
     }
 
 }

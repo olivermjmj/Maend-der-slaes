@@ -17,6 +17,8 @@ import java.io.IOException;
 
 public class Controller {
 
+    GameService gameService = new GameService(new Player(null, 0, 0, 0, 0, 0, 0, null), new DBManager());
+
     @FXML
     private TextField usernameField;
 
@@ -26,8 +28,8 @@ public class Controller {
     private final DBManager database = new DBManager();
     private SoundManager sound = new SoundManager();
 
-    private Player player = new Player(100, 20, 5, 0, 50, 1);
-    private Enemy enemy = new Enemy(80, 15, 3, 0, 20, 1);
+    private Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
+    private Enemy enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
 
     @FXML
     protected void lightAttack() {
@@ -44,7 +46,7 @@ public class Controller {
     }
 
     private void handleAttack(String attackType) {
-        String playersName = DBManager.getActiveUser();
+        String playersName = DBManager.getUserName();
 
         if(playersName == null) {
             playersName = "Guest";
@@ -127,6 +129,7 @@ public class Controller {
         database.ensureDatabaseExists();
 
         if(database.doesUserExist(username, password)) {
+            gameService.loadPlayerData();
             switchView(event, "createWarrior.fxml");
         } else {
             System.out.println("No such user exists.");

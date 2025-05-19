@@ -7,8 +7,8 @@ import java.util.Random;
 
 public class Player extends Character{
 
-    public Player(int health, int strength, int defence, int attack, int money, int level) {
-        super(health, strength, defence, attack, money, level);
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
+        super(username, health, strength, defence, attack, money, level, weapon);
     }
 
     @Override
@@ -67,17 +67,26 @@ public class Player extends Character{
         return health;
     }
 
+    public void setHP(int health) {
+
+        this.health = health;
+    }
+
     @Override
     public int getMoney() {
         return this.money;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    public String getUsername() {
+        return this.username;
     }
 
     public void negateMoney(int money) {
         this.money -= money;
+    }
+
+    public String getWeapon() {
+        return this.weapon;
     }
 
     public int getLevel() {
@@ -90,4 +99,19 @@ public class Player extends Character{
         }
     }
 
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setName(String username) {
+        this.username = username;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
 }
