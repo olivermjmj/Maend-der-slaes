@@ -7,6 +7,7 @@ import java.io.File;
 import java.sql.*;
 
 public class DBManager {
+    private static DBManager instance;
     private Connection conn;
     private String dbPath = "data/database/userData.db";
     private String url = "jdbc:sqlite:" + dbPath;
@@ -16,6 +17,15 @@ public class DBManager {
         connect(url);
         ensureDatabaseExists();
     }
+
+    // By ChatGPT: Will let us use the same database across multiple classes
+    public static DBManager getInstance() {
+        if(instance == null) {
+            instance = new DBManager();
+        }
+        return instance;
+    }
+
 
     public boolean doesUserExist(String name, String password) {
 
@@ -235,7 +245,7 @@ public class DBManager {
         }
     }
 
-    public static String getUserName() {
+    public String getUserName() {
 
         return activeUser;
     }

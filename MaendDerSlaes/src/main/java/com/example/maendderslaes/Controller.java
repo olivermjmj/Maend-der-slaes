@@ -13,11 +13,16 @@ import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.util.Duration;
+
 import java.io.IOException;
 
 public class Controller {
 
-    GameService gameService = new GameService(new Player(null, 0, 0, 0, 0, 0, 0, null), new DBManager());
+    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
+    DBManager dbManager = DBManager.getInstance();
+    GameService gameService = new GameService(player, DBManager.getInstance());
+
+    private final SoundManager sound = new SoundManager();
 
     @FXML
     private TextField usernameField;
@@ -25,11 +30,7 @@ public class Controller {
     @FXML
     private PasswordField passwordField;
 
-    private final DBManager database = new DBManager();
-    private SoundManager sound = new SoundManager();
-
-    private Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
-    private Enemy enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
+    private final Character enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
 
     @FXML
     protected void lightAttack() {
@@ -46,7 +47,7 @@ public class Controller {
     }
 
     private void handleAttack(String attackType) {
-        String playersName = DBManager.getUserName();
+        String playersName = dbManager.getUserName();
 
         if(playersName == null) {
             playersName = "Guest";
@@ -110,10 +111,12 @@ public class Controller {
         String password = passwordField.getText();
 
         //Ensures that the database exists, and if not creates it.
-        database.ensureDatabaseExists();
+        dbManager.ensureDatabaseExists();
 
-        if (!database.doesUserExist(username, password)) {
-            database.addUserToDB(username, password);
+        if (!dbManager.doesUserExist(username, password)) {
+            dbManager.addUserToDB(username, password);
+            gameService.setDefaultStats();
+            gameService.savePlayerData();
             System.out.println("Welcome: " + username);
         } else {
             System.out.println("A user with the name: " + username + ". Already exists, try another name");
@@ -126,16 +129,17 @@ public class Controller {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        database.ensureDatabaseExists();
+        dbManager.ensureDatabaseExists();
 
-        if(database.doesUserExist(username, password)) {
+        if(dbManager.doesUserExist(username, password)) {
             gameService.loadPlayerData();
+
             switchView(event, "createWarrior.fxml");
         } else {
             System.out.println("No such user exists.");
         }
-
     }
+
     @FXML protected void guestLogin(ActionEvent event) throws IOException { switchView (event, "createWarrior.fxml"); }
     @FXML protected void goBack (ActionEvent event) throws IOException { switchView (event, "MainMenu.fxml"); }
     @FXML protected void goToCityCenter (ActionEvent event) throws IOException { switchView (event, "cityCenter.fxml"); }
@@ -147,4 +151,12 @@ public class Controller {
     @FXML protected void goToColosseum (ActionEvent event) throws IOException { switchView (event, "Colosseum.fxml"); }
     @FXML protected void goBackToCharacterCreation(ActionEvent event) throws IOException { switchView (event, "createWarrior.fxml"); }
 
+
+    public void setGameService(GameService gameService) {
+        this.gameService = gameService;
+    }
+
+    public GameService getGameService() {
+        return gameService;
+    }
 }

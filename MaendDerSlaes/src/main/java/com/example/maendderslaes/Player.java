@@ -1,10 +1,5 @@
 package com.example.maendderslaes;
 
-
-import com.example.maendderslaes.util.SoundManager;
-
-import java.util.Random;
-
 public class Player extends Character{
 
     public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
@@ -67,11 +62,6 @@ public class Player extends Character{
         return health;
     }
 
-    public void setHP(int health) {
-
-        this.health = health;
-    }
-
     @Override
     public int getMoney() {
         return this.money;
@@ -99,6 +89,22 @@ public class Player extends Character{
         }
     }
 
+    public void addStrength(int strength) {
+        this.strength += strength;
+    }
+
+    public void negateStrength(int strength) {
+        this.strength -= strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setHP(int health) {
+        this.health = health;
+    }
+
     public void setLevel(int level) {
         this.level = level;
     }
@@ -113,5 +119,19 @@ public class Player extends Character{
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    public void applyWeaponBonus() {
+
+        switch (this.weapon) {
+
+            case "NONE" -> {this.strength += 1;}
+
+            case "woodenSword" -> {this.strength += 2;}
+
+            case "ironSword" -> {this.strength += 4;}
+
+            case "diamondSword" -> {this.strength += 8;}
+        }
     }
 }
