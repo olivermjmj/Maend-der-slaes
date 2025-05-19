@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -29,6 +30,12 @@ public class Controller {
 
     @FXML
     private PasswordField passwordField;
+
+    @FXML
+    private Text skillPointsLeft;
+
+    @FXML
+    private Text strengthLevel;
 
     private final Character enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
 
@@ -158,5 +165,20 @@ public class Controller {
 
     public GameService getGameService() {
         return gameService;
+    }
+
+    @FXML
+    public void addStrength() {
+
+    }
+
+    @FXML
+    public void negateStrength() {
+
+    }
+
+    @FXML
+    public void addHealth() {
+
     }
 }

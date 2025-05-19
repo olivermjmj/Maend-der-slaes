@@ -127,9 +127,9 @@ public class Player extends Character{
 
             case "NONE" -> {this.strength += 1;}
 
-            case "woodenSword" -> {this.strength += 2;}
+            case "SwordOfIce" -> {this.strength += 2;}
 
-            case "ironSword" -> {this.strength += 4;}
+            case "SwordOfBlood" -> {this.strength += 4;}
 
             case "diamondSword" -> {this.strength += 8;}
         }
