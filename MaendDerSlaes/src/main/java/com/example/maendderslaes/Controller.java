@@ -39,27 +39,24 @@ public class Controller {
         if (characterImageView == null) return;
 
         // antager at din working directory er projektroden, og at der findes en mappe "data/images/"
-        staticImage = new Image("file:data/images/Gladiator1.png");
-        fightImage  = new Image("file:data/images/Gladiator4.png");
+        staticImage = new Image("file:data/images/CharacterIdle.png");
         characterImageView.setImage(staticImage);
     }
-
-
 
     @FXML
     private void onHitButtonClick() {
         // Forudsat at disse billeder er indlæst et eller andet sted (fx i initialize)
-        Image stance1 = new Image("file:data/images/Gladiator1.png");
-        Image stance2 = new Image("file:data/images/Gladiator2.png");
-        Image stance3 = new Image("file:data/images/Gladiator3.png");
-        Image stance4 = new Image("file:data/images/Gladiator4.png");
+        Image stance1 = new Image("file:data/images/CharacterLightAttack1.png");
+        Image stance2 = new Image("file:data/images/CharacterLightAttack1.png");
+        Image stance3 = new Image("file:data/images/CharacterLightAttack2.png");
+        Image stance4 = new Image("file:data/images/CharLightAttack3.png");
 
 
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.ZERO, e -> characterImageView.setImage(stance1)),
-                new KeyFrame(Duration.seconds(0.2), e -> characterImageView.setImage(stance2)),
-                new KeyFrame(Duration.seconds(0.4), e -> characterImageView.setImage(stance3)),
-                new KeyFrame(Duration.seconds(0.6), e -> characterImageView.setImage(stance4)),
+                new KeyFrame(Duration.seconds(0.1), e -> characterImageView.setImage(stance2)),
+                new KeyFrame(Duration.seconds(0.3), e -> characterImageView.setImage(stance3)),
+                new KeyFrame(Duration.seconds(0.5), e -> characterImageView.setImage(stance4)),
                 new KeyFrame(Duration.seconds(0.8), e -> characterImageView.setImage(staticImage))
         );
         timeline.play();

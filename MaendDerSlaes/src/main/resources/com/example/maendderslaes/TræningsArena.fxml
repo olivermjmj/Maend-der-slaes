@@ -14,10 +14,10 @@
 
     <!-- Din nye character-ImageView -->
     <ImageView fx:id="characterImageView"
-               fitWidth="700"
+               fitWidth="900"
                preserveRatio="true"
-               AnchorPane.leftAnchor="400.0"
-               AnchorPane.bottomAnchor="150.0"/>
+               AnchorPane.leftAnchor="300.0"
+               AnchorPane.bottomAnchor="50.0"/>
 
     <!-- Din nye Hit-knap -->
     <Button text="HIT"
