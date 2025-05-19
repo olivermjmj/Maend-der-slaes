@@ -1,7 +1,5 @@
 ###Mænd der slås
-"Mænd der slås" er et digitalt kampspil, hvor brugeren skaber og udvikler sin egen kriger for at deltage i 
-kampe mod andre krigere. Spillet tager inspiration fra klassiske arena-kampspil, som Swords and Sandals, 
-hvor karakterudvikling og strategi er i fokus.
+- Mænd der slås" er et digitalt kampspil, hvor brugeren skaber og udvikler sin egen kriger for at deltage i kampe mod andre krigere. Spillet tager inspiration fra klassiske arena-kampspil, som Swords and Sandals, hvor karakterudvikling og strategi er i fokus.
 
 #Formål
 Formålet med spillet er at give spilleren mulighed for at skabe en personlig kriger, 
