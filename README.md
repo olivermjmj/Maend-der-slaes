@@ -6,8 +6,8 @@
 
 #BrugerTyper
 - Spillet understøtter følgende brugertyper:
- - Registrerede brugere: Brugere der opretter en personlig konto.
- - Gæstebrugere: Brugere der spiller uden at oprette en konto. Disse brugeres data gemmes ikke permanent.
+  - Registrerede brugere: Brugere der opretter en personlig konto.
+  - Gæstebrugere: Brugere der spiller uden at oprette en konto. Disse brugeres data gemmes ikke permanent.
 
 ##Funktionalitet
 #BrugerHåndtering
