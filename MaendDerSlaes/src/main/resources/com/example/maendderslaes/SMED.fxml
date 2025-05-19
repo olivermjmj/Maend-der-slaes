@@ -14,14 +14,14 @@
     <Button onAction="#goToCityCenter"
             text="GO BACK"
             style="-fx-background-color: #FFD700;
-               -fx-cursor: hand;
-               -fx-text-fill: #000000;
-               -fx-font-family: 'Comic Sans MS';
-               -fx-font-size: 15;
-               -fx-font-weight: bold;
-               -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-               -fx-min-width: 70;
-               -fx-min-height: 30;"
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 15;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                   -fx-min-width: 70;
+                   -fx-min-height: 30;"
             AnchorPane.rightAnchor="50.0"
             AnchorPane.bottomAnchor="80.0"/>
 

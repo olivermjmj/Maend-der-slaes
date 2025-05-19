@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory.">
+    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="pushing update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,6 +96,10 @@
       <workItem from="1747040795990" duration="76000" />
       <workItem from="1747040903553" duration="1184000" />
       <workItem from="1747380376650" duration="6842000" />
+      <workItem from="1747396631311" duration="71000" />
+      <workItem from="1747639611855" duration="1257000" />
+      <workItem from="1747641476447" duration="6030000" />
+      <workItem from="1747651338537" duration="6633000" />
     </task>
     <task id="LOCAL-00001" summary="Ny smed scene og nye knapper i city center">
       <option name="closed" value="true" />
@@ -143,5 +145,9 @@
     <MESSAGE value="rykket vbox over Anchorpane så den ikke overwriter" />
     <MESSAGE value="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory." />
     <option name="LAST_COMMIT_MESSAGE" value="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

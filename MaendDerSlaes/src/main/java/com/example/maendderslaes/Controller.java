@@ -3,17 +3,23 @@ package com.example.maendderslaes;
 import com.example.maendderslaes.util.DBManager;
 import com.example.maendderslaes.util.SoundManager;
 import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.util.Duration;
 import java.io.IOException;
+import java.net.URL;
 
 public class Controller {
 
@@ -22,6 +28,45 @@ public class Controller {
 
     @FXML
     private PasswordField passwordField;
+
+    @FXML private ImageView characterImageView;
+
+    private Image staticImage;
+    private Image fightImage;
+
+    @FXML
+    public void initialize() {
+        if (characterImageView == null) return;
+
+        // antager at din working directory er projektroden, og at der findes en mappe "data/images/"
+        staticImage = new Image("file:data/images/Gladiator1.png");
+        fightImage  = new Image("file:data/images/Gladiator4.png");
+        characterImageView.setImage(staticImage);
+    }
+
+
+
+    @FXML
+    private void onHitButtonClick() {
+        // Forudsat at disse billeder er indlæst et eller andet sted (fx i initialize)
+        Image stance1 = new Image("file:data/images/Gladiator1.png");
+        Image stance2 = new Image("file:data/images/Gladiator2.png");
+        Image stance3 = new Image("file:data/images/Gladiator3.png");
+        Image stance4 = new Image("file:data/images/Gladiator4.png");
+
+
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, e -> characterImageView.setImage(stance1)),
+                new KeyFrame(Duration.seconds(0.2), e -> characterImageView.setImage(stance2)),
+                new KeyFrame(Duration.seconds(0.4), e -> characterImageView.setImage(stance3)),
+                new KeyFrame(Duration.seconds(0.6), e -> characterImageView.setImage(stance4)),
+                new KeyFrame(Duration.seconds(0.8), e -> characterImageView.setImage(staticImage))
+        );
+        timeline.play();
+    }
+
+
+
 
     private final DBManager database = new DBManager();
     private SoundManager sound = new SoundManager();
@@ -80,7 +125,6 @@ public class Controller {
 
     @FXML
     protected void login() {
-        sound.playSound("data/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 

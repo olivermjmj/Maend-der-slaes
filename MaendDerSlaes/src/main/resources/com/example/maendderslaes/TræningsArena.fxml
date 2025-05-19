@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
@@ -11,17 +12,37 @@
                    -fx-background-position: center center;
                    -fx-background-color: black;">
 
+    <!-- Din nye character-ImageView -->
+    <ImageView fx:id="characterImageView"
+               fitWidth="700"
+               preserveRatio="true"
+               AnchorPane.leftAnchor="400.0"
+               AnchorPane.bottomAnchor="150.0"/>
+
+    <!-- Din nye Hit-knap -->
+    <Button text="HIT"
+            onAction="#onHitButtonClick"
+            style="-fx-background-color: #FF4500;
+                   -fx-cursor: hand;
+                   -fx-text-fill: #FFFFFF;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 14;
+                   -fx-font-weight: bold;"
+            AnchorPane.leftAnchor="220.0"
+            AnchorPane.bottomAnchor="60.0"/>
+
+    <!-- Den eksisterende Continue-knap -->
     <Button onAction="#goToCityCenter"
             text="CONTINUE TO CITY CENTER"
             style="-fx-background-color: #FFD700;
-               -fx-cursor: hand;
-               -fx-text-fill: #000000;
-               -fx-font-family: 'Comic Sans MS';
-               -fx-font-size: 15;
-               -fx-font-weight: bold;
-               -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-               -fx-min-width: 70;
-               -fx-min-height: 30;"
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 15;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                   -fx-min-width: 70;
+                   -fx-min-height: 30;"
             AnchorPane.rightAnchor="50.0"
             AnchorPane.bottomAnchor="80.0"/>
 
