@@ -2,14 +2,12 @@
 - "Mænd der slås" er et digitalt kampspil, hvor brugeren skaber og udvikler sin egen kriger for at deltage i kampe mod andre krigere. Spillet tager inspiration fra klassiske arena-kampspil, som Swords and Sandals, hvor karakterudvikling og strategi er i fokus.
 
 #Formål
-Formålet med spillet er at give spilleren mulighed for at skabe en personlig kriger, 
-tilpasse den med forskellige egenskaber og bruge krigeren i en kamparena. 
-Spilleren kan konkurrere mod computergenererede modstandere.
+- Formålet med spillet er at give spilleren mulighed for at skabe en personlig kriger, tilpasse den med forskellige egenskaber og bruge krigeren i en kamparena. Spilleren kan konkurrere mod computergenererede modstandere.
 
 #BrugerTyper
-Spillet understøtter følgende brugertyper:
-- Registrerede brugere: Brugere der opretter en personlig konto.
-- Gæstebrugere: Brugere der spiller uden at oprette en konto. Disse brugeres data gemmes ikke permanent.
+- Spillet understøtter følgende brugertyper:
+ - Registrerede brugere: Brugere der opretter en personlig konto.
+ - Gæstebrugere: Brugere der spiller uden at oprette en konto. Disse brugeres data gemmes ikke permanent.
 
 ##Funktionalitet
 #BrugerHåndtering
