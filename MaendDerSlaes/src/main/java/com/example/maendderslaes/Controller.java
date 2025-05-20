@@ -19,28 +19,15 @@ import java.io.IOException;
 
 public class Controller {
 
+    private int amountOfSkillPointsSpend = 0;
+    private int remainingSkillPoints = 10;
+
     private Player player;
     private GameService gameService;
     private final DBManager dbManager = DBManager.getInstance();
     private final SoundManager sound = new SoundManager();
 
-    public void setGameService(GameService service) {
-        this.gameService = service;
-        this.player = service.getPlayer();
-        // Load fra DB
-        service.loadPlayerData();
-        // Update UI
-        updateStatsUI();
-    }
-
-    private void updateStatsUI() {
-        if (player == null || strengthLevel == null) return;
-        strengthLevel.setText(String.valueOf(player.getStrength()));
-        defenceLevel.setText(String.valueOf(player.getDefence()));
-        maxHPLevel.setText(String.valueOf(player.getMaxHP()));
-        speedLevel.setText(String.valueOf(player.getSpeed()));
-        skillPointsLeft.setText(String.valueOf(player.getRemainingSkillPoints()));
-    }
+    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10); // dummy enemy
 
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
