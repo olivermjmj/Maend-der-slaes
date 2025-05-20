@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747741867956</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1747762238476</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1747762238476</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
