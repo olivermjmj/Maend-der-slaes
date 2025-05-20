@@ -94,7 +94,7 @@ public class Controller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent newRoot = fxmlLoader.load();
 
-        //This was written by ChatGPT, since I couldn't seem to understand why it wouldn't parse my stats.
+        //This was written by ChatGPT, since we couldn't seem to understand why it wouldn't parse player stats, nor could we google us to it.
         Controller newController = fxmlLoader.getController();
         newController.setGameService(this.gameService);
 
