@@ -93,6 +93,11 @@ public class Controller {
     private void switchView(ActionEvent event, String fxmlPath) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent newRoot = fxmlLoader.load();
+
+        //This was written by ChatGPT, since I couldn't seem to understand why it wouldn't parse my stats.
+        Controller newController = fxmlLoader.getController();
+        newController.setGameService(this.gameService);
+
         Scene scene = ((Node) event.getSource()).getScene();
 
         StackPane container = new StackPane();
