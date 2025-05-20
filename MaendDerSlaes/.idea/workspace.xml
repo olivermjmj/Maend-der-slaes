@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="For mange energi drikke.">
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Casino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/GameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747704959194</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player.">
+      <option name="closed" value="true" />
+      <created>1747707524995</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747707524995</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +356,8 @@
     <MESSAGE value="Well. A lot." />
     <MESSAGE value="Removed gifManager" />
     <MESSAGE value="For mange energi drikke." />
-    <option name="LAST_COMMIT_MESSAGE" value="For mange energi drikke." />
+    <MESSAGE value="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

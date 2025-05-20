@@ -140,12 +140,20 @@ public class Player extends Character{
         this.strength += strength;
     }
 
+    public void addMaxHealth(int maxHealth) {
+        this.maxHP += maxHealth;
+    }
+
     public void negateDefence(int defence) {
         this.defence -= defence;
     }
 
     public void negateStrength(int strength) {
         this.strength -= strength;
+    }
+
+    public void negateMaxHealth(int maxHealth) {
+        this.maxHP += maxHealth;
     }
 
 

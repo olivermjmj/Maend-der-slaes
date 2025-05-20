@@ -28,6 +28,8 @@ public class Controller {
 
     private final SoundManager sound = new SoundManager();
 
+    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE");
+
     @FXML
     private TextField usernameField;
 
@@ -43,8 +45,11 @@ public class Controller {
     @FXML
     private Text defenceLevel;
 
-    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE");
+    @FXML
+    private Text maxHPLevel;
 
+
+    //Attack types
     @FXML
     protected void lightAttack() {
         handleAttack("light");
@@ -222,6 +227,22 @@ public class Controller {
     }
 
     @FXML
+    public void addMaxHealth(ActionEvent event) {
+
+        if(this.remainingSkillPoints > 0) {
+
+            player.addMaxHealth(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
     public void negateStrength() {
 
         if(this.amountOfSkillPointsSpend > 0) {
@@ -253,8 +274,18 @@ public class Controller {
     }
 
     @FXML
-    public void negateHealth() {
+    public void negateMaxHealth() {
 
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateMaxHealth(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
     }
 
 
@@ -268,4 +299,5 @@ public class Controller {
             this.strengthLevel.setText(String.valueOf(player.getStrength()));
         }
     }
+
 }
