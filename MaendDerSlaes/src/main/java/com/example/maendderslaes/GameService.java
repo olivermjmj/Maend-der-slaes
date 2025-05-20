@@ -5,12 +5,16 @@ import com.example.maendderslaes.util.DBManager;
 public class GameService {
 
     private final Player player;
-    DBManager dbManager = DBManager.getInstance();
+    private final DBManager dbManager;
 
     public GameService(Player player, DBManager dbManager) {
 
         this.player = player;
         this.dbManager = dbManager;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 
     public boolean buyAndEquipWeapon(Item item) {
@@ -54,10 +58,12 @@ public class GameService {
         player.setStrength(dbManager.getUserStrength());    //loads the users strength
         player.setDefence(dbManager.getUserDefence());      //loads the users defence
         player.setSpeed(dbManager.getUserSpeed());          //loads the users speed
+
+        player.setRemainingSkillPoints(dbManager.getUserSkillPoints());
     }
 
     public void savePlayerData() {
-        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence(), player.getMaxHP(), player.getSpeed());
+        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence(), player.getMaxHP(), player.getSpeed(), player.getRemainingSkillPoints());
     }
 
 }

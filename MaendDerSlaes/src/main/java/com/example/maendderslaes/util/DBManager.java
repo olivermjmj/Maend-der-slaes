@@ -56,7 +56,7 @@ public class DBManager {
     public void addUserToDB(String name, String password) {
 
         if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
-            String sql = "INSERT INTO Users (name, password, level, weapon, strength, defence, speed) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Users (name, password, level, weapon, strength, defence, speed, skillPoints) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
             int startLevel = 1;
             try(PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -68,6 +68,7 @@ public class DBManager {
                 stmt.setInt(5, 1);          //strength
                 stmt.setInt(6, 1);          //defence
                 stmt.setInt(7, 1);          //speed
+                stmt.setInt(8, 10);
                 stmt.executeUpdate();
 
 
@@ -105,7 +106,8 @@ public class DBManager {
                          weapon VARCHAR(24) DEFAULT 'NONE',
                          strength INTEGER NOT NULL,
                          defence INTEGER NOT NULL,
-                         speed INTEGER NOT NULL
+                         speed INTEGER NOT NULL,
+                         skillPoints INTEGER
                      );
                      """;
             stmt.execute(sql);
@@ -125,13 +127,13 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon, int money, int strength, int defence, int maxHealth, int speed) {
+    public void saveUserData(int level, int health, String weapon, int money, int strength, int defence, int maxHealth, int speed, int skillPoints) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
         }
 
-        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ?, maxHealth = ?, speed = ? WHERE name = ?";
+        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ?, maxHealth = ?, speed = ?, skillPoints = ? WHERE name = ?";
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
@@ -143,7 +145,8 @@ public class DBManager {
             stmt.setInt(6, defence);
             stmt.setInt(7, maxHealth);
             stmt.setInt(8, speed);
-            stmt.setString(9, activeUser);
+            stmt.setInt(9, skillPoints);
+            stmt.setString(10, activeUser);
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -279,6 +282,20 @@ public class DBManager {
             System.out.println("Couldn't get column speed, because: " + e.getMessage());
         }
 
+        return 0;
+    }
+
+    public int getUserSkillPoints() {
+
+        String sql = "SELECT skillPoints FROM Users WHERE name = ?";
+
+        try(PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("skillPoints");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column skillPoints, because: " + e.getMessage());
+        }
         return 0;
     }
 

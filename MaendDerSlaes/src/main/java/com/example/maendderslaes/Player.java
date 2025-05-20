@@ -5,11 +5,12 @@ import com.example.maendderslaes.util.DBManager;
 public class Player extends Character{
 
     int maxHP;
-    public static Player instance;
+    int skillPoints;
 
-    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed) {
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed, int skillPoints) {
         super(username, health, strength, defence, attack, money, level, weapon, speed);
         this.maxHP = maxHP;
+        this.skillPoints = skillPoints;
     }
 
 
@@ -125,6 +126,10 @@ public class Player extends Character{
         return this.speed;
     }
 
+    public int getRemainingSkillPoints() {
+        return this.skillPoints;
+    }
+
     public void setStrength(int strength) {
         this.strength = strength;
     }
@@ -159,6 +164,10 @@ public class Player extends Character{
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public void setRemainingSkillPoints(int remainingSkillPoints) {
+        this.skillPoints = remainingSkillPoints;
     }
 
     //adds and negates

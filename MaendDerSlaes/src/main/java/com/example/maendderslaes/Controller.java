@@ -22,34 +22,20 @@ public class Controller {
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
-    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0, 0);
-    DBManager dbManager = DBManager.getInstance();
-    GameService gameService = new GameService(player, DBManager.getInstance());
-
+    private Player player;
+    private GameService gameService;
+    private final DBManager dbManager = DBManager.getInstance();
     private final SoundManager sound = new SoundManager();
 
     private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10); // dummy enemy
 
-    @FXML
-    private TextField usernameField;
-
-    @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    private Text skillPointsLeft;
-
-    @FXML
-    private Text strengthLevel;
-
-    @FXML
-    private Text defenceLevel;
-
-    @FXML
-    private Text maxHPLevel;
-
-    @FXML
-    private Text speedLevel;
+    @FXML private TextField usernameField;
+    @FXML private PasswordField passwordField;
+    @FXML private Text skillPointsLeft;
+    @FXML private Text strengthLevel;
+    @FXML private Text defenceLevel;
+    @FXML private Text maxHPLevel;
+    @FXML private Text speedLevel;
 
 
     //Attack types
@@ -191,15 +177,6 @@ public class Controller {
     }
 
     private void getSkillPointsLeft() {
-
-    }
-
-    @FXML
-    public void addHealth() {
-
-        if(this.remainingSkillPoints > 0) {
-
-        }
     }
 
     @FXML
@@ -213,6 +190,8 @@ public class Controller {
 
             this.strengthLevel.setText(String.valueOf(player.getStrength()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
         }
@@ -229,6 +208,8 @@ public class Controller {
 
             this.defenceLevel.setText(String.valueOf(player.getDefence()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
         }
@@ -245,6 +226,8 @@ public class Controller {
 
             this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
         }
@@ -260,6 +243,8 @@ public class Controller {
 
             this.speedLevel.setText(String.valueOf(player.getSpeed()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
         }
@@ -276,6 +261,8 @@ public class Controller {
 
             this.strengthLevel.setText(String.valueOf(player.getStrength()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player has reached the starting strength level.");
         }
@@ -291,6 +278,8 @@ public class Controller {
 
             this.defenceLevel.setText(String.valueOf(player.getDefence()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player has reached the starting stat level");
         }
@@ -306,6 +295,8 @@ public class Controller {
 
             this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player has reached the starting stat level");
         }
@@ -321,6 +312,8 @@ public class Controller {
 
             this.speedLevel.setText(String.valueOf(player.getSpeed()));
             setSkillPointsDisplay();
+
+            gameService.savePlayerData();
         } else {
             System.out.println("Player has reached the starting stat level");
         }
@@ -330,14 +323,15 @@ public class Controller {
     @FXML
     private void initialize() {
 
-        //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
-        if(skillPointsLeft != null && strengthLevel != null && maxHPLevel != null && speedLevel != null && defenceLevel != null) {
-            setSkillPointsDisplay();
-            this.strengthLevel.setText(String.valueOf(player.getStrength()));
-            this.defenceLevel.setText(String.valueOf(player.getDefence()));
-            this.speedLevel.setText(String.valueOf(player.getSpeed()));
-            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+        if(gameService == null || player == null) {
+            return;
         }
+
+        this.strengthLevel.setText(String.valueOf(player.getStrength()));
+        this.defenceLevel.setText(String.valueOf(player.getDefence()));
+        this.speedLevel.setText(String.valueOf(player.getSpeed()));
+        this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+        setSkillPointsDisplay();
     }
 
 
