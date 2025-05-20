@@ -24,12 +24,10 @@ public class Enemy extends Character{
 
     @Override
     protected int lightAttack() {
-
         int landAttack = random.nextInt(1, 11);  //90% chance to hit
 
         if(landAttack != 10) {
-            attack = strength - this.random.nextInt(5, 21);
-
+            attack = strength + random.nextInt(5, 21);
             return attack;
         }
         System.out.println("Enemy missed it's attack");
@@ -38,12 +36,10 @@ public class Enemy extends Character{
 
     @Override
     protected int mediumAttack() {
-
         int landAttack = random.nextInt(1, 11); //70% chance to hit
 
         if(landAttack > 3) {
-            attack = strength - this.random.nextInt(4, 11);
-
+            attack = strength + random.nextInt(4, 11);
             return attack;
         }
         System.out.println("Enemy missed it's attack");
@@ -52,12 +48,10 @@ public class Enemy extends Character{
 
     @Override
     protected int heavyAttack() {
-
         int landAttack = random.nextInt(1, 3); //50% chance to hit
 
         if(landAttack == 1) {
-            attack = strength - this.random.nextInt(3, 6);
-
+            attack = strength + random.nextInt(3, 6);
             return attack;
         }
         System.out.println("Enemy missed it's attack");

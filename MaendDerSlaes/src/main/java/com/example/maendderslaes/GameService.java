@@ -7,11 +7,20 @@ public class GameService {
     private final Player player;
     DBManager dbManager = DBManager.getInstance();
 
-    public GameService(Player player, DBManager dbManager) {
+    public GameService() {
+        this.dbManager = DBManager.getInstance();
+        this.player = new Player("Guest", 100, 1, 1, 0, 50, 1, "NONE", 100, 10);
+        loadPlayerData(); // Indlæs gemte data hvis de findes
+    }
 
+    public GameService(Player player, DBManager dbManager) {
         this.player = player;
         this.dbManager = dbManager;
     }
+    public Player getPlayer() {
+        return player;
+    }
+
 
     public boolean buyAndEquipWeapon(Item item) {
 
@@ -58,6 +67,15 @@ public class GameService {
 
     public void savePlayerData() {
         dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence(), player.getMaxHP(), player.getSpeed());
+    }
+    public void initializeBattle() {
+        if (player != null) {
+            // Genopfrisk spillerens HP til max ved kampstart
+            player.setHP(player.getMaxHP());
+
+            // Opret ny fjende med standard værdier
+            Enemy enemy = new Enemy("Skeleton", 100, 10, 0, 0, 50, 1, "NONE", 10);
+        }
     }
 
 }

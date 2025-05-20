@@ -29,12 +29,10 @@ public class Player extends Character{
 
     @Override
     protected int lightAttack() {
-
         int landAttack = random.nextInt(1, 6);  //80% chance to hit your attack
 
         if(landAttack != 5) {
-            attack = strength - this.random.nextInt(5, 21);
-
+            attack = strength + random.nextInt(5, 21);
             return attack;
         }
         System.out.println("You missed your attack");
@@ -43,12 +41,10 @@ public class Player extends Character{
 
     @Override
     protected int mediumAttack() {
-
         int landAttack = random.nextInt(1, 11); //60% chance to hit your attack
 
         if(landAttack > 4) {
-            attack = strength - this.random.nextInt(4, 11);
-
+            attack = strength + random.nextInt(4, 11);
             return attack;
         }
         System.out.println("You missed your attack");
@@ -57,12 +53,10 @@ public class Player extends Character{
 
     @Override
     protected int heavyAttack() {
-
         int landAttack = random.nextInt(1, 4); //1/3 chance to hit your attack
 
         if(landAttack == 1) {
-            attack = strength - this.random.nextInt(3, 6);
-
+            attack = strength + random.nextInt(3, 6);
             return attack;
         }
         System.out.println("You missed your attack");
@@ -72,11 +66,11 @@ public class Player extends Character{
 
     @Override
     protected int takeDMG(int damage) {
-        int finalDMG = damage - defence;
-        health -= finalDMG;
-
+        int finalDMG = Math.max(0, damage - defence);
+        health = Math.max(0, health - finalDMG);
         return finalDMG;
     }
+
 
     @Override
     public int getHP() {

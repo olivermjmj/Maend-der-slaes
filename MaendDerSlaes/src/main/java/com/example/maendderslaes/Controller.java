@@ -3,92 +3,192 @@ package com.example.maendderslaes;
 import com.example.maendderslaes.util.DBManager;
 import com.example.maendderslaes.util.SoundManager;
 import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-
 import java.io.IOException;
+
+
 
 public class Controller {
 
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
+
     Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0, 0);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
-
     private final SoundManager sound = new SoundManager();
+    private Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10);
 
-    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10); // dummy enemy
+
+    @FXML private TextField usernameField;
+    @FXML private PasswordField passwordField;
+    @FXML private Text skillPointsLeft;
+    @FXML private Text strengthLevel;
+    @FXML private Text defenceLevel;
+    @FXML private Text maxHPLevel;
+    @FXML private Text speedLevel;
+    @FXML private ImageView playerSprite;
+    @FXML private ImageView enemySprite;
+    @FXML private ProgressBar playerHealthBar;
+    @FXML private ProgressBar enemyHealthBar;
+    @FXML private Label playerHealthLabel;
+    @FXML private Label enemyHealthLabel;
+    @FXML private HBox attackButtonsContainer;
+
+
+
+    private AnimationHandler playerAnimations;
+    private AnimationHandler enemyAnimations;
+
+
+
 
     @FXML
-    private TextField usernameField;
+    private void initialize() {
+        if (playerSprite != null && enemySprite != null) {
+            // Initialiser GameService
+            gameService = new GameService();
+            player = gameService.getPlayer(); // Tilføj getPlayer() metode i GameService
 
-    @FXML
-    private PasswordField passwordField;
+            // Initialiser enemy med startværdier
+            enemy = new Enemy("Skeleton", 100, 10, 0, 0, 50, 1, "NONE", 10);
 
-    @FXML
-    private Text skillPointsLeft;
+            // Opdater health bars
+            updateHealthBars();
 
-    @FXML
-    private Text strengthLevel;
-
-    @FXML
-    private Text defenceLevel;
-
-    @FXML
-    private Text maxHPLevel;
-
-    @FXML
-    private Text speedLevel;
-
-
-    //Attack types
-    @FXML
-    protected void lightAttack() {
-        handleAttack("light");
+            // Start animationer
+            playerAnimations = new AnimationHandler(CharacterType.PLAYER, playerSprite);
+            enemyAnimations = new AnimationHandler(CharacterType.SKELETON, enemySprite);
+            playerAnimations.afspilAnimation(AnimationType.IDLE);
+            enemyAnimations.afspilAnimation(AnimationType.IDLE);
+        }
     }
 
-    @FXML
-    protected void mediumAttack() {
-        handleAttack("medium");
+
+
+    private void enableAttackButtons() {
+        if (attackButtonsContainer != null) {
+            attackButtonsContainer.setDisable(false);
+        }
     }
 
-    @FXML void heavyAttack() {
-        handleAttack("heavy");
+    private void disableAttackButtons() {
+        if (attackButtonsContainer != null) {
+            attackButtonsContainer.setDisable(true);
+        }
     }
+
+
+    private void resetBattle() {
+        enableAttackButtons();
+        player.setHP(player.getMaxHP());
+        enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10);
+        updateHealthBars();
+
+        if (playerAnimations != null && enemyAnimations != null) {
+            playerAnimations.afspilAnimation(AnimationType.IDLE);
+            enemyAnimations.afspilAnimation(AnimationType.IDLE);
+        }
+    }
+
 
     private void handleAttack(String attackType) {
-        String playersName = dbManager.getUserName();
+        if (player == null || enemy == null) return;
 
-        if(playersName == null) {
-            playersName = "Guest";
-        }
+        // Deaktiver knapper midlertidigt
+        attackButtonsContainer.setDisable(true);
 
+        // Spiller angriber
+        playerAnimations.afspilAnimation(getAnimationTypeForAttack(attackType));
         player.tryToAttack(enemy, attackType);
+        updateHealthBars();
 
-        if(enemy.getHP() <= 0 ) {
-            int oldMoneyAmount = player.getMoney();
-            player.setMoney(player.getMoney() + enemy.getMoney());
-            System.out.println(playersName + ", won the battle. Your balance has gone from " + oldMoneyAmount + " to " + player.getMoney());
+        // Hvis fjenden er død
+        if (enemy.getHP() <= 0) {
+            enemyAnimations.afspilAnimation(AnimationType.DEATH);
+            // Håndter sejr
+            handleVictory();
             return;
         }
 
-        enemy.tryToAttack(player, null);
+        // Fjendens tur efter en kort forsinkelse
+        PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
+        pause.setOnFinished(e -> {
+            if (player.getHP() > 0) {
+                enemyAnimations.afspilAnimation(AnimationType.LIGHT_ATTACK);
+                enemy.tryToAttack(player, null);
+                updateHealthBars();
 
-        if(player.getHP() <= 0) {
-            System.out.println(playersName + ", has lost");
-        }
+                if (player.getHP() <= 0) {
+                    handleDefeat();
+                } else {
+                    // Genaktiver kun knapperne hvis spilleren stadig lever
+                    attackButtonsContainer.setDisable(false);
+                }
+            }
+        });
+        pause.play();
     }
+
+    private void handleVictory() {
+        int reward = enemy.getMoney();
+        player.setMoney(player.getMoney() + reward);
+        System.out.println("You won! Earned " + reward + " gold!");
+        gameService.savePlayerData();
+    }
+
+    private void handleDefeat() {
+        playerAnimations.afspilAnimation(AnimationType.DEATH);
+        System.out.println("You were defeated!");
+        attackButtonsContainer.setDisable(true);
+    }
+
+    private void updateHealthBars() {
+        // Opdater spiller health bar
+        double playerHealthPercent = (double) Math.max(0, player.getHP()) / player.getMaxHP();
+        playerHealthBar.setProgress(playerHealthPercent);
+        playerHealthLabel.setText(player.getHP() + " / " + player.getMaxHP());
+
+        // Opdater fjende health bar
+        double enemyHealthPercent = (double) Math.max(0, enemy.getHP()) / 100;
+        enemyHealthBar.setProgress(enemyHealthPercent);
+        enemyHealthLabel.setText(enemy.getHP() + " / 100");
+    }
+
+
+
+    private AnimationType getAnimationTypeForAttack(String attackType) {
+        return switch (attackType) {
+            case "light" -> AnimationType.LIGHT_ATTACK;
+            case "medium" -> AnimationType.MEDIUM_ATTACK;
+            case "heavy" -> AnimationType.HEAVY_ATTACK;
+            default -> AnimationType.LIGHT_ATTACK;
+        };
+    }
+
+    @FXML protected void lightAttack() { handleAttack("light"); }
+    @FXML protected void mediumAttack() { handleAttack("medium"); }
+    @FXML protected void heavyAttack() { handleAttack("heavy"); }
+
+
+
+
 
     private void switchView(ActionEvent event, String fxmlPath) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
@@ -322,14 +422,5 @@ public class Controller {
 
 
     //Lets us view the skill points before pressing any buttons.
-    @FXML
-    private void initialize() {
-
-        //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
-        if(skillPointsLeft != null && strengthLevel != null) {
-            setSkillPointsDisplay();
-            this.strengthLevel.setText(String.valueOf(player.getStrength()));
-        }
-    }
 
 }
