@@ -12,8 +12,9 @@ public abstract class Character {
     protected Random random;
     protected String username;
     protected String weapon;
+    protected int speed;
 
-    public Character(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
+    public Character(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int speed) {
         this.health = health;
         this.strength = strength;
         this.defence = defence;
@@ -23,6 +24,7 @@ public abstract class Character {
         this.random = new Random();
         this.username = username;
         this.weapon = weapon;
+        this.speed = speed;
     }
 
     public abstract void tryToAttack(Character target, String choice);

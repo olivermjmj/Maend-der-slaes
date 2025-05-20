@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Enemy extends Character{
 
-    public Enemy(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
-        super(username, health, strength, defence, attack, money, level, weapon);
+    public Enemy(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int speed) {
+        super(username, health, strength, defence, attack, money, level, weapon, speed);
     }
 
     @Override

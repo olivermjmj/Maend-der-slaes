@@ -53,10 +53,11 @@ public class GameService {
         player.setWeapon(dbManager.getUserWeapon());        //loads the users weapon
         player.setStrength(dbManager.getUserStrength());    //loads the users strength
         player.setDefence(dbManager.getUserDefence());      //loads the users defence
+        player.setSpeed(dbManager.getUserSpeed());          //loads the users speed
     }
 
     public void savePlayerData() {
-        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence(), player.getMaxHP());
+        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence(), player.getMaxHP(), player.getSpeed());
     }
 
 }

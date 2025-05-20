@@ -4,8 +4,8 @@ public class Player extends Character{
 
     int maxHP;
 
-    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP) {
-        super(username, health, strength, defence, attack, money, level, weapon);
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed) {
+        super(username, health, strength, defence, attack, money, level, weapon, speed);
         this.maxHP = maxHP;
     }
 
@@ -99,6 +99,10 @@ public class Player extends Character{
         return this.maxHP;
     }
 
+    public int getSpeed() {
+        return this.speed;
+    }
+
     public void setStrength(int strength) {
         this.strength = strength;
     }
@@ -131,6 +135,10 @@ public class Player extends Character{
         this.defence = defence;
     }
 
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
     //adds and negates
     public void addDefence(int defence) {
         this.defence += defence;
@@ -144,6 +152,10 @@ public class Player extends Character{
         this.maxHP += maxHealth;
     }
 
+    public void addSpeed(int speed) {
+        this.speed += speed;
+    }
+
     public void negateDefence(int defence) {
         this.defence -= defence;
     }
@@ -154,6 +166,10 @@ public class Player extends Character{
 
     public void negateMaxHealth(int maxHealth) {
         this.maxHP += maxHealth;
+    }
+
+    public void negateSpeed(int speed) {
+        this.speed -= speed;
     }
 
 

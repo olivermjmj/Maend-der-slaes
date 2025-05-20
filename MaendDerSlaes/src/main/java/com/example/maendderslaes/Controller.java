@@ -22,13 +22,13 @@ public class Controller {
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
-    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0);
+    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0, 0);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
 
     private final SoundManager sound = new SoundManager();
 
-    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE");
+    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10); // dummy enemy
 
     @FXML
     private TextField usernameField;
@@ -47,6 +47,9 @@ public class Controller {
 
     @FXML
     private Text maxHPLevel;
+
+    @FXML
+    private Text speedLevel;
 
 
     //Attack types
@@ -227,7 +230,7 @@ public class Controller {
     }
 
     @FXML
-    public void addMaxHealth(ActionEvent event) {
+    public void addMaxHealth() {
 
         if(this.remainingSkillPoints > 0) {
 
@@ -236,6 +239,21 @@ public class Controller {
             remainingSkillPoints--;
 
             this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void addSpeed() {
+
+        if(this.remainingSkillPoints > 0) {
+            player.addSpeed(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.speedLevel.setText(String.valueOf(player.getSpeed()));
             setSkillPointsDisplay();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
@@ -283,6 +301,20 @@ public class Controller {
 
             this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
             setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
+    }
+
+    @FXML
+    public void negateSpeed() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateSpeed(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.speedLevel.setText(String.valueOf(player.getSpeed()));
         } else {
             System.out.println("Player has reached the starting stat level");
         }
