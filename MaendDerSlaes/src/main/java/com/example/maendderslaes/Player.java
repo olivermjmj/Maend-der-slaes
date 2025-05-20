@@ -9,6 +9,7 @@ public class Player extends Character{
         this.maxHP = maxHP;
     }
 
+
     @Override
     public void tryToAttack(Character target, String choice) {
 
@@ -29,25 +30,43 @@ public class Player extends Character{
     @Override
     protected int lightAttack() {
 
-        attack = strength - this.random.nextInt(5,21);
+        int landAttack = random.nextInt(1, 6);  //80% chance to hit your attack
 
-        return attack;
+        if(landAttack != 5) {
+            attack = strength - this.random.nextInt(5, 21);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
     @Override
     protected int mediumAttack() {
 
-        attack = strength - this.random.nextInt(4, 11);
+        int landAttack = random.nextInt(1, 11); //60% chance to hit your attack
 
-        return attack;
+        if(landAttack > 4) {
+            attack = strength - this.random.nextInt(4, 11);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
     @Override
     protected int heavyAttack() {
 
-        attack = strength - this.random.nextInt(3,6);
+        int landAttack = random.nextInt(1, 4); //1/3 chance to hit your attack
 
-        return attack;
+        if(landAttack == 1) {
+            attack = strength - this.random.nextInt(3, 6);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
 
