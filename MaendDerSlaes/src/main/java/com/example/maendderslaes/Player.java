@@ -2,9 +2,13 @@ package com.example.maendderslaes;
 
 public class Player extends Character{
 
-    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
-        super(username, health, strength, defence, attack, money, level, weapon);
+    int maxHP;
+
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed) {
+        super(username, health, strength, defence, attack, money, level, weapon, speed);
+        this.maxHP = maxHP;
     }
+
 
     @Override
     public void tryToAttack(Character target, String choice) {
@@ -26,25 +30,43 @@ public class Player extends Character{
     @Override
     protected int lightAttack() {
 
-        attack = strength - this.random.nextInt(5,21);
+        int landAttack = random.nextInt(1, 6);  //80% chance to hit your attack
 
-        return attack;
+        if(landAttack != 5) {
+            attack = strength - this.random.nextInt(5, 21);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
     @Override
     protected int mediumAttack() {
 
-        attack = strength - this.random.nextInt(4, 11);
+        int landAttack = random.nextInt(1, 11); //60% chance to hit your attack
 
-        return attack;
+        if(landAttack > 4) {
+            attack = strength - this.random.nextInt(4, 11);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
     @Override
     protected int heavyAttack() {
 
-        attack = strength - this.random.nextInt(3,6);
+        int landAttack = random.nextInt(1, 4); //1/3 chance to hit your attack
 
-        return attack;
+        if(landAttack == 1) {
+            attack = strength - this.random.nextInt(3, 6);
+
+            return attack;
+        }
+        System.out.println("You missed your attack");
+        return 0;
     }
 
 
@@ -62,6 +84,7 @@ public class Player extends Character{
         return health;
     }
 
+    //setters and getters
     @Override
     public int getMoney() {
         return this.money;
@@ -80,21 +103,23 @@ public class Player extends Character{
     }
 
     public int getLevel() {
-        return level;
+        return this.level;
     }
 
-    public void spendMoney(int amount) {
-        if(money >= amount) {
-            money -= amount;
-        }
+    public int getStrength() {
+        return this.strength;
     }
 
-    public void addStrength(int strength) {
-        this.strength += strength;
+    public int getDefence() {
+        return this.defence;
     }
 
-    public void negateStrength(int strength) {
-        this.strength -= strength;
+    public int getMaxHP() {
+        return this.maxHP;
+    }
+
+    public int getSpeed() {
+        return this.speed;
     }
 
     public void setStrength(int strength) {
@@ -103,6 +128,10 @@ public class Player extends Character{
 
     public void setHP(int health) {
         this.health = health;
+    }
+
+    public void setMaxHP(int maxHealth) {
+        this.maxHP = maxHealth;
     }
 
     public void setLevel(int level) {
@@ -121,6 +150,48 @@ public class Player extends Character{
         this.money = money;
     }
 
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    //adds and negates
+    public void addDefence(int defence) {
+        this.defence += defence;
+    }
+
+    public void addStrength(int strength) {
+        this.strength += strength;
+    }
+
+    public void addMaxHealth(int maxHealth) {
+        this.maxHP += maxHealth;
+    }
+
+    public void addSpeed(int speed) {
+        this.speed += speed;
+    }
+
+    public void negateDefence(int defence) {
+        this.defence -= defence;
+    }
+
+    public void negateStrength(int strength) {
+        this.strength -= strength;
+    }
+
+    public void negateMaxHealth(int maxHealth) {
+        this.maxHP += maxHealth;
+    }
+
+    public void negateSpeed(int speed) {
+        this.speed -= speed;
+    }
+
+
     public void applyWeaponBonus() {
 
         switch (this.weapon) {
@@ -134,4 +205,11 @@ public class Player extends Character{
             case "diamondSword" -> {this.strength += 8;}
         }
     }
+
+    public void spendMoney(int amount) {
+        if(money >= amount) {
+            money -= amount;
+        }
+    }
+
 }

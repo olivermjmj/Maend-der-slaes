@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Well. A lot.">
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Added speed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Dino_GUI_Implementation" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -303,7 +301,47 @@
       <option name="project" value="LOCAL" />
       <updated>1747690406317</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Removed gifManager">
+      <option name="closed" value="true" />
+      <created>1747700882782</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747700882782</updated>
+    </task>
+    <task id="LOCAL-00024" summary="For mange energi drikke.">
+      <option name="closed" value="true" />
+      <created>1747704959194</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747704959194</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player.">
+      <option name="closed" value="true" />
+      <created>1747707524995</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747707524995</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Sleepy">
+      <option name="closed" value="true" />
+      <created>1747710999031</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747710999031</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added speed.">
+      <option name="closed" value="true" />
+      <created>1747713325551</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747713325551</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +367,12 @@
     <MESSAGE value="Gameservice clas and pvp battle," />
     <MESSAGE value="Tired" />
     <MESSAGE value="Well. A lot." />
-    <option name="LAST_COMMIT_MESSAGE" value="Well. A lot." />
+    <MESSAGE value="Removed gifManager" />
+    <MESSAGE value="For mange energi drikke." />
+    <MESSAGE value="Kl er 04.18 og der er opdateret meget, såsom Controller, database, gameservice og player." />
+    <MESSAGE value="Sleepy" />
+    <MESSAGE value="Added speed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added speed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

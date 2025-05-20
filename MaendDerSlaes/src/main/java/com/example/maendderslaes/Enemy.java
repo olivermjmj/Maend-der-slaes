@@ -1,11 +1,9 @@
 package com.example.maendderslaes;
 
-import java.util.Random;
-
 public class Enemy extends Character{
 
-    public Enemy(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
-        super(username, health, strength, defence, attack, money, level, weapon);
+    public Enemy(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int speed) {
+        super(username, health, strength, defence, attack, money, level, weapon, speed);
     }
 
     @Override
@@ -27,30 +25,49 @@ public class Enemy extends Character{
     @Override
     protected int lightAttack() {
 
-        attack = strength - this.random.nextInt(5,21);
+        int landAttack = random.nextInt(1, 11);  //90% chance to hit
 
-        return attack;
+        if(landAttack != 10) {
+            attack = strength - this.random.nextInt(5, 21);
+
+            return attack;
+        }
+        System.out.println("Enemy missed it's attack");
+        return 0;
     }
 
     @Override
     protected int mediumAttack() {
 
-        attack = strength - this.random.nextInt(4, 11);
+        int landAttack = random.nextInt(1, 11); //70% chance to hit
 
-        return attack;
+        if(landAttack > 3) {
+            attack = strength - this.random.nextInt(4, 11);
+
+            return attack;
+        }
+        System.out.println("Enemy missed it's attack");
+        return 0;
     }
 
     @Override
     protected int heavyAttack() {
 
-        attack = strength - this.random.nextInt(3,6);
+        int landAttack = random.nextInt(1, 3); //50% chance to hit
 
-        return attack;
+        if(landAttack == 1) {
+            attack = strength - this.random.nextInt(3, 6);
+
+            return attack;
+        }
+        System.out.println("Enemy missed it's attack");
+        return 0;
     }
 
 
     @Override
     protected int takeDMG(int damage) {
+
         int finalDamage = Math.max(0, damage - defence);
         health -= finalDamage;
         return finalDamage;
