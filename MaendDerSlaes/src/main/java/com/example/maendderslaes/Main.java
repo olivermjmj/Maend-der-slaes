@@ -18,8 +18,8 @@ public class Main extends Application {
         //Loads FXML
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-
         Controller controller = fxmlLoader.getController();
+
         GameService gameService = controller.getGameService();
 
         //fullscreen code for mac
