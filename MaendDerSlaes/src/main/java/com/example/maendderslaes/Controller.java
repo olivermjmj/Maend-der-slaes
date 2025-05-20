@@ -315,6 +315,7 @@ public class Controller {
             remainingSkillPoints++;
 
             this.speedLevel.setText(String.valueOf(player.getSpeed()));
+            setSkillPointsDisplay();
         } else {
             System.out.println("Player has reached the starting stat level");
         }
@@ -326,9 +327,12 @@ public class Controller {
     private void initialize() {
 
         //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
-        if(skillPointsLeft != null && strengthLevel != null) {
+        if(skillPointsLeft != null && strengthLevel != null && maxHPLevel != null && speedLevel != null && defenceLevel != null) {
             setSkillPointsDisplay();
             this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            this.defenceLevel.setText(String.valueOf(player.getDefence()));
+            this.speedLevel.setText(String.valueOf(player.getSpeed()));
+            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
         }
     }
 

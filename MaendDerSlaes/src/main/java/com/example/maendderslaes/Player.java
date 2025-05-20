@@ -184,7 +184,7 @@ public class Player extends Character{
     }
 
     public void negateMaxHealth(int maxHealth) {
-        this.maxHP += maxHealth;
+        this.maxHP -= maxHealth;
     }
 
     public void negateSpeed(int speed) {
