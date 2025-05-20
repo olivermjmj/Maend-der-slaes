@@ -7,7 +7,10 @@ import java.util.List;
 
 public class Shop {
 
+    // Attributes
     private List<Item> items = new ArrayList<>();
+
+    // ________________________________________
 
     public void showShop() {
 
@@ -29,6 +32,8 @@ public class Shop {
 
      */
 
+    // ________________________________________
+
     private void setShopItems() {
 
         items.add(new Item("Wooden Sword", 10));
@@ -37,7 +42,10 @@ public class Shop {
         items.add(new Item("Wooden dagger", 10));
     }
 
+    // ________________________________________
+
     public List<Item> getItems() {
         return items;
     }
-}
+
+} // Class end

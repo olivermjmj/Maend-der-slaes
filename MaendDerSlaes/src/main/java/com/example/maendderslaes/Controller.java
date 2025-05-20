@@ -9,16 +9,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class Controller {
 
+    @FXML
+    private AnchorPane root;
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
@@ -50,7 +54,6 @@ public class Controller {
 
     @FXML
     private Text speedLevel;
-
 
     //Attack types
     @FXML
@@ -91,6 +94,12 @@ public class Controller {
     }
 
     private void switchView(ActionEvent event, String fxmlPath) throws IOException {
+
+        if (!fxmlPath.startsWith("/")) {
+
+            fxmlPath = "/com/example/maendderslaes/" + fxmlPath;
+        }
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent newRoot = fxmlLoader.load();
         Scene scene = ((Node) event.getSource()).getScene();
@@ -106,7 +115,6 @@ public class Controller {
 
         scene.setRoot(container);
 
-        // Længere varighed på fade transitions
         FadeTransition fadeOut = new FadeTransition(Duration.millis(500), oldRoot);
         fadeOut.setFromValue(1.0);
         fadeOut.setToValue(0.0);
@@ -122,12 +130,13 @@ public class Controller {
         });
 
         fadeOut.play();
-        sound.playSound("data/musicFX/buttonPress.wav");
+
+       // sound.playSoundFromResource("/musicFX/buttonPress.wav");
     }
 
     @FXML
     protected void register() {
-        sound.playSound("data/musicFX/buttonPress.wav");
+        //sound.playSoundFromResource("/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -146,7 +155,7 @@ public class Controller {
 
     @FXML
     protected void login(ActionEvent event) throws IOException {
-        sound.playSound("data/musicFX/buttonPress.wav");
+        //sound.playSoundFromResource("/musicFX/buttonPress.wav");
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -156,6 +165,7 @@ public class Controller {
             gameService.loadPlayerData();
 
             switchView(event, "createWarrior.fxml");
+
         } else {
             System.out.println("No such user exists.");
         }
@@ -322,18 +332,16 @@ public class Controller {
     }
 
     //Lets us view the skill points before pressing any buttons.
+    // Public instead of private
     @FXML
-    private void initialize() {
-
-        //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
+    public void initialize() {
         if(skillPointsLeft != null && strengthLevel != null && maxHPLevel != null && speedLevel != null && defenceLevel != null) {
             setSkillPointsDisplay();
-            this.strengthLevel.setText(String.valueOf(player.getStrength()));
-            this.defenceLevel.setText(String.valueOf(player.getDefence()));
-            this.speedLevel.setText(String.valueOf(player.getSpeed()));
-            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            strengthLevel.setText(String.valueOf(player.getStrength()));
+            defenceLevel.setText(String.valueOf(player.getDefence()));
+            speedLevel.setText(String.valueOf(player.getSpeed()));
+            maxHPLevel.setText(String.valueOf(player.getMaxHP()));
         }
     }
-
 
 }

@@ -4,14 +4,18 @@ import com.example.maendderslaes.util.DBManager;
 
 public class Player extends Character{
 
+    // Attributes
     int maxHP;
     public static Player instance;
+
+    // ________________________________________
 
     public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed) {
         super(username, health, strength, defence, attack, money, level, weapon, speed);
         this.maxHP = maxHP;
     }
 
+    // ________________________________________
 
     @Override
     public void tryToAttack(Character target, String choice) {
@@ -30,6 +34,8 @@ public class Player extends Character{
         System.out.println("Attack hit for " + dealtDMG + " damage");
     }
 
+    // ________________________________________
+
     @Override
     protected int lightAttack() {
 
@@ -43,6 +49,8 @@ public class Player extends Character{
         System.out.println("You missed your attack");
         return 0;
     }
+
+    // ________________________________________
 
     @Override
     protected int mediumAttack() {
@@ -58,6 +66,8 @@ public class Player extends Character{
         return 0;
     }
 
+    // ________________________________________
+
     @Override
     protected int heavyAttack() {
 
@@ -72,6 +82,7 @@ public class Player extends Character{
         return 0;
     }
 
+    // ________________________________________
 
     @Override
     protected int takeDMG(int damage) {
@@ -81,11 +92,15 @@ public class Player extends Character{
         return finalDMG;
     }
 
+    // ________________________________________
+
     @Override
     public int getHP() {
 
         return health;
     }
+
+    // ________________________________________
 
     //setters and getters
     @Override

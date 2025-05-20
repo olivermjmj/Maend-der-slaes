@@ -5,11 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="Ændret alle fxml filer til at være placeret i en Anchorpane istedet for vbox, da det skabte en masse komplikationer. Anchorpane knapper er langt nemmere at placere præcist. Har også tilføjet en helt ny loading metode til scenerne, som bl.a. nu giver et fadeout hver gang man skifter scene, har også gjort at den ikke tager så meget på memory.">
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/Borgen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/CITYCENTER.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/Colosseum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/Game_Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/MaenDerSlaasForside.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/SMED.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/SkabDinKrigerScene.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/TræningsArena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/VælgDinArena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/images/statsogegenskaber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/music/mainMenu_Music.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/music/startMenu_Music.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/musicFX/AttackNoise.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/musicFX/Punch.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/musicFX/buttonPress.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12-05-2025_18_17_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12-05-2025_18_17__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12-05-2025_19_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12-05-2025_19_42__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-05-2025_19_39_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-05-2025_19_39__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-05-2025_19_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-05-2025_19_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2025_09_35_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2025_09_35__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Casino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/util/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/util/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/util/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/util/SoundManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/ArenaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Borgen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/Colosseum.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/SMED.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/StatsOgEgenskaber.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/cityCenter.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
@@ -39,12 +79,12 @@
     &quot;assignee&quot;: &quot;olivermjmj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/olivermjmj/Maend-der-slaes.git&quot;,
-    &quot;accountId&quot;: &quot;09590726-4c0e-4eb2-b275-4c29be444e5a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/olivermjmj/Maend-der-slaes.git",
+    "accountId": "6c40eeb2-9541-4d09-9c7e-b121432decd3"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -62,10 +102,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "DinoSceneChange",
+    "git-widget-placeholder": "Jonas__soundManager__Fix",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes",
+    "last_opened_file_path": "C:/Users/jonas/Desktop/Git/Maend-der-slaes/MaendDerSlaes/src/main/resources/music",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,11 +118,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonas\Desktop\Git\Maend-der-slaes\MaendDerSlaes\src\main\resources\music" />
+      <recent name="C:\Users\jonas\Desktop\Git\Maend-der-slaes\MaendDerSlaes\src\main\resources\musicFX" />
+      <recent name="C:\Users\jonas\Desktop\Git\Maend-der-slaes\MaendDerSlaes\src\main\resources\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
       </set>
     </attachedChunks>
   </component>
@@ -98,6 +145,7 @@
       <workItem from="1747040795990" duration="76000" />
       <workItem from="1747040903553" duration="1184000" />
       <workItem from="1747380376650" duration="6842000" />
+      <workItem from="1747737613597" duration="4544000" />
     </task>
     <task id="LOCAL-00001" summary="Ny smed scene og nye knapper i city center">
       <option name="closed" value="true" />

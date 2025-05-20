@@ -7,16 +7,22 @@ import java.io.File;
 import java.sql.*;
 
 public class DBManager {
+
+    // Attributes
     private static DBManager instance;
     private Connection conn;
     private String dbPath = "data/database/userData.db";
     private String url = "jdbc:sqlite:" + dbPath;
     private static String activeUser;
 
+    // ________________________________________
+
     public DBManager() {
         connect(url);
         ensureDatabaseExists();
     }
+
+    // ________________________________________
 
     // By ChatGPT: Will let us use the same database across multiple classes
     public static DBManager getInstance() {
@@ -26,6 +32,7 @@ public class DBManager {
         return instance;
     }
 
+    // ________________________________________
 
     public boolean doesUserExist(String name, String password) {
 
@@ -53,6 +60,8 @@ public class DBManager {
         return false;
     }
 
+    // ________________________________________
+
     public void addUserToDB(String name, String password) {
 
         if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
@@ -78,6 +87,8 @@ public class DBManager {
             System.out.println("Username and password length must be: 3 - 12 characters");
         }
     }
+
+    // ________________________________________
 
     //creates the database if not found
     public void ensureDatabaseExists() {
@@ -116,6 +127,8 @@ public class DBManager {
         }
     }
 
+    // ________________________________________
+
     private void connect(String url) {
 
         try {
@@ -124,6 +137,8 @@ public class DBManager {
             System.out.println(e.getMessage());
         }
     }
+
+    // ________________________________________
 
     public void saveUserData(int level, int health, String weapon, int money, int strength, int defence, int maxHealth, int speed) {
         if(activeUser == null) {
@@ -151,6 +166,7 @@ public class DBManager {
         }
     }
 
+    // ________________________________________
 
     public void saveUserGold(int moneyAmount) {
 
@@ -171,6 +187,8 @@ public class DBManager {
         }
     }
 
+    // ________________________________________
+
     public int getUserLevel() {
 
         String sql = "SELECT level FROM Users WHERE name = ?";
@@ -186,6 +204,8 @@ public class DBManager {
 
         return 0;
     }
+
+    // ________________________________________
 
     public int getUserHP() {
 
@@ -203,6 +223,8 @@ public class DBManager {
         return 0;
     }
 
+    // ________________________________________
+
     public int getUserMaxHP() {
 
         String sql = "SELECT maxHealth FROM Users WHERE name = ?";
@@ -218,6 +240,8 @@ public class DBManager {
 
         return 0;
     }
+
+    // ________________________________________
 
     public int getUserGold() {
 
@@ -235,6 +259,8 @@ public class DBManager {
         return 0;
     }
 
+    // ________________________________________
+
     public int getUserStrength() {
 
         String sql = "SELECT strength FROM Users WHERE name = ?";
@@ -250,6 +276,8 @@ public class DBManager {
 
         return 0;
     }
+
+    // ________________________________________
 
     public int getUserDefence() {
 
@@ -267,6 +295,8 @@ public class DBManager {
         return 0;
     }
 
+    // ________________________________________
+
     public int getUserSpeed() {
 
         String sql = "SELECT speed FROM Users WHERE name = ?";
@@ -281,6 +311,8 @@ public class DBManager {
 
         return 0;
     }
+
+    // ________________________________________
 
     public String getUserWeapon() {
 
@@ -297,6 +329,8 @@ public class DBManager {
 
         return null;
     }
+
+    // ________________________________________
 
     public void saveUserWeapon(String weapon) {
         if(activeUser == null) {
@@ -319,13 +353,17 @@ public class DBManager {
         }
     }
 
+    // ________________________________________
+
     public String getUserName() {
 
         return activeUser;
     }
 
+    // ________________________________________
+
     public static void setActiveUser(String user) {
         activeUser = user;
     }
 
-}
+} // DBManager end

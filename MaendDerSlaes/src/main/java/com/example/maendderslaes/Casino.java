@@ -8,8 +8,11 @@ import java.util.Random;
 
 public class Casino {
 
+    // Attributes
     private boolean won = false;
     private int[] dice = new int[2];
+
+    // ________________________________________
 
     //The game hazard. The player has to guess a number that ranges from 5-9
     public void hazard(Player player, int moneyToGamble, int guess) {
@@ -46,4 +49,4 @@ public class Casino {
         }
     }
 
-}
+} // Class end

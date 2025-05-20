@@ -9,14 +9,19 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class Main extends Application {
+
+    // Attributes
+
+    // ________________________________________
 
     @Override
     public void start(Stage stage) throws IOException {
 
         //Loads FXML
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/maendderslaes/MainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Controller controller = fxmlLoader.getController();
 
@@ -31,10 +36,12 @@ public class Main extends Application {
         stage.setHeight(bounds.getHeight()); */
 
         stage.setTitle("Hovedmenu");
-        stage.getIcons().add(new Image("file:data/images/Game_Logo.png"));
+        stage.getIcons().add(new Image(getClass().getResource("/images/Game_Logo.png").toExternalForm()));
 
         SoundManager music = new SoundManager();
-        music.playSoundOnRepeat("data/music/startMenu_Music.wav");
+        URL musicUrl = getClass().getResource("/music/mp3/startMenu_Music.mp3");
+        music.playBackgroundMusicFromResource(musicUrl);
+
         stage.setMaximized(true);
         stage.setFullScreen(true);
         stage.setResizable(false);
@@ -51,7 +58,10 @@ public class Main extends Application {
         });
     }
 
+    // ________________________________________
+
     public static void main(String[] args) {
         launch();
     }
-}
+
+} // Class end
