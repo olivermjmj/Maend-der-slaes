@@ -25,9 +25,9 @@ public class Enemy extends Character{
     @Override
     protected int lightAttack() {
 
-        int landAttack = random.nextInt(1, 6);  //80% chance to hit
+        int landAttack = random.nextInt(1, 11);  //90% chance to hit
 
-        if(landAttack != 5) {
+        if(landAttack != 10) {
             attack = strength - this.random.nextInt(5, 21);
 
             return attack;
@@ -39,9 +39,9 @@ public class Enemy extends Character{
     @Override
     protected int mediumAttack() {
 
-        int landAttack = random.nextInt(1, 11); //60% chance to hit
+        int landAttack = random.nextInt(1, 11); //70% chance to hit
 
-        if(landAttack > 4) {
+        if(landAttack > 3) {
             attack = strength - this.random.nextInt(4, 11);
 
             return attack;
@@ -53,7 +53,7 @@ public class Enemy extends Character{
     @Override
     protected int heavyAttack() {
 
-        int landAttack = random.nextInt(1, 4); //1/3 chance to hit
+        int landAttack = random.nextInt(1, 3); //50% chance to hit
 
         if(landAttack == 1) {
             attack = strength - this.random.nextInt(3, 6);
