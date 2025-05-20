@@ -80,7 +80,11 @@ public class Player extends Character{
     }
 
     public int getLevel() {
-        return level;
+        return this.level;
+    }
+
+    public int getStrength() {
+        return this.strength;
     }
 
     public void spendMoney(int amount) {

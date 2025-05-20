@@ -19,6 +19,9 @@ import java.io.IOException;
 
 public class Controller {
 
+    private int amountOfSkillPointsSpend;
+    private int remainingSkillPoints = 10;
+
     Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
@@ -37,7 +40,7 @@ public class Controller {
     @FXML
     private Text strengthLevel;
 
-    private final Character enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
+    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE");
 
     @FXML
     protected void lightAttack() {
@@ -167,18 +170,59 @@ public class Controller {
         return gameService;
     }
 
+    private void setSkillPointsDisplay() {
+        this.skillPointsLeft.setText(String.valueOf(this.remainingSkillPoints));
+    }
+
+    private void getSkillPointsLeft() {
+
+    }
+
     @FXML
     public void addStrength() {
 
+        if(this.remainingSkillPoints > 0) {
+
+            player.addStrength(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
     }
 
     @FXML
     public void negateStrength() {
 
+        if(this.amountOfSkillPointsSpend > 0) {
+
+            player.negateStrength(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting strength level.");
+        }
     }
 
     @FXML
     public void addHealth() {
 
+    }
+
+    //Lets us view the skill points before pressing any buttons.
+    @FXML
+    private void initialize() {
+
+        //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
+        if(skillPointsLeft != null && strengthLevel != null) {
+            setSkillPointsDisplay();
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+        }
     }
 }
