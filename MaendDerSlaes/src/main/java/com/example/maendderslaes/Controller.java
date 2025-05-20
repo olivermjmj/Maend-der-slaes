@@ -163,7 +163,7 @@ public class Controller {
 
     @FXML protected void guestLogin(ActionEvent event) throws IOException { switchView (event, "createWarrior.fxml"); }
     @FXML protected void goBack (ActionEvent event) throws IOException { switchView (event, "MainMenu.fxml"); }
-    @FXML protected void goToCityCenter (ActionEvent event) throws IOException { switchView (event, "cityCenter.fxml"); }
+    @FXML protected void goToCityCenter (ActionEvent event) throws IOException { gameService.savePlayerData(); switchView (event, "cityCenter.fxml"); }
     @FXML protected void goToSmed (ActionEvent event) throws IOException { switchView (event, "SMED.fxml"); }
     @FXML protected void goToStatsOgEgenskaber (ActionEvent event) throws IOException { switchView (event, "StatsOgEgenskaber.fxml"); }
     @FXML protected void goToArenaMenu (ActionEvent event) throws IOException { switchView (event, "ArenaMenu.fxml"); }
@@ -321,7 +321,6 @@ public class Controller {
         }
     }
 
-
     //Lets us view the skill points before pressing any buttons.
     @FXML
     private void initialize() {
@@ -335,5 +334,6 @@ public class Controller {
             this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
         }
     }
+
 
 }

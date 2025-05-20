@@ -1,8 +1,11 @@
 package com.example.maendderslaes;
 
+import com.example.maendderslaes.util.DBManager;
+
 public class Player extends Character{
 
     int maxHP;
+    public static Player instance;
 
     public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP, int speed) {
         super(username, health, strength, defence, attack, money, level, weapon, speed);

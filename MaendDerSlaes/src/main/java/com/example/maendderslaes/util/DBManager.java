@@ -136,9 +136,8 @@ public class DBManager {
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
             stmt.setInt(1, level);
-            stmt.setInt(2, maxHealth);
-            stmt.setInt(3,health);
-            stmt.setString(3,weapon);
+            stmt.setInt(2, health);
+            stmt.setString(3, weapon);
             stmt.setInt(4, money);
             stmt.setInt(5, strength);
             stmt.setInt(6, defence);
