@@ -19,11 +19,16 @@ import java.io.IOException;
 
 public class Controller {
 
-    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
+    private int amountOfSkillPointsSpend;
+    private int remainingSkillPoints = 10;
+
+    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0, 0);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
 
     private final SoundManager sound = new SoundManager();
+
+    private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10); // dummy enemy
 
     @FXML
     private TextField usernameField;
@@ -37,8 +42,17 @@ public class Controller {
     @FXML
     private Text strengthLevel;
 
-    private final Character enemy = new Enemy("NONE", 15, 3, 0, 20, 1, 2, "NONE");
+    @FXML
+    private Text defenceLevel;
 
+    @FXML
+    private Text maxHPLevel;
+
+    @FXML
+    private Text speedLevel;
+
+
+    //Attack types
     @FXML
     protected void lightAttack() {
         handleAttack("light");
@@ -167,18 +181,155 @@ public class Controller {
         return gameService;
     }
 
-    @FXML
-    public void addStrength() {
-
+    private void setSkillPointsDisplay() {
+        this.skillPointsLeft.setText(String.valueOf(this.remainingSkillPoints));
     }
 
-    @FXML
-    public void negateStrength() {
+    private void getSkillPointsLeft() {
 
     }
 
     @FXML
     public void addHealth() {
 
+        if(this.remainingSkillPoints > 0) {
+
+        }
     }
+
+    @FXML
+    public void addStrength() {
+
+        if(this.remainingSkillPoints > 0) {
+
+            player.addStrength(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void addDefence() {
+
+        if(this.remainingSkillPoints > 0) {
+
+            player.addDefence(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.defenceLevel.setText(String.valueOf(player.getDefence()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void addMaxHealth() {
+
+        if(this.remainingSkillPoints > 0) {
+
+            player.addMaxHealth(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void addSpeed() {
+
+        if(this.remainingSkillPoints > 0) {
+            player.addSpeed(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.speedLevel.setText(String.valueOf(player.getSpeed()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void negateStrength() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+
+            player.negateStrength(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting strength level.");
+        }
+    }
+
+    @FXML
+    public void negateDefence() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateDefence(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.defenceLevel.setText(String.valueOf(player.getDefence()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
+    }
+
+    @FXML
+    public void negateMaxHealth() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateMaxHealth(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.maxHPLevel.setText(String.valueOf(player.getMaxHP()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
+    }
+
+    @FXML
+    public void negateSpeed() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateSpeed(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.speedLevel.setText(String.valueOf(player.getSpeed()));
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
+    }
+
+
+    //Lets us view the skill points before pressing any buttons.
+    @FXML
+    private void initialize() {
+
+        //Makes it, so aren't trying to update the fields before they even exist. Which first happens in "createWarrior"
+        if(skillPointsLeft != null && strengthLevel != null) {
+            setSkillPointsDisplay();
+            this.strengthLevel.setText(String.valueOf(player.getStrength()));
+        }
+    }
+
 }

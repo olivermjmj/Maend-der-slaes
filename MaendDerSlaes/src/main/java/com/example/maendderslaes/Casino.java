@@ -2,17 +2,19 @@ package com.example.maendderslaes;
 
 import com.example.maendderslaes.util.DBManager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Casino {
 
     private boolean won = false;
     private int[] dice = new int[2];
-    private Random random = new Random();
-    private DBManager database;
 
     //The game hazard. The player has to guess a number that ranges from 5-9
-    public void diceGame(Player player, int moneyToGamble, int guess) {
+    public void hazard(Player player, int moneyToGamble, int guess) {
+
+        Random random = new Random();
 
         //First throw.
         dice[0] = random.nextInt(1, 7);
@@ -43,4 +45,5 @@ public class Casino {
             player.negateMoney(moneyToGamble);
         }
     }
+
 }
