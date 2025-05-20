@@ -335,7 +335,38 @@ public class Controller {
     // Public instead of private
     @FXML
     public void initialize() {
-        if(skillPointsLeft != null && strengthLevel != null && maxHPLevel != null && speedLevel != null && defenceLevel != null) {
+        if (root != null) {
+            String backgroundPath;
+
+            if (strengthLevel != null && maxHPLevel != null && speedLevel != null && defenceLevel != null) {
+                backgroundPath = "/images/SkabDinKrigerScene.png";
+            } else if (usernameField != null && passwordField != null) {
+                backgroundPath = "/images/MaenDerSlaasForside.png";
+            } else {
+                switch (root.getId()) {
+                    case "cityCenterScene"   -> backgroundPath = "/images/CITYCENTER.png";
+                    case "smedScene"         -> backgroundPath = "/images/SMED.png";
+                    case "statsScene"        -> backgroundPath = "/images/statsogegenskaber.png";
+                    case "arenaMenuScene"    -> backgroundPath = "/images/VælgDinArena.png";
+                    case "trainingScene"     -> backgroundPath = "/images/TræningsArena.png";
+                    case "borgenScene"       -> backgroundPath = "/images/Borgen.png";
+                    case "colosseumScene"    -> backgroundPath = "/images/Colosseum.png";
+                    default                  -> backgroundPath = "/images/MaenDerSlaasForside.png";
+                }
+            }
+
+            String imageUrl = getClass().getResource(backgroundPath).toExternalForm();
+            root.setStyle(
+                    "-fx-background-image: url('" + imageUrl + "');" +
+                            "-fx-background-repeat: stretch;" +
+                            "-fx-background-size: 100% 100%;" +
+                            "-fx-background-position: center center;" +
+                            "-fx-background-color: black;");
+        }
+
+        // Stats-skærmens tal
+        if (skillPointsLeft != null && strengthLevel != null &&
+                maxHPLevel != null && speedLevel != null && defenceLevel != null) {
             setSkillPointsDisplay();
             strengthLevel.setText(String.valueOf(player.getStrength()));
             defenceLevel.setText(String.valueOf(player.getDefence()));
@@ -343,5 +374,4 @@ public class Controller {
             maxHPLevel.setText(String.valueOf(player.getMaxHP()));
         }
     }
-
 }

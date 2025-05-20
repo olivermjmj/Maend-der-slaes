@@ -58,8 +58,6 @@ public class Main extends Application {
         });
     }
 
-    // ________________________________________
-
     public static void main(String[] args) {
         launch();
     }

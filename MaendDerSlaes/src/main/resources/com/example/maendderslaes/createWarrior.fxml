@@ -4,7 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane style="-fx-background-image: url('/images/SkabDinKrigerScene.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover; -fx-background-position: center center; -fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maendderslaes.Controller">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.maendderslaes.Controller"
+            fx:id="root">
 
     <Text layoutX="464.0" layoutY="143.0" style="-fx-background-color: #FFD700;                -fx-text-fill: #000000;                -fx-font-family: 'Comic Sans MS';                -fx-font-size: 18;                -fx-font-weight: bold;                -fx-min-height: 30;                -fx-min-width: 200;                -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.8), 15, 0.5, 0, 0);                -fx-border-color: #000000;                -fx-border-width: 2;                -fx-background-radius: 5;                -fx-border-radius: 5;" text="Skill points left:" AnchorPane.bottomAnchor="657.7529296875" AnchorPane.rightAnchor="636.052734375" />
 

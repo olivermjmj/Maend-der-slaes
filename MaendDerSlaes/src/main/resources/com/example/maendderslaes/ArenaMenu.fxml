@@ -5,11 +5,8 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.maendderslaes.Controller"
-            style="-fx-background-image: url('/images/VælgDinArena.png');
-                   -fx-background-repeat: stretch;
-                   -fx-background-size: 100% 100%;
-                   -fx-background-position: center center;
-                   -fx-background-color: #ff0000;">
+            fx:id="root"
+            id="arenaMenuScene">
 
     <Button onAction="#goToTræningsArena"
             style="-fx-background-color: rgba(179,5,237,0.3); -fx-opacity: 0;
