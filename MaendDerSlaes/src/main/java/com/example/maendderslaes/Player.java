@@ -87,10 +87,22 @@ public class Player extends Character{
         return this.strength;
     }
 
+    public int getDefence() {
+        return this.defence;
+    }
+
     public void spendMoney(int amount) {
         if(money >= amount) {
             money -= amount;
         }
+    }
+
+    public void addDefence(int defence) {
+        this.defence += defence;
+    }
+
+    public void negateDefence(int defence) {
+        this.defence -= defence;
     }
 
     public void addStrength(int strength) {
@@ -125,6 +137,10 @@ public class Player extends Character{
         this.money = money;
     }
 
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
     public void applyWeaponBonus() {
 
         switch (this.weapon) {
@@ -138,4 +154,5 @@ public class Player extends Character{
             case "diamondSword" -> {this.strength += 8;}
         }
     }
+
 }

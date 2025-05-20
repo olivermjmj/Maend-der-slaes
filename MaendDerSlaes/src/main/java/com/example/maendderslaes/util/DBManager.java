@@ -56,17 +56,19 @@ public class DBManager {
     public void addUserToDB(String name, String password) {
 
         if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
-            String sql = "INSERT INTO Users (name, password, level, weapon) VALUES (?, ?, ?, ?)";
-            int startLevel = 1;
-            try {
+            String sql = "INSERT INTO Users (name, password, level, weapon, strength, defence) VALUES (?, ?, ?, ?, ?, ?)";
 
-                PreparedStatement stmt = conn.prepareStatement(sql);
+            int startLevel = 1;
+            try(PreparedStatement stmt = conn.prepareStatement(sql)) {
 
                 stmt.setString(1, name);
                 stmt.setString(2, password);
                 stmt.setInt(3, startLevel);
-                stmt.setString(4,"NONE");
+                stmt.setString(4, "NONE");
+                stmt.setInt(5, 1);
+                stmt.setInt(6, 1);
                 stmt.executeUpdate();
+
 
             } catch (SQLException e) {
                 System.out.println("Failed to create user because: " + e.getMessage());
@@ -98,7 +100,9 @@ public class DBManager {
                          level INTEGER NOT NULL,
                          health INTEGER DEFAULT 100,
                          money INTEGER DEFAULT 50,
-                         weapon VARCHAR(24) DEFAULT 'NONE'
+                         weapon VARCHAR(24) DEFAULT 'NONE',
+                         strength INTEGER NOT NULL,
+                         defence INTEGER NOT NULL
                      );
                      """;
             stmt.execute(sql);
@@ -118,13 +122,13 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon, int money) {
+    public void saveUserData(int level, int health, String weapon, int money, int strength, int defence) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
         }
 
-        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ? WHERE name = ?";
+        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ? WHERE name = ?";
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
@@ -132,7 +136,9 @@ public class DBManager {
             stmt.setInt(2, health);
             stmt.setString(3,weapon);
             stmt.setInt(4, money);
-            stmt.setString(5, activeUser);
+            stmt.setInt(5, strength);
+            stmt.setInt(6, defence);
+            stmt.setString(7, activeUser);
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -208,6 +214,38 @@ public class DBManager {
         return 0;
     }
 
+    public int getUserStrength() {
+
+        String sql = "SELECT strength FROM Users WHERE name = ?";
+
+        try(PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("strength");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column strength, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public int getUserDefence() {
+
+        String sql = "SELECT defence FROM Users WHERE name = ?";
+
+        try(PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+            return rs.getInt("defence");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column defence, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
     public String getUserWeapon() {
 
         String sql = "SELECT weapon FROM Users WHERE name = ?";
@@ -251,7 +289,7 @@ public class DBManager {
     }
 
     public static void setActiveUser(String user) {
-
         activeUser = user;
     }
+
 }

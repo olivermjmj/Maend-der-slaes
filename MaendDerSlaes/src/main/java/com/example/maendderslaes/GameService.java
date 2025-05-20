@@ -39,18 +39,22 @@ public class GameService {
         player.setHP(100);
         player.setMoney(50);
         player.setWeapon("NONE");
+        player.setStrength(1);
+        player.setDefence(1);
     }
 
     public void loadPlayerData() {
-        player.setName(dbManager.getUserName());        //lods the users name
-        player.setLevel(dbManager.getUserLevel());      //loads the users level
-        player.setHP(dbManager.getUserHP());            //loads the users hp
-        player.setMoney(dbManager.getUserGold());       //loads the users money
-        player.setWeapon(dbManager.getUserWeapon());    //loads the users weapon
+        player.setName(dbManager.getUserName());            //lods the users name
+        player.setLevel(dbManager.getUserLevel());          //loads the users level
+        player.setHP(dbManager.getUserHP());                //loads the users hp
+        player.setMoney(dbManager.getUserGold());           //loads the users money
+        player.setWeapon(dbManager.getUserWeapon());        //loads the users weapon
+        player.setStrength(dbManager.getUserStrength());    //loads the users strength
+        player.setDefence(dbManager.getUserDefence());      //loads the users defence
     }
 
     public void savePlayerData() {
-        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney());
+        dbManager.saveUserData(player.getLevel(), player.getHP(), player.getWeapon(), player.getMoney(), player.getStrength(), player.getDefence());
     }
 
 }

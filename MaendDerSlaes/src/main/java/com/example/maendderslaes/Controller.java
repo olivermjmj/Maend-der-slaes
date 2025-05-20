@@ -40,6 +40,9 @@ public class Controller {
     @FXML
     private Text strengthLevel;
 
+    @FXML
+    private Text defenceLevel;
+
     private final Character enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE");
 
     @FXML
@@ -179,6 +182,14 @@ public class Controller {
     }
 
     @FXML
+    public void addHealth() {
+
+        if(this.remainingSkillPoints > 0) {
+
+        }
+    }
+
+    @FXML
     public void addStrength() {
 
         if(this.remainingSkillPoints > 0) {
@@ -188,6 +199,22 @@ public class Controller {
             remainingSkillPoints--;
 
             this.strengthLevel.setText(String.valueOf(player.getStrength()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player does not have any more skill points to spend.");
+        }
+    }
+
+    @FXML
+    public void addDefence() {
+
+        if(this.remainingSkillPoints > 0) {
+
+            player.addDefence(1);
+            amountOfSkillPointsSpend++;
+            remainingSkillPoints--;
+
+            this.defenceLevel.setText(String.valueOf(player.getDefence()));
             setSkillPointsDisplay();
         } else {
             System.out.println("Player does not have any more skill points to spend.");
@@ -211,9 +238,25 @@ public class Controller {
     }
 
     @FXML
-    public void addHealth() {
+    public void negateDefence() {
+
+        if(this.amountOfSkillPointsSpend > 0) {
+            player.negateDefence(1);
+            amountOfSkillPointsSpend--;
+            remainingSkillPoints++;
+
+            this.defenceLevel.setText(String.valueOf(player.getDefence()));
+            setSkillPointsDisplay();
+        } else {
+            System.out.println("Player has reached the starting stat level");
+        }
+    }
+
+    @FXML
+    public void negateHealth() {
 
     }
+
 
     //Lets us view the skill points before pressing any buttons.
     @FXML
