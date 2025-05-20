@@ -99,6 +99,7 @@ public class DBManager {
                          password VARCHAR(12) NOT NULL,
                          level INTEGER NOT NULL,
                          health INTEGER DEFAULT 100,
+                         maxHealth INTEGER DEFAULT 100,
                          money INTEGER DEFAULT 50,
                          weapon VARCHAR(24) DEFAULT 'NONE',
                          strength INTEGER NOT NULL,
@@ -122,23 +123,25 @@ public class DBManager {
         }
     }
 
-    public void saveUserData(int level, int health, String weapon, int money, int strength, int defence) {
+    public void saveUserData(int level, int health, String weapon, int money, int strength, int defence, int maxHealth) {
         if(activeUser == null) {
             System.out.println("No user is logged in.");
             return;
         }
 
-        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ? WHERE name = ?";
+        String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ?, maxHealth = ? WHERE name = ?";
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
 
             stmt.setInt(1, level);
-            stmt.setInt(2, health);
+            stmt.setInt(2, maxHealth);
+            stmt.setInt(3,health);
             stmt.setString(3,weapon);
             stmt.setInt(4, money);
             stmt.setInt(5, strength);
             stmt.setInt(6, defence);
-            stmt.setString(7, activeUser);
+            stmt.setInt(7, maxHealth);
+            stmt.setString(8, activeUser);
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -193,6 +196,22 @@ public class DBManager {
             return rs.getInt("health");
         } catch (SQLException e) {
             System.out.println("Couldn't get column health, because: " + e.getMessage());
+        }
+
+        return 0;
+    }
+
+    public int getUserMaxHP() {
+
+        String sql = "SELECT maxHealth FROM Users WHERE name = ?";
+
+        try(PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, activeUser);
+            ResultSet rs = stmt.executeQuery();
+
+            return rs.getInt("maxHealth");
+        } catch (SQLException e) {
+            System.out.println("Couldn't get column maxHP, because: " + e.getMessage());
         }
 
         return 0;

@@ -22,7 +22,7 @@ public class Controller {
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
-    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null);
+    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
 

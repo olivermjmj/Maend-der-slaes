@@ -2,8 +2,11 @@ package com.example.maendderslaes;
 
 public class Player extends Character{
 
-    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon) {
+    int maxHP;
+
+    public Player(String username, int health, int strength, int defence, int attack, int money, int level, String weapon, int maxHP) {
         super(username, health, strength, defence, attack, money, level, weapon);
+        this.maxHP = maxHP;
     }
 
     @Override
@@ -62,6 +65,7 @@ public class Player extends Character{
         return health;
     }
 
+    //setters and getters
     @Override
     public int getMoney() {
         return this.money;
@@ -91,26 +95,8 @@ public class Player extends Character{
         return this.defence;
     }
 
-    public void spendMoney(int amount) {
-        if(money >= amount) {
-            money -= amount;
-        }
-    }
-
-    public void addDefence(int defence) {
-        this.defence += defence;
-    }
-
-    public void negateDefence(int defence) {
-        this.defence -= defence;
-    }
-
-    public void addStrength(int strength) {
-        this.strength += strength;
-    }
-
-    public void negateStrength(int strength) {
-        this.strength -= strength;
+    public int getMaxHP() {
+        return this.maxHP;
     }
 
     public void setStrength(int strength) {
@@ -119,6 +105,10 @@ public class Player extends Character{
 
     public void setHP(int health) {
         this.health = health;
+    }
+
+    public void setMaxHP(int maxHealth) {
+        this.maxHP = maxHealth;
     }
 
     public void setLevel(int level) {
@@ -141,6 +131,24 @@ public class Player extends Character{
         this.defence = defence;
     }
 
+    //adds and negates
+    public void addDefence(int defence) {
+        this.defence += defence;
+    }
+
+    public void addStrength(int strength) {
+        this.strength += strength;
+    }
+
+    public void negateDefence(int defence) {
+        this.defence -= defence;
+    }
+
+    public void negateStrength(int strength) {
+        this.strength -= strength;
+    }
+
+
     public void applyWeaponBonus() {
 
         switch (this.weapon) {
@@ -152,6 +160,12 @@ public class Player extends Character{
             case "SwordOfBlood" -> {this.strength += 4;}
 
             case "diamondSword" -> {this.strength += 8;}
+        }
+    }
+
+    public void spendMoney(int amount) {
+        if(money >= amount) {
+            money -= amount;
         }
     }
 
