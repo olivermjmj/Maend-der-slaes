@@ -7,12 +7,11 @@ public class Enemy extends Character{
     }
 
     @Override
-    public void tryToAttack(Character target, String choice) {
+    public boolean tryToAttack(Character target, String choice) {
         int roll = this.random.nextInt(1,4);
         int damage = 0;
 
         switch (roll) {
-            //Lambda for switch cases are only possible for java 14+
             case 1 -> damage = lightAttack();
             case 2 -> damage = mediumAttack();
             case 3 -> damage = heavyAttack();
@@ -20,6 +19,7 @@ public class Enemy extends Character{
 
         int dealtDMG = target.takeDMG(damage);
         System.out.println("Attack hit for " + dealtDMG + " damage");
+        return dealtDMG > 0;  // Returner true hvis der blev gjort skade
     }
 
     @Override

@@ -116,13 +116,18 @@ public class Controller {
 
         // Spiller angriber
         playerAnimations.afspilAnimation(getAnimationTypeForAttack(attackType));
-        player.tryToAttack(enemy, attackType);
+        boolean playerHit = player.tryToAttack(enemy, attackType);
+
+        // Hvis spilleren rammer, afspil "got hit" animation på fjenden
+        if (playerHit) {
+            enemyAnimations.afspilAnimation(AnimationType.GOT_HIT);
+        }
+
         updateHealthBars();
 
         // Hvis fjenden er død
         if (enemy.getHP() <= 0) {
             enemyAnimations.afspilAnimation(AnimationType.DEATH);
-            // Håndter sejr
             handleVictory();
             return;
         }
@@ -132,7 +137,13 @@ public class Controller {
         pause.setOnFinished(e -> {
             if (player.getHP() > 0) {
                 enemyAnimations.afspilAnimation(AnimationType.LIGHT_ATTACK);
-                enemy.tryToAttack(player, null);
+                boolean enemyHit = enemy.tryToAttack(player, null);
+
+                // Hvis fjenden rammer, afspil "got hit" animation på spilleren
+                if (enemyHit) {
+                    playerAnimations.afspilAnimation(AnimationType.GOT_HIT);
+                }
+
                 updateHealthBars();
 
                 if (player.getHP() <= 0) {
@@ -145,7 +156,6 @@ public class Controller {
         });
         pause.play();
     }
-
     private void handleVictory() {
         int reward = enemy.getMoney();
         player.setMoney(player.getMoney() + reward);
@@ -421,6 +431,5 @@ public class Controller {
     }
 
 
-    //Lets us view the skill points before pressing any buttons.
 
 }

@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="oprettede en karakter">
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/heavy_attack/MinotaurAttack1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/heavy_attack/MinotaurAttack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/heavy_attack/MinotaurAttack3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/heavy_attack/MinotaurAttack4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/heavy_attack/MinotaurAttack5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/medium_attack/MinotaurAttack1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/medium_attack/MinotaurAttack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/medium_attack/MinotaurAttack3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/medium_attack/MinotaurAttack4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/data/sprites/minotaur/medium_attack/MinotaurAttack5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/AnimationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/AnimationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/CharacterType.java" afterDir="false" />
+    <list default="true" id="a35e58fb-8a04-496f-8552-e51fce0ca32b" name="Changes" comment="EVERYTHING HAS BEEN CHANGED :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/data/database/userData.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/AnimationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/AnimationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/GameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/java/com/example/maendderslaes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/TræningsArena.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MaendDerSlaes/src/main/resources/com/example/maendderslaes/createWarrior.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,32 +59,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Maven.MaendDerSlaes [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
-    "Maven.MaendDerSlaes [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor": "Run",
-    "Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor": "Run",
-    "Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "DinosMergeBranch",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes/MaendDerSlaes/data/sprites/minotaur/heavy_attack",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MaendDerSlaes [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MaendDerSlaes [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MaendDerSlaes [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DinosMergeBranch&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dinos/OneDrive/Dokumenter/GitHub/Maend-der-slaes/MaendDerSlaes/data/sprites/minotaur/heavy_attack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dinos\OneDrive\Dokumenter\GitHub\Maend-der-slaes\MaendDerSlaes\data\sprites\minotaur\heavy_attack" />

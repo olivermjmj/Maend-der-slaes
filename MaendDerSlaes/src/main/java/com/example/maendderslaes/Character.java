@@ -27,7 +27,7 @@ public abstract class Character {
         this.speed = speed;
     }
 
-    public abstract void tryToAttack(Character target, String choice);
+    public abstract boolean tryToAttack(Character target, String choice);
 
     protected abstract int lightAttack();
 

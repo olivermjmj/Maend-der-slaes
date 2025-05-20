@@ -27,9 +27,11 @@ public class AnimationHandler {
         String basePath = "file:data/sprites/" + characterType.toString().toLowerCase() + "/";
         String baseCharacter = (characterType == CharacterType.PLAYER) ? "Character" : "Skeleton";
 
+        System.out.println("Indlæser animationer for: " + characterType);
+
         for (AnimationType animType : AnimationType.values()) {
             List<Image> frames = new ArrayList<>();
-            String animationName = animType.toString();
+            String animationName = animType.toString().toLowerCase();
 
             // Håndter specielle navne for hver animation type
             String fileName = switch (animType) {
@@ -43,9 +45,9 @@ public class AnimationHandler {
             };
 
             if (animType == AnimationType.BLOCK) {
-                // Block har kun ét billede uden nummer
                 try {
                     String imagePath = basePath + "block/" + fileName;
+                    System.out.println("Prøver at indlæse block: " + imagePath);
                     Image frame = new Image(imagePath);
                     if (!frame.isError()) {
                         frames.add(frame);
@@ -53,15 +55,37 @@ public class AnimationHandler {
                 } catch (Exception e) {
                     System.err.println("Kunne ikke indlæse block: " + fileName);
                 }
+            } else if (animType == AnimationType.GOT_HIT) {
+                // Speciel håndtering af got_hit animationer
+                try {
+                    for (int i = 1; i <= 2; i++) {
+                        String imagePath = basePath + "got_hit/" + fileName + i + ".png";
+                        System.out.println("Prøver at indlæse got_hit: " + imagePath);
+                        Image frame = new Image(imagePath);
+                        if (!frame.isError()) {
+                            frames.add(frame);
+                            System.out.println("Succes: Indlæste got_hit frame " + i);
+                        } else {
+                            System.err.println("Fejl: Kunne ikke indlæse got_hit frame " + i + " (frame.isError() er true)");
+                            // Print yderligere information om billedet
+                            System.err.println("  Billede bredde: " + frame.getWidth());
+                            System.err.println("  Billede højde: " + frame.getHeight());
+                            System.err.println("  Billede exception: " + frame.getException());
+                        }
+                    }
+                    System.out.println("Antal indlæste got_hit frames: " + frames.size());
+                } catch (Exception e) {
+                    System.err.println("Kunne ikke indlæse got_hit animation: " + e.getMessage());
+                    e.printStackTrace();
+                }
             } else {
-                // For alle andre animationer, prøv at indlæse nummererede frames
+                // Håndtering af andre animationer
                 int frameNumber = 1;
                 boolean hasMoreFrames = true;
 
                 while (hasMoreFrames) {
-                    String imagePath = basePath +
-                            animType.toString().toLowerCase() + "/" +
-                            fileName + frameNumber + ".png";
+                    String imagePath = basePath + animationName + "/" + fileName + frameNumber + ".png";
+                    System.out.println("Prøver at indlæse: " + imagePath);
                     try {
                         Image frame = new Image(imagePath);
                         if (!frame.isError()) {
@@ -78,6 +102,7 @@ public class AnimationHandler {
 
             if (!frames.isEmpty()) {
                 animations.put(animType, frames);
+                System.out.println("Tilføjede " + frames.size() + " frames for " + animType);
             } else {
                 System.err.println("Ingen frames fundet for " + animType + " animation for " + characterType);
             }
@@ -95,20 +120,67 @@ public class AnimationHandler {
             return;
         }
 
-        Timeline timeline = new Timeline();
-        double frameVarighed = 0.1; // 100 ms mellem hver frame
+        System.out.println("Starter " + type + " animation med " + frames.size() + " frames");
 
-        for (int i = 0; i < frames.size(); i++) {
-            final Image frame = frames.get(i);
+        Timeline timeline = new Timeline();
+
+        // Forskellige hastigheder for forskellige animations typer
+        double frameVarighed = switch(type) {
+            case GOT_HIT -> 0.4;    // 400ms per frame for got_hit
+            case DEATH -> 0.4;      // 400ms for død
+            case BLOCK -> 1.0;      // 1 sekund for block
+            default -> 0.3;         // 300ms for alle andre
+        };
+
+        if (type == AnimationType.GOT_HIT) {
+            // Særlig håndtering af got_hit animation
+            System.out.println("GotHit animation starter - antal frames: " + frames.size());
+            
+            // Frame 1
             timeline.getKeyFrames().add(
-                    new KeyFrame(Duration.seconds(i * frameVarighed),
-                            e -> spriteView.setImage(frame))
+                new KeyFrame(Duration.seconds(0),
+                e -> {
+                    System.out.println("Viser GotHit frame 1");
+                    spriteView.setImage(frames.get(0));
+                })
             );
+
+            // Frame 2
+            timeline.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(frameVarighed),
+                e -> {
+                    System.out.println("Viser GotHit frame 2");
+                    spriteView.setImage(frames.get(1));
+                })
+            );
+
+            // Hold sidste frame lidt længere
+            timeline.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(frameVarighed * 2),
+                e -> {
+                    System.out.println("Holder GotHit frame 2 lidt længere");
+                    spriteView.setImage(frames.get(1));
+                })
+            );
+
+        } else {
+            // Normal håndtering for andre animationer
+            for (int i = 0; i < frames.size(); i++) {
+                final Image frame = frames.get(i);
+                final int frameNumber = i + 1;
+                timeline.getKeyFrames().add(
+                    new KeyFrame(Duration.seconds(i * frameVarighed),
+                    e -> spriteView.setImage(frame))
+                );
+            }
         }
 
         // Gå tilbage til idle efter animationen er færdig
         if (type != AnimationType.IDLE && type != AnimationType.DEATH) {
-            timeline.setOnFinished(e -> afspilAnimation(AnimationType.IDLE));
+            timeline.setOnFinished(e -> {
+                System.out.println("Animation " + type + " færdig, går tilbage til IDLE");
+                afspilAnimation(AnimationType.IDLE);
+            });
         }
 
         // For idle animation, gentag den
@@ -118,17 +190,5 @@ public class AnimationHandler {
 
         currentAnimation = timeline;
         timeline.play();
-    }
-
-    public void stopAnimation() {
-        if (currentAnimation != null) {
-            currentAnimation.stop();
-            currentAnimation = null;
-        }
-    }
-
-    public boolean harAnimation(AnimationType type) {
-        List<Image> frames = animations.get(type);
-        return frames != null && !frames.isEmpty();
     }
 }
