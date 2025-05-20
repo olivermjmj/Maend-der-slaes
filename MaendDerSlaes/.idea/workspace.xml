@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Controller.java" afterDir="false" />
+    <list default="true" id="c4bfe5b9-cda7-4bea-8f78-affcd9790204" name="Changes" comment="fixes">
+      <change beforePath="$PROJECT_DIR$/data/database/userData.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/database/userData.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/maendderslaes/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,14 +349,21 @@
       <option name="project" value="LOCAL" />
       <updated>1747730023067</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1747741867956</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747741867956</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renaming and creating files." />
     <MESSAGE value="Done with DBMananger" />
     <MESSAGE value="Ændrede klassediagrammet og har tilføjet metoder til Enemy, Player og Character" />
     <MESSAGE value="For Maven" />
@@ -380,7 +388,8 @@
     <MESSAGE value="Sleepy" />
     <MESSAGE value="Added speed." />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

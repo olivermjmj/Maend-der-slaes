@@ -15,12 +15,14 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+        DBManager db = DBManager.getInstance();
+        Player player = new Player(null, 0,0,0,0,0,0,null,0,0);
+        GameService gameService = new GameService(player, db);
+
         //Loads FXML
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Controller controller = fxmlLoader.getController();
-
-        GameService gameService = controller.getGameService();
 
         //fullscreen code for mac
         /*Screen screen = Screen.getPrimary();
