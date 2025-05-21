@@ -26,7 +26,8 @@ public class Controller {
     private int amountOfSkillPointsSpend;
     private int remainingSkillPoints = 10;
 
-    Player player = new Player(null, 0, 0, 0, 0, 0, 0, null, 0, 0);
+    // Ændr initialiseringen af player til at have nogle standard værdier
+    Player player = new Player(null, 100, 1, 1, 0, 50, 1, "NONE", 100, 1);
     DBManager dbManager = DBManager.getInstance();
     GameService gameService = new GameService(player, DBManager.getInstance());
     private final SoundManager sound = new SoundManager();
@@ -57,8 +58,28 @@ public class Controller {
 
     public void initializeArenaBattle() {
         if (playerSprite != null && enemySprite != null) {
-            gameService = new GameService();
-            player = gameService.getPlayer();
+            // Hvis der er en bruger logget ind, indlæs deres data
+            if (dbManager.getUserName() != null) {
+                player.setName(dbManager.getUserName());
+                player.setHP(dbManager.getUserHP());
+                player.setMaxHP(dbManager.getUserMaxHP());
+                player.setStrength(dbManager.getUserStrength());
+                player.setDefence(dbManager.getUserDefence());
+                player.setSpeed(dbManager.getUserSpeed());
+                player.setMoney(dbManager.getUserGold());
+                player.setWeapon(dbManager.getUserWeapon());
+                player.setLevel(dbManager.getUserLevel());
+            } else {
+                // Hvis det er en gæst, brug standard værdier
+                player.setHP(100);
+                player.setMaxHP(100);
+                player.setStrength(10);
+                player.setDefence(1);
+                player.setSpeed(1);
+                player.setMoney(50);
+                player.setWeapon("NONE");
+                player.setLevel(1);
+            }
 
             String currentFxml = this.currentFxmlName != null ? this.currentFxmlName : "unknown.fxml";
 
@@ -82,11 +103,16 @@ public class Controller {
 
             updateHealthBars();
         }
+        
+        // Opdater health bars efter initialisering
+        updateHealthBars();
     }
 
     @FXML
     private void initialize() {
-        // Intentionally left blank; logic moved to initializeArenaBattle()
+        if (playerHealthBar != null && enemyHealthBar != null) {
+            updateHealthBars();
+        }
     }
 
     private void handleAttack(String attackType) {
@@ -145,13 +171,22 @@ public class Controller {
     }
 
     private void updateHealthBars() {
-        double playerHealthPercent = (double) Math.max(0, player.getHP()) / player.getMaxHP();
-        playerHealthBar.setProgress(playerHealthPercent);
-        playerHealthLabel.setText(player.getHP() + " / " + player.getMaxHP());
+        if (playerHealthBar != null && player != null) {
+            // Sikr at HP aldrig er mindre end 0
+            int currentHP = Math.max(0, player.getHP());
+            int maxHP = Math.max(100, player.getMaxHP()); // Brug mindst 100 som max HP
+            
+            double playerHealthPercent = (double) currentHP / maxHP;
+            playerHealthBar.setProgress(playerHealthPercent);
+            playerHealthLabel.setText(currentHP + " / " + maxHP);
+        }
 
-        double enemyHealthPercent = (double) Math.max(0, enemy.getHP()) / 100;
-        enemyHealthBar.setProgress(enemyHealthPercent);
-        enemyHealthLabel.setText(enemy.getHP() + " / 100");
+        if (enemyHealthBar != null && enemy != null) {
+            int enemyCurrentHP = Math.max(0, enemy.getHP());
+            double enemyHealthPercent = (double) enemyCurrentHP / 100;
+            enemyHealthBar.setProgress(enemyHealthPercent);
+            enemyHealthLabel.setText(enemyCurrentHP + " / 100");
+        }
     }
 
     private AnimationType getAnimationTypeForAttack(String attackType) {

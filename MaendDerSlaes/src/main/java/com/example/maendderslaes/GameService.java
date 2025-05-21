@@ -44,13 +44,16 @@ public class GameService {
     }
 
     public void setDefaultStats() {
-        player.setLevel(1);
-        player.setHP(100);
-        player.setMaxHP(100);
-        player.setMoney(50);
-        player.setWeapon("NONE");
-        player.setStrength(1);
-        player.setDefence(1);
+        if (player != null) {
+            player.setHP(100);
+            player.setMaxHP(100);
+            player.setStrength(1);
+            player.setDefence(1);
+            player.setSpeed(1);
+            player.setMoney(50);
+            player.setWeapon("NONE");
+            player.setLevel(1);
+        }
     }
 
     public void loadPlayerData() {

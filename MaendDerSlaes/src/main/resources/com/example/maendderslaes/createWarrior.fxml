@@ -15,93 +15,93 @@
     <Text text="Skill points left:"
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 200;"
-          AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="50.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="260.0"/>
 
     <Text fx:id="skillPointsLeft" text=""
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 50;"
-          AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="50.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="260.0"/>
 
     <!-- Strength Section -->
     <Text text="Strength" style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                                 -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 200;"
-          AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="150.0"/>
+          AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="360.0"/>
 
     <Text fx:id="strengthLevel" text="1"
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 50;"
-          AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="150.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="360.0"/>
 
     <Button onAction="#addStrength" text="+"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="150.0"/>
+            AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="360.0"/>
 
     <Button onAction="#negateStrength" text="-"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="150.0"/>
+            AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="360.0"/>
 
     <!-- Defence Section -->
     <Text text="Defence" style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                                 -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 200;"
-          AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="250.0"/>
+          AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="460.0"/>
 
     <Text fx:id="defenceLevel" text="1"
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 50;"
-          AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="250.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="460.0"/>
 
     <Button onAction="#addDefence" text="+"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="250.0"/>
+            AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="460.0"/>
 
     <Button onAction="#negateDefence" text="-"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="250.0"/>
+            AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="460.0"/>
 
     <!-- Max Health Section -->
     <Text text="Max health" style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                                    -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 200;"
-          AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="350.0"/>
+          AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="560.0"/>
 
     <Text fx:id="maxHPLevel" text="1"
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 50;"
-          AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="350.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="560.0"/>
 
     <Button onAction="#addMaxHealth" text="+"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="350.0"/>
+            AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="560.0"/>
 
     <Button onAction="#negateMaxHealth" text="-"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="350.0"/>
+            AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="560.0"/>
 
     <!-- Speed Section -->
     <Text text="Speed" style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                               -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 200;"
-          AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="450.0"/>
+          AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="660.0"/>
 
     <Text fx:id="speedLevel" text="1"
           style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-family: 'Comic Sans MS';
                  -fx-font-size: 18; -fx-font-weight: bold; -fx-min-height: 30; -fx-min-width: 50;"
-          AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="450.0"/>
+          AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="660.0"/>
 
     <Button onAction="#addSpeed" text="+"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="450.0"/>
+            AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="660.0"/>
 
     <Button onAction="#negateSpeed" text="-"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;"
-            AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="450.0"/>
+            AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="660.0"/>
 
     <!-- Navigation Buttons -->
     <Button onAction="#goBack" text="GO BACK"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;
                    -fx-font-family: 'Comic Sans MS'; -fx-font-size: 15; -fx-font-weight: bold;"
-            AnchorPane.rightAnchor="200.0" AnchorPane.bottomAnchor="100.0"/>
+            AnchorPane.rightAnchor="30.0" AnchorPane.bottomAnchor="50.0"/>
 
     <Button onAction="#goToCityCenter" text="GO TO CITY CENTER"
             style="-fx-background-color: #FFD700; -fx-cursor: hand; -fx-text-fill: #000000;
                    -fx-font-family: 'Comic Sans MS'; -fx-font-size: 15; -fx-font-weight: bold;"
-            AnchorPane.rightAnchor="50.0" AnchorPane.bottomAnchor="100.0"/>
+            AnchorPane.rightAnchor="425.0" AnchorPane.bottomAnchor="50.0"/>
 </AnchorPane>

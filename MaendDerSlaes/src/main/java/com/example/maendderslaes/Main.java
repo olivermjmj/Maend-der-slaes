@@ -35,12 +35,13 @@ public class Main extends Application {
 
         SoundManager music = new SoundManager();
         music.playSoundOnRepeat("data/music/startMenu_Music.wav");
-        stage.setMaximized(true);
+// stage.setMaximized(true);  // Fjern denne linje
         stage.setFullScreen(true);
         stage.setResizable(false);
         stage.setFullScreenExitHint("");
         stage.setScene(scene);
         stage.show();
+
 
         // Saves users data to the database, if user is logged in.
         stage.setOnCloseRequest(event -> {
