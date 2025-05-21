@@ -25,7 +25,12 @@ public class AnimationHandler {
 
     private void indlæsAnimationer() {
         String basePath = "file:data/sprites/" + characterType.toString().toLowerCase() + "/";
-        String baseCharacter = (characterType == CharacterType.PLAYER) ? "Character" : "Skeleton";
+        String baseCharacter = switch (characterType) {
+            case PLAYER -> "Character";
+            case SKELETON -> "Skeleton";
+            case WEREWOLF -> "Werewolf";
+            case MINOTAUR -> "Minotaur";
+        };
 
         System.out.println("Indlæser animationer for: " + characterType);
 
@@ -126,10 +131,13 @@ public class AnimationHandler {
 
         // Forskellige hastigheder for forskellige animations typer
         double frameVarighed = switch(type) {
-            case GOT_HIT -> 0.4;    // 400ms per frame for got_hit
-            case DEATH -> 0.4;      // 400ms for død
-            case BLOCK -> 1.0;      // 1 sekund for block
-            default -> 0.3;         // 300ms for alle andre
+            case GOT_HIT -> 0.2;    // 200ms per frame for got_hit
+            case DEATH -> 0.3;      // 300ms for død
+            case BLOCK -> 0.5;      // 500ms for block
+            case LIGHT_ATTACK -> 0.15;  // 150ms for let angreb
+            case MEDIUM_ATTACK -> 0.2;  // 200ms for medium angreb
+            case HEAVY_ATTACK -> 0.25;  // 250ms for kraftigt angreb
+            case IDLE -> 0.25;      // 250ms for idle
         };
 
         if (type == AnimationType.GOT_HIT) {
@@ -154,25 +162,25 @@ public class AnimationHandler {
                 })
             );
 
-            // Hold sidste frame lidt længere
+            // Hold sidste frame lidt længere og tilføj en ekstra keyframe for at sikre fuld visning
             timeline.getKeyFrames().add(
-                new KeyFrame(Duration.seconds(frameVarighed * 2),
-                e -> {
-                    System.out.println("Holder GotHit frame 2 lidt længere");
-                    spriteView.setImage(frames.get(1));
-                })
+                new KeyFrame(Duration.seconds(frameVarighed * 2))
             );
 
         } else {
             // Normal håndtering for andre animationer
             for (int i = 0; i < frames.size(); i++) {
                 final Image frame = frames.get(i);
-                final int frameNumber = i + 1;
                 timeline.getKeyFrames().add(
                     new KeyFrame(Duration.seconds(i * frameVarighed),
                     e -> spriteView.setImage(frame))
                 );
             }
+            
+            // Tilføj en ekstra keyframe for at holde den sidste frame
+            timeline.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(frames.size() * frameVarighed))
+            );
         }
 
         // Gå tilbage til idle efter animationen er færdig

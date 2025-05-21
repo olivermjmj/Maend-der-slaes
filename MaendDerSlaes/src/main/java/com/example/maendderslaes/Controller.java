@@ -68,6 +68,8 @@ public class Controller {
 
             // Initialiser enemy med startværdier
             enemy = new Enemy("Skeleton", 100, 10, 0, 0, 50, 1, "NONE", 10);
+            enemy = new Enemy("Werewolf", 100, 15,2,10,100,5,"None",15);
+            enemy = new Enemy("Minotaur", 100, 20,5,15,500,10,"None",20);
 
             // Opdater health bars
             updateHealthBars();
@@ -75,37 +77,13 @@ public class Controller {
             // Start animationer
             playerAnimations = new AnimationHandler(CharacterType.PLAYER, playerSprite);
             enemyAnimations = new AnimationHandler(CharacterType.SKELETON, enemySprite);
+            enemyAnimations = new AnimationHandler(CharacterType.WEREWOLF, enemySprite);
+            enemyAnimations = new AnimationHandler(CharacterType.MINOTAUR, enemySprite);
             playerAnimations.afspilAnimation(AnimationType.IDLE);
             enemyAnimations.afspilAnimation(AnimationType.IDLE);
         }
     }
 
-
-
-    private void enableAttackButtons() {
-        if (attackButtonsContainer != null) {
-            attackButtonsContainer.setDisable(false);
-        }
-    }
-
-    private void disableAttackButtons() {
-        if (attackButtonsContainer != null) {
-            attackButtonsContainer.setDisable(true);
-        }
-    }
-
-
-    private void resetBattle() {
-        enableAttackButtons();
-        player.setHP(player.getMaxHP());
-        enemy = new Enemy("NONE", 5, 1, 0, 20, 1, 1, "NONE", 10);
-        updateHealthBars();
-
-        if (playerAnimations != null && enemyAnimations != null) {
-            playerAnimations.afspilAnimation(AnimationType.IDLE);
-            enemyAnimations.afspilAnimation(AnimationType.IDLE);
-        }
-    }
 
 
     private void handleAttack(String attackType) {

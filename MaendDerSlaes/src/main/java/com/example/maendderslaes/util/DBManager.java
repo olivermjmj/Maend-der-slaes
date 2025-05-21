@@ -54,13 +54,11 @@ public class DBManager {
     }
 
     public void addUserToDB(String name, String password) {
-
         if((name.length() > 2 && password.length() > 2) && (name.length() < 13 && password.length() < 13)) {
-            String sql = "INSERT INTO Users (name, password, level, weapon, strength, defence, speed) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Users (name, password, level, weapon, strength, defence, speed, health, maxHealth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             int startLevel = 1;
             try(PreparedStatement stmt = conn.prepareStatement(sql)) {
-
                 stmt.setString(1, name);
                 stmt.setString(2, password);
                 stmt.setInt(3, startLevel);
@@ -68,14 +66,12 @@ public class DBManager {
                 stmt.setInt(5, 1);          //strength
                 stmt.setInt(6, 1);          //defence
                 stmt.setInt(7, 1);          //speed
+                stmt.setInt(8, 100);        //health
+                stmt.setInt(9, 100);        //maxHealth
                 stmt.executeUpdate();
-
-
             } catch (SQLException e) {
                 System.out.println("Failed to create user because: " + e.getMessage());
             }
-        } else {
-            System.out.println("Username and password length must be: 3 - 12 characters");
         }
     }
 
@@ -134,11 +130,9 @@ public class DBManager {
         String sql = "UPDATE Users SET level = ?, health = ?, weapon = ?, money = ?, strength = ?, defence = ?, maxHealth = ?, speed = ? WHERE name = ?";
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
-
             stmt.setInt(1, level);
-            stmt.setInt(2, maxHealth);
-            stmt.setInt(3,health);
-            stmt.setString(3,weapon);
+            stmt.setInt(2, health);        // Rettet fra maxHealth
+            stmt.setString(3, weapon);     // Rettet fra at sætte health igen
             stmt.setInt(4, money);
             stmt.setInt(5, strength);
             stmt.setInt(6, defence);
@@ -146,7 +140,6 @@ public class DBManager {
             stmt.setInt(8, speed);
             stmt.setString(9, activeUser);
             stmt.executeUpdate();
-
         } catch (SQLException e) {
             System.out.println("Failed to update user because: " + e.getMessage());
         }
@@ -189,14 +182,15 @@ public class DBManager {
     }
 
     public int getUserHP() {
-
         String sql = "SELECT health FROM Users WHERE name = ?";
 
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, activeUser);
             ResultSet rs = stmt.executeQuery();
-            return rs.getInt("health");
+            if (rs.next()) {  // Tilføjet check
+                return rs.getInt("health");
+            }
         } catch (SQLException e) {
             System.out.println("Couldn't get column health, because: " + e.getMessage());
         }

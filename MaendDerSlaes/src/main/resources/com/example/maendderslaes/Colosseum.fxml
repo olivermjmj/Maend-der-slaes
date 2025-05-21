@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="[http://javafx.com/fxml](http://javafx.com/fxml)" fx:controller="com.example.maendderslaes.Controller" style="-fx-background-image: url('file:data/images/Colosseum.png');
-    -fx-background-repeat: stretch;
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center center;
-    -fx-background-color: black;">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.maendderslaes.Controller"
+            style="-fx-background-image: url('file:data/images/Colosseum.png');
+                   -fx-background-repeat: stretch;
+                   -fx-background-size: 100% 100%;
+                   -fx-background-position: center center;
+                   -fx-background-color: black;">
+
+    <!-- Spiller karakter -->
+    <ImageView fx:id="playerSprite"
+               layoutX="500"
+               layoutY="500"
+               fitWidth="500"
+               fitHeight="800"
+               preserveRatio="true"/>
+
+    <!-- Fjende (Skeleton i TræningsArena) -->
+    <ImageView fx:id="enemySprite"
+               layoutX="700"
+               layoutY="500"
+               fitWidth="500"
+               fitHeight="800"
+               preserveRatio="true"/>
+
+    <ProgressBar fx:id="playerHealthBar"
+                 layoutX="525"
+                 layoutY="530"
+                 prefWidth="200"
+                 prefHeight="20"
+                 style="-fx-accent: #22b14c;"/>
+
+    <Label fx:id="playerHealthLabel"
+           layoutX="575"
+           layoutY="510"
+           style="-fx-font-family: 'Comic Sans MS';
+          -fx-font-size: 14;
+          -fx-text-fill: white;"/>
+
+    <!-- Enemy HP Bar -->
+    <ProgressBar fx:id="enemyHealthBar"
+                 layoutX="825"
+                 layoutY="530"
+                 prefWidth="200"
+                 prefHeight="20"
+                 style="-fx-accent: #ed1c24;"/>
+
+    <Label fx:id="enemyHealthLabel"
+           layoutX="875"
+           layoutY="510"
+           style="-fx-font-family: 'Comic Sans MS';
+          -fx-font-size: 14;
+          -fx-text-fill: white;"/>
+
+
+    <!-- Attack knapper i en HBox for bedre layout -->
+    <HBox fx:id="attackButtonsContainer"
+          spacing="20"
+          alignment="CENTER"
+          layoutX="250"
+          layoutY="600">
+
+
+        <Button text="Light Attack"
+                onAction="#lightAttack"
+                style="-fx-background-color: #FFD700;
+                       -fx-cursor: hand;
+                       -fx-text-fill: #000000;
+                       -fx-font-family: 'Comic Sans MS';
+                       -fx-font-size: 15;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                       -fx-min-width: 120;
+                       -fx-min-height: 40;"/>
+
+        <Button text="Medium Attack"
+                onAction="#mediumAttack"
+                style="-fx-background-color: #FFD700;
+                       -fx-cursor: hand;
+                       -fx-text-fill: #000000;
+                       -fx-font-family: 'Comic Sans MS';
+                       -fx-font-size: 15;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                       -fx-min-width: 120;
+                       -fx-min-height: 40;"/>
+
+        <Button text="Heavy Attack"
+                onAction="#heavyAttack"
+                style="-fx-background-color: #FFD700;
+                       -fx-cursor: hand;
+                       -fx-text-fill: #000000;
+                       -fx-font-family: 'Comic Sans MS';
+                       -fx-font-size: 15;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                       -fx-min-width: 120;
+                       -fx-min-height: 40;"/>
+    </HBox>
+
     <Button onAction="#goToCityCenter"
             text="CONTINUE TO CITY CENTER"
             style="-fx-background-color: #FFD700;
-               -fx-cursor: hand;
-               -fx-text-fill: #000000;
-               -fx-font-family: 'Comic Sans MS';
-               -fx-font-size: 15;
-               -fx-font-weight: bold;
-               -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
-               -fx-min-width: 70;
-               -fx-min-height: 30;"
+                   -fx-cursor: hand;
+                   -fx-text-fill: #000000;
+                   -fx-font-family: 'Comic Sans MS';
+                   -fx-font-size: 15;
+                   -fx-font-weight: bold;
+                   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+                   -fx-min-width: 70;
+                   -fx-min-height: 30;"
             AnchorPane.rightAnchor="50.0"
             AnchorPane.bottomAnchor="80.0"/>
+
 </AnchorPane>
