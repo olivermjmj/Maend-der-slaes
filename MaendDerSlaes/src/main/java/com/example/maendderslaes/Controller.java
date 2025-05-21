@@ -58,7 +58,6 @@ public class Controller {
 
     public void initializeArenaBattle() {
         if (playerSprite != null && enemySprite != null) {
-            // Hvis der er en bruger logget ind, indlæs deres data
             if (dbManager.getUserName() != null) {
                 player.setName(dbManager.getUserName());
                 player.setHP(dbManager.getUserHP());
@@ -70,7 +69,7 @@ public class Controller {
                 player.setWeapon(dbManager.getUserWeapon());
                 player.setLevel(dbManager.getUserLevel());
             } else {
-                // Hvis det er en gæst, brug standard værdier
+                // Sets guest parameters
                 player.setHP(100);
                 player.setMaxHP(100);
                 player.setStrength(10);
@@ -103,8 +102,7 @@ public class Controller {
 
             updateHealthBars();
         }
-        
-        // Opdater health bars efter initialisering
+
         updateHealthBars();
     }
 
@@ -172,10 +170,9 @@ public class Controller {
 
     private void updateHealthBars() {
         if (playerHealthBar != null && player != null) {
-            // Sikr at HP aldrig er mindre end 0
             int currentHP = Math.max(0, player.getHP());
-            int maxHP = Math.max(100, player.getMaxHP()); // Brug mindst 100 som max HP
-            
+            int maxHP = Math.max(100, player.getMaxHP());
+
             double playerHealthPercent = (double) currentHP / maxHP;
             playerHealthBar.setProgress(playerHealthPercent);
             playerHealthLabel.setText(currentHP + " / " + maxHP);

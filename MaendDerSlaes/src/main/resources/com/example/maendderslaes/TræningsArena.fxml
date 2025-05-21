@@ -17,18 +17,18 @@
 
     <!-- Spiller karakter -->
     <ImageView fx:id="playerSprite"
-               layoutX="500"
-               layoutY="500"
-               fitWidth="500"
-               fitHeight="800"
+               layoutX="200"
+               layoutY="400"
+               fitWidth="900"
+               fitHeight="1200"
                preserveRatio="true"/>
 
     <!-- Fjende (Skeleton i TræningsArena) -->
     <ImageView fx:id="enemySprite"
-               layoutX="700"
-               layoutY="500"
-               fitWidth="500"
-               fitHeight="800"
+               layoutX="500"
+               layoutY="400"
+               fitWidth="900"
+               fitHeight="1200"
                preserveRatio="true"/>
 
     <ProgressBar fx:id="playerHealthBar"
@@ -65,8 +65,8 @@
     <HBox fx:id="attackButtonsContainer"
           spacing="20"
           alignment="CENTER"
-          layoutX="250"
-          layoutY="600">
+          layoutX="100"
+          layoutY="700">
 
 
     <Button text="Light Attack"
@@ -117,7 +117,6 @@
                    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
                    -fx-min-width: 70;
                    -fx-min-height: 30;"
-            AnchorPane.rightAnchor="50.0"
-            AnchorPane.bottomAnchor="80.0"/>
-
+            AnchorPane.rightAnchor="100.0"
+            AnchorPane.bottomAnchor="300.0"/>
 </AnchorPane>
